@@ -7,7 +7,7 @@ using BusinessEntity.SMS;
 
 namespace Repositories
 {
-    public static class PartialSmsRepository
+    public static class PartialSmsRepositoryHafiz
     {
         #region Insert
         public static void InsertRole(Role role)
@@ -43,9 +43,17 @@ namespace Repositories
         }
         #endregion
 
-        #region
-        #endregion
-
+        #region GetById
+		 public static Role GetRoleById(int roleId)
+         {
+             Role roleobj = new Role();
+             using (SMSContext db = new SMSContext())
+             {
+                 roleobj = db.Roles.Single(x => x.Id == roleId);
+             }
+             return roleobj;
+         }
+	#endregion
 
     }
 
