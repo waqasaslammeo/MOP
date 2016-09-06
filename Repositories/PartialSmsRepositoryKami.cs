@@ -8,12 +8,12 @@ using BusinessEntity.SMS;
 
 namespace Repositories
 {
-    public class PartialSmsRepository
+    public class PartialSmsRepositoryKami
     {   
         #region Insert
         public static void InsertUser(User user)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 
             }

@@ -84,20 +84,6 @@
     <Compile Include="SMS\User.cs" />
     <Compile Include="SMS\UserRole.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MOP\MOP.csproj">
-      <Project>{5156d3f2-cd5e-4309-a80e-e1b8fe995af2}</Project>
-      <Name>MOP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Repositories\Repositories.csproj">
-      <Project>{e8dbca8d-297e-4de3-bd2b-1cbc6eabe3e9}</Project>
-      <Name>Repositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utility\Utility.csproj">
-      <Project>{b8fa00ca-7266-4660-bd9c-647aedfd1d15}</Project>
-      <Name>Utility</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
