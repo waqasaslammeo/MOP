@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Opticare - Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+<!--stylesheets-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+<!--javascripts-->
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+<!--Google font integration-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+  
+  <div id="LoginScreen" class="modal fade" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+       <div class="modal-content">
+    
+           <div class="login-contr">
+                <div class="inner-head"><img src="images/opticare-logo-small.png" width="95" height="30"></div>
+                <div class="bottom-header">Please Login</div>
+                <div class="login-inner col-xs-9 col-sm-8 no-padding">
+                    <form class="form-inline">
+                      <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Enter User ID">
+                      </div>
+                      <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="password" value="" placeholder="Enter Password">
+                      </div>
+                      <button type="submit" class="btn btn-default login">Login</button>              
+                    </form>
+                </div>
+           </div>
+   
+   		</div>
+   	</div>
+   </div>
+    
+  </div>
+</div>
+</body>
+</html>
