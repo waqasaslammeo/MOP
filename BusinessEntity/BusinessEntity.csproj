@@ -75,7 +75,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SMS\Class.cs" />
     <Compile Include="SMS\Grade.cs" />
+    <Compile Include="SMS\Module.cs" />
+    <Compile Include="SMS\Role.cs" />
+    <Compile Include="SMS\RoleItem.cs" />
     <Compile Include="SMS\Section.cs" />
+    <Compile Include="SMS\Session.cs" />
+    <Compile Include="SMS\Subject.cs" />
+    <Compile Include="SMS\SystemItem.cs" />
+    <Compile Include="SMS\SystemLog.cs" />
+    <Compile Include="SMS\User.cs" />
+    <Compile Include="SMS\UserRole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
