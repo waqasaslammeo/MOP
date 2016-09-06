@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Opticare - Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+<!--stylesheets-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+<!--javascripts-->
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!--Google font integration-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="header"> 
+      <!--Top Header starts here-->
+      <nav class="top-header navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Member Activity<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-demographics.html" data-target="#MemberList">Member Demographics</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-accumulator-edit.html" data-target="#MemberAccumulatorEdit">Member Accumulator Edit</a></li>
+                  <li><span>UR &amp; CLAIMS</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="referral-certifications-member.html" data-target="#RefCertMember">Referral/Certifications under this Member</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="referral-certifications-examiner.html" data-target="#RefCertExaminer">Referral/Certification Examiner Form</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="claim-under-member.html" data-target="#ClaimUnderMember">Claims under this Member</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="claims-examiner-form.html" data-target="#ClaimsExaminerForm">Claims Examiner Form</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Payers-Emps<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><span>PAYERS</span><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="insurers-hmos-tpas.html" data-target="#PayerList">Insurers, HMOs, TPAs</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="payers-benefit-plan.html" data-target="#PayersBenefitPlan">Benefit Plans</a></li>
+                  <li><a href="#">Benefit Classes</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="copy-tiers-schedules.html" data-target="#CopyTiersSchedules">Copay Tiers Schedules</a></li>
+                  <li><span>EMPLOYERS</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="employer-groups-coverage.html" data-target="#EmployerGroupsCoverage">Employer Groups &amp; Coverage</a></li>
+                  <li><a href="#">North American Industrial Classifications</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="legal-representives-attorneys.html" data-target="#LegalRepresentativeAttorneys">Legal Representatives / Attorneys</a></li>
+                  <li><span>THIRD PARTY CARRIERS (COB)</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="third-party-carriers.html" data-target="#ThirdPartyCarriers">Carriers</a></li>
+                  <li><a href="#">Relationship Types</a></li>
+                  <li><a href="#">Coverage Types</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Providers<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="providers-practitioners-facilities.html" data-target="#PractitionersFacilities">Practitioners &amp; Facilities</a></li>
+                  <li><a href="#">Case Managers</a></li>
+                  <li><a href="#">Provider Code Changing Utility</a></li>
+                  <li><span>REIMBURSEMENT</span><a href="#">Fee Schedules, FFS &amp; Capitated</a></li>
+                  <li><a href="#">Taxpayers and Tax Rates</a></li>
+                  <li><span>CREDENTIALLING</span><a href="#">Licensed Specialties &amp; Sources</a></li>
+                  <li><a href="#">Sub Specialties</a></li>
+                  <li><a href="#">Certifications/Accreditations &amp; Sources</a></li>
+                  <li><a href="#">Identification Number Types &amp; Sources</a></li>
+                  <li><a href="#">Other Provider Credentials:  Insurers, Schools..</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Communications<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><span>OPEN CASES</span><a href="#">My Cases</a></li>
+                  <li><a href="#">My Cases for Follow-up Today</a></li>
+                  <li><span>CLOSED CASES</span><a href="#">My Case History</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Financial<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="lines-of-business.html" data-target="#LinesOfBusiness">Lines of Business</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="funds.html" data-target="#Fund">Funds</a></li>
+                  <li><a href="#">Fund Transactions</a></li>
+                  <li><a href="#">General Ledger</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">EDI<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><span>Claims Imports</span><a href="#">ANSI EDI Inventory &amp; File Conversion</a></li>
+                  <li><a href="#">NSF EDI Inventory &amp; File Conversion</a></li>
+                  <li><a href="#">Claims Scrubbing &amp; Import</a></li>
+                  <li><a href="#">Claims Examiner Interface</a></li>
+                  <li><span>Claims EDI Setup</span><a href="#">Submitters</a></li>
+                  <li><a href="#">NSF System Definition</a></li>
+                  <li><a href="#">NSF System Variables Definition</a></li>
+                  <li><a href="#">City Translations</a></li>
+                  <li><span>Other</span><a href="#">Eligibility Imports</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Reports<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu"><a href="#">Payment Reports/Statements<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Explanation of Benefits Report</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Reference<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu"><a href="#">Member Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="ref-ethnic-categories.html" data-target="#ethnicCategories">Ethnic Categories</a></li>
+                      <li><a href="#">Job Status Categories</a></li>
+                      <li><a href="#">Occupational Classes</a></li>
+                      <li><a href="#">Member-Subscriber Relationships</a></li>
+                      <li><a href="#">Coverage Manual Entry Reasons</a></li>
+                      <li><a href="#">Payer Types</a></li>
+                      <li><a href="#">Contract Types</a></li>
+                      <li><a href="#">Benefit Premium Coverage Extents</a></li>
+                      <li><a href="#">Benefit Premium Payment Modes</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">FCMC-Specific Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action Codes</a></li>
+                      <li><a href="#">Race Codes</a></li>
+                      <li><a href="#">Ethnic Group Codes</a></li>
+                      <li><a href="#">Relation Codes (Caregiver and Consenter)</a></li>
+                      <li><a href="#">Level of Care Codes</a></li>
+                      <li><a href="#">Consenter Types</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Provider Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Academic Degrees</a></li>
+                      <li><a href="#">Provider Type Classifications</a></li>
+                      <li><a href="#">Provider-Organization Affiliation Types</a></li>
+                      <li><a href="#">Office Type Classifications</a></li>
+                      <li><a href="#">Other Credentialling Source Categories</a></li>
+                      <li><a href="#">Credentialling Status Categories</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Communications Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Case Types</a></li>
+                      <li><a href="#">Case Status Classifications</a></li>
+                      <li><a href="#">Case Priority Classifications</a></li>
+                      <li><a href="#">Journal Contact Media</a></li>
+                      <li><a href="#">Journal Note Types</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Diagnostic Code Types<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Diagnostic Categories</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="icd-dsm-diagnosis-codes.html" data-target="#IcdDsmDiagnosisCodes">ICD & DSM Diagnosis Codes</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="diagnosis-code-sets.html" data-target="#DiagnosisCodeSets">Diagnosis Code Sets</a></li>
+                      <li><a href="#">UR Case/Problem Types</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Procedural Code Types<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HCFA Service Types</a></li>
+                      <li><a href="#">Service Categories (for Benefits)</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="service-codes-cpts.html" data-target="#ServiceCodesCPTs">Service Codes (CPTs)</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="ref-modifiers.html" data-target="#RefModifiers">Modifiers</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="ref-service-sets.html" data-target="#RefServiceSets">Service Sets</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="relative-value-units.html" data-target="#RelativeValueUnits">Relative Value Units</a></li>
+                      <li><a class="nav-menu payer-list main_link" oncontextmenu="return false" href="rvu-geographic-multiplier.html" data-target="#RvuGeoMulti">RVU Geographic Multipliers</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">UM Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Case Status Codes</a></li>
+                      <li><a href="#">Reasons for Referral</a></li>
+                      <li><a href="#">Case Referral Sources</a></li>
+                      <li><a href="#">Degrees of Clinical Urgency</a></li>
+                      <li><a href="#">Initial Response at Intake</a></li>
+                      <li><a href="#">Provider Roles</a></li>
+                      <li><a href="#">Inpatient Wards/Units</a></li>
+                      <li><a href="#">Post-Tx Followup Actions</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Claims Processing Supporting Codes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="disposition-codes.html" data-target="#DispositionCodes">Disposition Codes</a></li>
+                      <li><a href="#">Place of Service Types</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a href="#">Miscellaneous Support Tables<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">U.S. States & Canadian Provinces</a></li>
+                      <li><a href="#">Languages</a></li>
+                      <li><a href="#">Holidays & Days Off</a></li>
+                    </ul>
+                  </li>
+                  <li><span>QUERY MAINTENANCE</span><a class="nav-menu main_link" oncontextmenu="return false" href="ref-claim-based-queries.html" data-target="#claimBasedQueries">Claim-based Queries</a></li>
+                  <li><a href="#">Service-based Queries</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Setup<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="setup-licensee-information.html" data-target="#SetupLicensee">Setup &amp; Licensee Information</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="staff-users-system-security.html" data-target="#StaffSecurity">Staff/Users &amp; System Security</a></li>
+                  <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="staff-role-profiles-and-access-privileges.html" data-target="#StaffRoleProfile">Staff Role Profiles and Access Privileges</a></li>
+                  <li><span>SYSTEM SPECIFICATIONS</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="about-this-product.html" data-target="#AboutThisProduct">About this Product</a></li>
+                  <li><span>UTILITIES</span><a href="#">Re-Total Claim Services Detail to all Claims</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Edit</a></li>
+              <li><a href="#">Windows</a></li>
+              <li><a href="#">Exit</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Top Header ends here--> 
+    </div>
+    
+    <!--Member List Popup contant starts here-->
+    <div id="MemberList" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from member-demographics.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Member List Popup content ends here--> 
+    
+    <!--Member Accumulator Edit content starts here-->
+    <div id="MemberAccumulatorEdit" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from member-accumulator-edit.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Member Accumulator Edit content ends here-->
+    
+    <!--Referral / Certifications under this member content starts here-->
+    <div id="RefCertMember" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from referral-certifications-member.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Referral / Certifications under this member content ends here-->
+    
+    <!--Referral / Certifications Examiner content starts here-->
+    <div id="RefCertExaminer" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from referral-certifications-examiner.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Referral / Certifications Examiner content ends here-->
+    
+    <!--Claim Under this Member content starts here-->
+    <div id="ClaimUnderMember" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from claim-under-member.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Claim Under this Member content ends here-->
+    
+    <!--Claims Examiner Form content starts here-->
+    <div id="ClaimsExaminerForm" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from claims-examiner-form.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Claims Examiner Form content ends here-->
+    
+    <!--Payer List Popup content starts here-->
+    <div id="PayerList" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from insurers-hmos-tpas.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Payer List Popup content ends here--> 
+    
+    <!--Payers Benefit Plan starts here-->
+    <div id="PayersBenefitPlan" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from payers-benefit-plan.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Payers Benefit Plan Ends here--> 
+    
+    <!--Copy Tiers Schedules starts here-->
+    <div id="CopyTiersSchedules" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from copy-tiers-schedules.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Copy Tiers Schedules Ends here--> 
+    
+    <!--Employer Groups & Coverage starts here-->
+    <div id="EmployerGroupsCoverage" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from employer-groups-coverage.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Employer Groups & Coverage Ends here--> 
+    
+    <!--Legal Representative Attorneys starts here-->
+    <div id="LegalRepresentativeAttorneys" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from legal-representives-attorneys.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Legal Representative Attorneys Ends here-->
+    
+    <!--Third Party Carriers starts here-->
+    <div id="ThirdPartyCarriers" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from third-party-carriers.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Third Party Carriers Ends here-->
+    
+    <!--Setup And Licensee Information contant starts here-->
+    <div id="SetupLicensee" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from setup-licensee-information.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Setup And Licensee Information Contant Ends here--> 
+    
+    <!--Staff/User And System Security Contant starts here-->
+    <div id="StaffSecurity" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from staff-users-system-security.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Staff/User And System Security Contant Ends here--> 
+    
+    <!--Staff Role Profiles and Access Privileges Contant starts here-->
+    <div id="StaffRoleProfile" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from staff-role-profiles-and-access-privileges.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Staff Role Profiles and Access Privileges Contant Ends here-->
+    
+    <!--About this Product Content starts here-->
+    <div id="AboutThisProduct" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from about-this-product.html--> 
+        </div>
+      </div>
+    </div>
+    <!--About this Product Content Ends here-->
+    
+    <!--Reference - Claim Based Queries Content starts here-->
+    <div id="claimBasedQueries" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from ref-claim-based-queries.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - Claim Based Queries Content Ends here-->  
+    
+    <!--Reference - Ethnic Categories Content starts here-->
+    <div id="ethnicCategories" class="modal fade ethnic-categories">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from ref-ethnic-categories.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - Ethnic Categories Content Ends here--> 
+    
+    <!--Reference - ICD & DSM Diagnosis Codes Content starts here-->
+    <div id="IcdDsmDiagnosisCodes" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from icd-dsm-diagnosis-codes.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - ICD & DSM Diagnosis Codes Content Ends here--> 
+    
+    <!--Reference - Diagnosis Code Sets Content starts here-->
+    <div id="DiagnosisCodeSets" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from diagnosis-code-sets.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - Diagnosis Code Sets Content Ends here-->  
+    
+    <!--Reference - Service Codes (CPTs) Content starts here-->
+    <div id="ServiceCodesCPTs" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from diagnosis-code-sets.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - Service Codes (CPTs) Content Ends here-->   
+    
+    <!--Reference - Modifiers Content starts here-->
+    <div id="RefModifiers" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from ref-modifiers.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Reference - Modifiers Content Ends here--> 
+    
+    <!--Disposition Codes Content starts here-->
+    <div id="DispositionCodes" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from disposition-codes.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Disposition Codes Content Ends here-->
+    
+    <!--Ref Service Sets Content starts here-->
+    <div id="RefServiceSets" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from ref-service-sets.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Ref Service Sets Content Ends here--> 
+    
+    <!--RVU Geographic Multiplier starts here-->
+    <div id="RelativeValueUnits" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from relative-value-units.html--> 
+        </div>
+      </div>
+    </div>
+    <!--RVU Geographic Multiplier Ends here-->
+    
+    <!--RVU Geographic Multiplier starts here-->
+    <div id="RvuGeoMulti" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from rvu-geographic-multiplier.html--> 
+        </div>
+      </div>
+    </div>
+    <!--RVU Geographic Multiplier Ends here-->
+    
+    <!--Lines of Business starts here-->
+    <div id="LinesOfBusiness" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from lines-of-business.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Lines of Business Ends here-->
+    
+    <!--Fund starts here-->
+    <div id="Fund" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from fund.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Fund Ends here-->
+    
+    <!--Practitioners Facilities starts here-->
+    <div id="PractitionersFacilities" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          <!--Content stretch from providers-practitioners-facilities.html--> 
+        </div>
+      </div>
+    </div>
+    <!--Practitioners Facilities Ends here-->
+    
+  </div>
+</div>
+</body>
+</html>

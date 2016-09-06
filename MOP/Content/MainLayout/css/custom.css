@@ -1,0 +1,5268 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, .container-fluid, .row{
+	height:100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	font-weight:400;
+	background: url(../images/main-bg-01.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+  padding-right: 0px !important
+}
+
+.modal-open {
+  overflow-y: auto;
+}
+.modal-content{
+	border-radius:0px;
+	border:0px;
+}
+.inner-window{
+	margin-top:0px;
+}
+.no-padding{
+	padding:0px;
+}
+.no-margin{
+	margin:0px;
+}
+.no-right-margin{
+	margin-right:0px;
+}
+.no-left-margin{
+	margin-left:0px;
+}
+.no-right-padding{
+	padding-right:0px;
+}
+.no-left-padding{
+	padding-left:0px;
+}
+.margin-top-5{
+	margin-top:5px;
+}
+.text-normal{
+	font-weight:400;
+}
+.margin-top-12{
+	margin-top:12px;
+}
+.disabled{
+	opacity:.6;
+}
+.header{
+	height:39px;
+	position:fixed;
+	z-index:99999;
+	width:100%;
+}
+.dropdown-menu{
+}
+.header .top-header{
+	background: #8fbbf1;
+	height:39px;
+	-webkit-box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+}
+.header .top-header2{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6a95b9+0,6a95b9+50,729cc0+51,729cc0+100 */
+	background: #6a95b9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6a95b9 0%, #6a95b9 50%, #729cc0 51%, #729cc0 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #6a95b9 0%,#6a95b9 50%,#729cc0 51%,#729cc0 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #6a95b9 0%,#6a95b9 50%,#729cc0 51%,#729cc0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a95b9', endColorstr='#729cc0',GradientType=0 ); /* IE6-9 */
+
+}
+.header .top-header ul{
+	list-style:none;
+	margin:0px;
+	padding:9px 0 0 0px;
+}
+.header .top-header ul li{
+	float:left;
+	margin:0 10px;
+}
+.header .top-header ul li:first-child{
+	margin-left:0px;
+}
+.header .top-header ul li a{
+	color:#000;
+	padding:0px;
+}
+.header .top-header2 ul li a{
+	color:#fff;
+}
+.header .top-header2 ul li a:hover{
+	color:#d1e7fa;
+}
+.header .top-header2 ul li li a:hover{
+	color:#000;
+}
+.header .top-header.navbar{
+	min-height:0px;
+	border:none;
+	margin:0px;
+	border-radius:0px;
+}
+.header .top-header ul ul{
+	padding:9px 8px 9px 4px;
+}
+.header .top-header ul li li{
+	float:none;
+	margin:4px 0;
+}
+.header .top-header ul li li a{
+	color:#000;
+	font-size:12px;
+	padding:4px 7px;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+	background:#90bbf0;
+}
+.header .top-header ul li li:first-child{
+	margin-left:5px;
+}
+.header .top-header ul li li{
+	margin-left:5px;
+}
+.header .top-header ul li li span{
+	display:block;
+	width:100%;
+	font-weight:600;
+	margin-left:2px;
+}
+.header .top-header ul li li span.caret{
+	display:inline-block;
+	width:auto;
+	margin-left:2px;
+}
+.header .top-header li.dropdown-submenu{
+	position:relative;
+}
+.header .top-header li.dropdown-submenu ul{
+	display:none;
+	position:absolute;
+	z-index:999;
+	left:170px;
+	top:-15px;
+}
+.header .top-header li.dropdown-submenu li a{	
+	padding-left:10px;
+}
+.header .top-header li.dropdown-submenu li:first-child a{
+	background:url(../images/left-arrow.png) no-repeat left center;
+	background-position:3px center;
+	padding-left:12px;
+}
+.header .top-header li.dropdown-submenu li:first-child:hover a{
+	background:url(../images/left-arrow.png) no-repeat left center #90bbf0;
+	background-position:3px center;
+}
+.header .top-header li.dropdown-submenu:hover ul{
+	display:block;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
+	color:#fff;
+	background:none;
+}
+.navbar-collapse{
+	padding:0px;
+}
+.bottom-header{
+	height:57px;
+	background: #8fbbf1;
+}
+.bottom-header ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	margin-top:4px;
+}
+.bottom-header li{
+	float:left;
+	border-right:solid 1px #4e505d;
+}
+.bottom-header li:last-child{
+	border-right:0px;
+}
+.bottom-header li a{
+	color:#fff;
+	font-size:11px;
+	text-transform:uppercase;
+	display:block;
+	text-align:center;
+	padding:0 14px;
+	font-weight:600;
+}
+.bottom-header li:first-child a{
+	padding-left:0px;
+}
+.bottom-header li a:hover{
+	color:#000;
+	text-decoration:none;
+}
+.bottom-header li a span{
+	display:block;
+	width:100%;
+	margin-top:1px;
+}
+
+/*Inner Window Styles*/
+.modal{
+	top:39px;
+	overflow-y:scroll;
+}
+.child-modal{
+	z-index:9998 !important;
+}
+.child-modal2{
+	z-index:9999 !important;
+}
+.modal-dialog{	
+	width:96%;
+	max-width:1250px;
+	background:none;
+	border:0px;
+	padding:0px;
+	-webkit-box-shadow: -2px 2px 23px 8px rgba(0,0,0,0.45);
+	-moz-box-shadow: -2px 2px 23px 8px rgba(0,0,0,0.45);
+	box-shadow: -2px 2px 23px 8px rgba(0,0,0,0.45);
+}
+.modal-dialog .modal-content{
+	width:100%;
+}
+#MemberCoverage .modal-dialog{
+	width:60%;
+	max-width:758px;
+}
+#MemberGuardians .modal-dialog{
+	width:70%;
+	max-width:872px;
+}
+#MemberCoverage .modal-dialog .inner-head, #MemberGuardians .modal-dialog .inner-head, #ElectedProvidersEdit .modal-dialog .inner-head{
+	margin-bottom:20px;
+}
+.full-width-form .form-control, .full-width-form .selectpicker{
+	width:81%;
+}
+.full-width-form .control-label{
+	width:19%;
+}
+#MemberCoverage textarea{
+	width:100%;
+	height:40px;
+}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+	background:none;
+	box-shadow:none;
+}
+#MemberList .modal-dialog{
+	min-height:750px;
+}
+#PayerList .modal-dialog{
+	min-height:682px;
+}
+#SetupLicensee .modal-dialog{
+	min-height:416px;
+}
+#StaffSecurity .modal-dialog{
+	min-height:656px;
+}
+.inner-window{
+	background:rgba(238, 238, 238, 1);
+	padding-bottom:20px;
+	height:auto;
+	overflow:hidden;
+	margin-top:1px;
+}
+.inner-window .inner-head{
+	background:#7daeeb;
+	padding:5px 0;
+	text-align:center;
+	text-transform:uppercase;
+	color:#000;
+	font-size:18px;
+	font-weight:600;
+	clear:both;
+	-webkit-box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 6px -2px rgba(0,0,0,0.75);
+	overflow:visible;
+}
+.inner-window2 .inner-head{
+	background:#5987ae;
+	color:#fff;
+}
+.inner-window2 .btn-primary, .inner-window2 .btn-secondary{
+	background:#5987ae;
+}
+.inner-window2 .btn-secondary{
+	background:#88aece;
+}
+.inner-window .close{
+	margin-right:6px;
+	opacity:1;
+	background-color:#ff4040;
+	color:#fff;
+	font-size:20px;
+	font-weight:600;
+	padding:1px 6px 3px 6px;
+	display:block;
+	filter:alpha(opacity=100);
+}
+.inner-window .close{
+	opacity:1;
+}
+.inner-window .search-container{
+	padding:12px 12px 6px 12px;
+	max-width:1280px;
+}
+.search-container .first-col{
+	margin-right:-18px;
+}
+.search-container .first-col .control-label{
+	width:28%;
+}
+.search-container .first-col .form-control{
+	width:65%;
+}
+#PayerList .search-container .first-col .control-label, .employer-group-coverage .search-container .first-col .control-label{
+	width:35%;
+}
+#PayerList .search-container .first-col .form-control, .employer-group-coverage .search-container .first-col .form-control{
+	width:60%;
+}
+.form-group{
+	margin:4px 0;
+	clear:both;
+	height:auto;
+	overflow:hidden;
+}
+.control-label{
+	font-size:12px;
+	color:#414141;
+	float:left;
+	font-weight:400;
+	width:38%;
+	margin-top:5px;
+	text-align:right;
+	padding-right:5px;
+}
+.form-control, .selectpicker{
+	font-size:12px;
+	font-weight:400;
+	width:62%;
+	float:left;
+	height:26px;
+	border:solid 1px #c6c5c5;
+	border-radius:0px;
+	padding:3px 8px;
+}
+#PayerList .control-label{
+	width:40%;
+}
+#PayerList .form-control{
+	width:60%;
+}
+.selectpicker{
+	padding:3px 3px;
+}
+#PayerList .selectpicker, .employer-group-coverage .selectpicker{
+	width:60%;
+}
+.inner-window .search-container .last-row .control-label{
+	width:47%;
+}
+.inner-window .search-container .last-row .form-control{
+	width:53%;
+}
+.btn-primary, .btn-secondary{
+	font-size:12px;
+	font-weight:400;
+	padding:4px 8px;
+	background:#3e81f4;
+	border-radius:0px;
+	border:none;
+	color:#fff;
+	width:100%;
+	margin:4px 0;
+}
+.btn-bottom01{
+	background:#2f2f2f !important;
+	width:88px;
+	color:#fff !important;
+	margin-top:2px;
+}
+.btn-bottom02{
+	background:#545454 !important;
+	width:88px;
+	color:#fff !important;
+	margin-top:2px;
+}
+#PayerList .btn-primary, #PayerList .btn-secondary, .employer-group-coverage .btn-primary, .employer-group-coverage .btn-secondary{
+	width:48%;
+}
+.btn-secondary{
+	background:#7daeeb;
+}
+.btn-primary:hover, .btn-secondary:hover{
+	 background-color:#286090;
+	 color:#fff;
+}
+.grid-contr{
+	clear:both;
+	max-width:1280px;
+}
+.table-responsive{
+	background:rgba(209, 209, 209, 0.8);
+}
+.grid-contr .table-responsive th{
+	white-space:nowrap;
+}
+#PayerList .table-responsive{
+	min-height:515px;
+	background:#e8e8e8;
+}
+.tab-content .table-responsive{
+	max-height:200px;
+}
+.table-responsive thead{
+	background:#d1d1d1;
+}
+.table-responsive tr:nth-child(even){
+	background:#e8e8e8
+}
+.table{
+	margin-bottom:0px;
+	background:#fff;
+}
+.table-responsive .record-info{
+	color:#2665d2;
+}
+.record-info{
+	color:#2665d2;
+	margin-top:8px;
+}
+.tab-container{
+	margin-top:6px;
+	max-width:1280px;
+}
+.tab-container .nav-tabs{
+	border-bottom:solid 1px #d1d1d1;
+}
+.tab-container .tab-content{
+	background:#f6f4f4;
+	border-width:0px 1px 1px 1px;
+	border-style:solid;
+	border-color:#d1d1d1;
+	height:auto;
+	overflow:hidden;
+	padding:12px;
+}
+#PayerList .tab-container .tab-content{
+	min-height:470px;
+}
+.tab-container .control-label{
+	width:36%;
+}
+.tab-container .form-control{
+	width:64%;
+}
+.tab-container .address-info .form-control{
+	width:78%;
+}
+#PayerList .tab-container .address-info .control-label, .employer-group-coverage .tab-container .address-info .control-label{
+	width:20%;
+}
+#PayerList .tab-container .address-info .form-control, .employer-group-coverage .tab-container .address-info .form-control{
+	width:78%;
+}
+.tab-container .other-demo .form-control{
+	width:65%;
+}
+.half-size-01{
+	width:29% !important;
+	margin-right:1%;
+}
+.tab-container .tab-pane .small-size-01{
+	width:29% !important;
+	margin-right:1%;
+}
+.tab-container .tab-pane .small-size-02{
+	width:10% !important;
+}
+.tab-container .tab-pane .gender{
+	width:25% !important;
+}
+.tab-container .tab-pane .birth-date{
+	width:26% !important;
+	margin-left:1%;
+}
+#PayerList .tab-container .tab-pane .birth-date, .employer-group-coverage .tab-container .tab-pane .birth-date{
+	width:23% !important;
+	margin-left:1%;
+}
+.tab-container .tab-pane .small-size-03{
+	width:32% !important;
+}
+#PayerList .tab-container .tab-pane .small-size-03, .employer-group-coverage .tab-container .tab-pane .small-size-03{
+	width:29% !important;
+}
+
+#PayerList .tab-container .tab-pane .small-size-04, .employer-group-coverage .tab-container .tab-pane .small-size-04{
+	width:25% !important;
+}
+#PayerList .text-area textarea, .employer-group-coverage .text-area textarea{
+	width:100%;
+}
+#PayerList .checkbox-ex label.checkbox-inline{
+	width:60%;
+}
+.tab-container .tab-pane .general-info .first-col .control-label{
+	width:16%;
+}
+.tab-container .tab-pane .general-info .first-col .form-control{
+	width:84%;
+}
+#PayerList .tab-container .tab-pane .general-info .first-col .control-label, .employer-group-coverage .tab-container .tab-pane .general-info .first-col .control-label{
+	width:20%;
+}
+#PayerList .tab-container .tab-pane .general-info .first-col .form-control, .employer-group-coverage .tab-container .tab-pane .general-info .first-col .form-control{
+	width:78%;
+}
+.tab-container .tab-pane .general-info .half-size-01, .tab-container .tab-pane .general-info .small-size-01{
+	width:26% !important;
+}
+.tab-container .tab-pane .general-info .first-col .half-size-01, .tab-container .tab-pane .general-info .first-col .small-size-01{
+	width:32% !important;
+}
+.tab-container .tab-pane .general-info .small-size-02{
+	width:16% !important;
+}
+.tab-container .tab-pane .general-info .first-col .small-size-02{
+	width:18% !important;
+}
+.tab-container .nav-tabs li a{
+	font-size:12px;
+	color:#000;
+	font-weight:600;
+	outline:none;
+}
+.tab-container .nav-tabs li.active a{
+	color:#2665d2;
+	background-color:#f6f4f4;
+}
+.general-info h2, .address-info h2, .other-demo h2,
+.setup-licensee-wraper h2,
+#StaffSecurity .staff-security-wrapper h2, .user-field-contr h2{
+	font-size:12px;
+	color:#2665d2;
+	font-weight:400;
+	margin:3px 0px;
+	clear:both;
+}
+.other-demo h2{
+	margin-top:12px;
+}
+.tab-container .address-info .col-md-5 .control-label{
+	width:20%;
+}
+.tab-container .address-info .col-md-5 .form-control{
+	width:80%;
+}
+.tab-container .address-info .col-md-2 .control-label, .tab-container .address-info .col-md-3 .control-label{
+	width:21%;
+}
+.tab-container .address-info .col-md-2 .form-control, .tab-container .address-info .col-md-3 .form-control{
+	width:79%;
+}
+.tab-container .address-info .gender{
+	width:22% !important;
+}
+.tab-container .tab-pane .address-info .small-size-02{
+	width:27% !important;
+	margin-left:1%;
+}
+#PayerList .tab-container .tab-pane .address-info .small-size-02, .employer-group-coverage .tab-container .tab-pane .address-info .small-size-02{
+	width:25% !important;
+	margin-left:1%;
+}
+.tab-container .other-demo .control-label{
+	width:50%;
+}
+.tab-container .other-demo .selectpicker{
+	width:50%;
+	
+}
+.tab-container .other-demo .other-contact-info{
+	background:#e9e9e9;
+	padding:5px;
+	margin-top:-26px;
+	margin-left:1%;
+	width:49%;
+}
+.tab-container .other-demo .other-contact-info .control-label{
+	width:100%;
+	margin-top:0px;
+	text-align:left;
+}
+.tab-container .other-demo .other-contact-info .form-control{
+	margin:0px;
+	width:96%;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{
+	padding:4px 8px;
+}
+.checkbox-ex input[type="checkbox"]{
+		margin-top:1px;
+		margin-left:-19px;
+	}
+#MemberCoverage .checkbox-ex input[type="checkbox"]{
+	margin-left:6px;
+}
+#MemberCoverage .checkbox-ex label.checkbox-inline{
+		height:auto;
+		overflow:hidden;
+		padding-left:0px;
+		padding-right:20px;
+}
+#MemberCoverage .work-city .half-size-01{
+	width:35% !important;
+}
+#MemberCoverage .work-city .gender{
+	width:26%;
+}
+#MemberCoverage .eff-period .half-size-01{
+	width:31% !important;
+	margin-right:0px;
+}
+.pagination{
+	margin:0px;
+}
+#MemberGuardians .first-col .control-label{
+	width:auto;
+	float:left;
+}
+#MemberGuardians .first-col .half-size-01{
+	width:24.9% !important;
+}
+#MemberGuardians .medical-con-cntr .first-col .half-size-01{
+	width:24.8% !important;
+}
+#MemberGuardians .first-col .half-size-02{
+	width:15%;
+	float:left;
+	margin-right:1%;
+}
+#MemberGuardians .first-col .no-right-margin{
+	margin-right:0;
+}
+#MemberGuardians .guardian-info .form-control, #MemberGuardians .guardian-info .selectpicker{
+	width:55%;
+}
+#MemberGuardians .gender01 .selectpicker{
+		width:47%;
+}
+#MemberGuardians .guardian-info .control-label{
+	width:45%;
+}
+#MemberGuardians .guardian-info .first-col .control-label{
+	width:34%;
+}
+#MemberGuardians .guardian-info .first-col .form-control{
+	width:61%;
+}
+#MemberGuardians .modal-content table thead, #MemberGuardians .modal-content table th, #MemberGuardians .modal-content table tr, #MemberGuardians .modal-content table, #MemberGuardians .table-responsive{
+	padding:0px;
+	background:none;
+	font-weight:400;
+	border:none;	
+}
+#MemberGuardians .modal-content .form-group{
+	margin:3px 0;
+}
+#MemberGuardians .modal-content td .form-group{
+	margin:0;
+}
+#MemberGuardians .modal-content td{
+	border:none;
+	vertical-align:middle;
+	padding:3px;
+	line-height:normal;
+}
+#MemberGuardians .modal-content td:first-child{
+	padding:3px 3px 3px 0;
+}
+#MemberGuardians .table-responsive .form-control, #MemberGuardians .table-responsive .selectpicker{
+	width:100%;
+}
+#MemberGuardians .guardians-facility td:nth-child(1), #MemberGuardians .guardians-facility td:nth-child(5){
+	width:10%;
+}
+#MemberGuardians .guardians-facility td:nth-child(2), #MemberGuardians .guardians-facility td:nth-child(3){
+	width:18%;
+}
+#MemberGuardians .medical-con-addr .half-size-02{
+	width:13%;
+}
+#MemberGuardians .medical-con-cntr .medical-con-addr1 .half-size-01{
+	width:31% !important;
+}
+#MemberGuardians .general-info{
+	padding:2px 0;
+	border-bottom:solid 1px #d1d1d1 !important;
+}
+#MemberGuardians .level-care .selectpicker{
+	width:59%;
+}
+.audit-info table{
+	width:500px;
+	border:1px solid #ddd;
+}
+.audit-info table td{
+	padding:5px;
+}
+.audit-info h2{
+	color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+.audit-info .record-info{
+	margin-top:5px;
+	width:100% !important;
+	text-align:left;
+}
+.audit-info table tr:first-child{
+	border-top:1px solid #ddd;
+}
+.audit-info .rec-mark .checkbox-inline{
+	padding-left:0px;
+	padding-right:20px;
+}
+.audit-info .checkbox-inline input[type="checkbox"]{
+	margin-top:2px;
+}
+.audit-info .rec-mark .checkbox-inline input[type="checkbox"]{
+	margin-left:5px;
+}
+.audit-info .rec-mark input[type="text"]{
+    height:20px;
+    margin-left:4px;
+    padding:0 2px !important;
+    width:18px;
+	text-align:center;
+	font-size:12px;
+	font-weight:400;	
+	border:solid 1px #c6c5c5;
+	border-radius:0px;
+}
+
+/** Login Page style starts**/
+
+#LoginScreen{
+  display:block !important;
+}
+#LoginScreen.modal{
+	top:0px;
+}
+#LoginScreen .modal-dialog{
+	width:520px;
+}
+#LoginScreen .modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
+#LoginScreen .modal-content{
+	border-radius:0px;
+}
+.login-contr{
+	background: rgba(238, 238, 238, .88);
+	text-align:center;
+	height:380px;
+}
+.login-contr .inner-head{
+	background:#7daeeb;
+	padding:10px 0;
+	text-align:center;
+}
+.login-contr .bottom-header{
+	font-size:18px;
+	color:#231f20;
+	font-weight:600;
+	text-transform:uppercase;
+	text-align:center;
+	padding-top:16px;
+}
+.login-contr .login-inner{
+	float:none;
+	margin:40px auto;
+}
+.login-contr .form-group{
+	width:100%;
+	clear:both;
+	margin-bottom:18px;
+}
+.login-contr .form-control{
+	border-radius:0px;
+	height:42px;
+	font-size:13px;
+	color:#414141;
+}
+.login-contr .input-group-addon{
+	font-size:18px;
+	padding:10px 2px;
+	border-radius:0px;
+}
+.login-contr ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #555555;
+}
+.login-contr :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #555555;
+}
+.login-contr ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #555555;
+}
+.login-contr :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #555555;
+}
+.login-contr button{
+	width:100px;
+	height:36px;
+	color:#fff;
+	font-size:13px;
+	border-radius:0px;
+}
+.login-contr button.cancel{
+	float:left;
+	background:#2f2f2f;
+}
+.login-contr button.login{
+	float:right;
+	background:#3e81f4;
+}
+.login-contr button:hover{
+	color:#c7c7c7;
+}
+.login-contr .ie9-ph-fix{
+	font:normal sans-serif;
+	left: 5px; 
+	top: 3px; 
+	width: 147px; 
+	height: 15px; 
+	color: rgb(186, 186, 186); 
+	position: absolute; 
+	overflow-x: hidden; 
+	font-size-adjust: none; 
+	font-stretch: normal;
+}
+
+/** Login Page style starts**/
+
+.tab-container .tab-content .btn-secondary,
+#SetupLicensee .setup-licensee-wraper .button-wrap .btn-secondary,
+#StaffSecurity .staff-security-wrapper .button-wrap .btn-secondary{
+		width:100px;
+		float:right;
+		overflow:hidden;
+}
+
+/***********************MembersPatient*************/
+#MemberPatient .modal-dialog{
+	width:70%;
+	max-width:894px;
+	}
+#MemberPatient .modal-content .table-responsive{
+	margin-top:8px;
+	
+}
+#MemberPatient .modal-content .empty-form .form-control{
+	width:100%;
+}
+#MemberPatient .modal-content .text-area textarea{
+	width:100%;
+}
+#MemberPatient .modal-content .tab-content .table-responsive{
+	max-height:100px;
+}
+#MemberPatient .relatedparties-table .form-control{
+	width:100%;
+}
+#MemberPatient .sort-and-filter{
+	 width:180px;
+	 padding-top:9px;
+	}
+#MemberPatient .sort-and-filter select{
+	width:50%;
+}
+#MemberPatient .tab-container .tab-content .btn-secondary{
+	float:left;
+	}
+#memberpatient02 .audit-info{
+	margin-top:10px;
+	
+}
+#MemberPatient .modal-content .tab-container .tab-content .btn-secondary{
+	width: 84px;
+}
+#MemberPatient .modal-content .tab-container .tab-content .small-but01{
+	width:76px;
+}
+#MemberPatient .modal-content .tab-container .tab-content .time-stamp{
+	width:44px;
+	float:right;
+	display:inline-block;
+	font-size:10px;
+}
+#MemberPatient .modal-content .tab-container .tab-content .btn-secondary.launch-task-btn{
+	background:#3e81f4 !important;
+}
+#MemberPatient #memberpatient02 .control-label {
+	width:auto;
+	
+	}
+#MemberPatient .journalnote-table{
+	margin:12px 0;
+}
+#MemberPatient .relatedparties-table{
+	margin-bottom:12px;
+}
+#MemberPatient .modal-content .tab-content .relatedparties-table .table-responsive{
+	max-height:130px;
+}
+/** Personal Health style starts**/
+
+.personal-health .control-label {
+	 width:auto;
+}
+.margin-left-6 {
+	margin-left:6px !important;
+}
+.margin-top-5{
+	margin-top:5px;
+}
+.personal-health .contact-info .control-label {
+	width:60px;
+}
+.personal-health .contact-info .half-size-01 {
+	margin-right: 1%;
+    width: 24% !important;
+}
+.personal-health .contact-info .small-size-01 {
+	width: 18% !important;
+}
+.personal-health .prior-treatment-summary .half-size-01 {
+	width: 16% !important;
+}
+.personal-health .contact-info .gender {
+	margin-right: 1%;
+    width: 20% !important;
+}
+.personal-health .prior-treatment-summary .gender {
+	width:103px !important;
+	margin-right:0;
+	
+}
+.personal-health .prior-treatment-summary textarea {
+	width:100%;
+	height:127px;
+	margin-top:4px;
+	padding:5px;
+}
+.personal-health .prior-treatment-summary .control-label {
+	margin-left:1%;
+}
+#ElectedProvider .audit-info .control-label{
+	width:100%;
+}
+#ElectedProvidersEdit .modal-dialog {
+	width:545px;
+	min-height:112px;
+}
+.elected-provider .control-label {
+ width:auto !important;	
+}
+.elected-provider .input-full-width {
+	width:80% !important ;
+}
+.elected-provider .group-name {
+	width:100px !important;
+}
+.elected-provider .half-size-01{
+	width:124px !important;
+	margin-right:4px;
+}
+.elected-provider .pcp-role-check{
+	padding-left:8px;
+}
+/***** Print screen styles ********/
+#OutPutFormat-print .modal-dialog{
+ width:70%;
+ max-width:894px;
+}
+#OutPutFormat-print #rangeOfRecords label{
+ width:auto;
+}
+#AlternateTitle .control-label{
+ width:auto !important;
+}
+#AlternateTitle .form-control {
+ width:100%;
+}
+.audit-info.recordAuditinfotable  table {
+ width:100%;
+ 
+}
+.audit-info.recordAuditinfotable  table label {
+ width:auto;
+ }
+#OutPutFormat-print textarea{
+	width:100%;
+}
+ 
+/*Setup And Licensee Information Style Starts */
+
+#SetupLicensee .setup-licensee-wraper{
+	 padding:15px 15px 0 15px;
+}
+#SetupLicensee .setup-licensee-wraper .company-info {
+	border-right:solid #999 1px;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .current-employee-label {
+	width:59%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .company-name-label {
+	 width:20%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .web-page-label {
+	 width:13%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info table .control-label {
+	width:auto;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .tax-id {
+	width:42%;
+	}
+#SetupLicensee .setup-licensee-wraper .company-info .company-name-input {
+	width:79.7%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .tax-id-input {
+	width:58%;
+	}
+#SetupLicensee .setup-licensee-wraper .company-info .current-employee-input {
+		width:40%;
+	}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info {
+	width:97%;
+	border:solid #999 1px;
+	padding:4px 10px 6px 10px;
+	margin-bottom:8px;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info .city-input-label {
+	width:17%;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info .control-label {
+	 width:42%;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info .form-control{
+	 width:58%;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info .city-input {
+	width:19%;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info select.city-input {
+	margin:0 1%;
+	width:18%;
+}
+
+#SetupLicensee .setup-licensee-wraper .user-login .control-label {
+	width:auto;
+}
+#SetupLicensee .setup-licensee-wraper .user-login .selectpicker {
+	width:61%;
+}
+
+#SetupLicensee .setup-licensee-wraper  .default-value .control-label {
+	width:49%;
+}
+#SetupLicensee .setup-licensee-wraper  .default-value .selectpicker,
+#SetupLicensee .setup-licensee-wraper  .default-value .form-control {
+		width:37%;
+}
+#SetupLicensee .setup-licensee-wraper  .default-value input[type="button"] {
+	width:30px;
+	border:none;
+	 height:26px;
+	 margin-left:1%;
+	 border-radius:0;
+	 background:#999;
+	 color:#fff;
+}
+#SetupLicensee .setup-licensee-wraper .button-wrap {
+	margin-top:-34px;
+	clear:both;
+	overflow:hidden;
+	}
+/*Setup And Licensee Information Style Ends */
+
+/*Staff/Users & System Security Style Starts */
+
+#StaffSecurity .staff-security-wrapper {
+	padding:15px;
+	clear:both;
+	overflow:hidden;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-grid {
+	height:476px;
+	overflow-x: hidden;
+    overflow-y: scroll;
+	}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info {
+	
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .staff-security-user-dtls .control-label  {
+	width:22%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .staff-security-user-right .control-label  {
+	width:28%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .checkbox-ex input[type="checkbox"] {
+	margin-left: 7px ;	
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .checkbox-ex .checkbox-inline {
+	padding-left:0;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .system-admin {
+	padding-left:3%;	
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .system-admin-right {
+	padding-left:9%;	
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .date-range .form-control {
+	width:28%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .date-range .control-label {
+	width:25%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .os-login .control-label {
+	width:28%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .allowed-user-grid-wrap  {
+	height:100px;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .home-address {
+	border:solid 1px #999999;
+	margin:10px 0
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .home-address .control-label {
+	width:10%;
+	}
+/*Staff/Users & System Security Style Ends */
+
+/*Reference - Claim Based Queries Style starts */
+#claimBasedQueries .search-container .control-label{
+	width:40%;
+}
+#claimBasedQueries .search-container .form-control{
+	width:60%;
+}
+#claimBasedQueries .button-contr button{
+	width:48%;
+	float:left;
+	margin-left:2%;
+}
+#claimBasedQueries .grid-contr.query-main-table{
+	height:200px;
+	overflow-y:scroll;
+}
+#claimBasedQueries .grid-contr.query-main-table td:nth-child(2){
+	width:60%;
+}
+#claimBasedQueries .modal-dialog{
+	min-height:702px;
+}
+#claimBasedQueries .grid-contr .selectpicker{
+	width:100%;
+}
+#claimBasedQueries .first-col .control-label{
+	width:18%;
+}
+#claimBasedQueries .first-col .form-control{
+	width:82%;
+}
+#claimBasedQueries .last-col .control-label{
+	width:12%;
+}
+#claimBasedQueries .last-col textarea{
+	width:88%;
+}
+.deactivated{
+	opacity:.5;
+}
+#claimBasedQueries .btn-secondary{
+	width:120px;
+}
+#claimBasedQueries .audit-info{
+	margin:auto;
+	width:350px;
+	min-height:218px;
+}
+#claimBasedQueries .audit-info .control-label{
+	width:100%;
+	text-align:left;
+}
+#claimBasedQueries .fullexpressions div{
+	margin:12px 0;
+}
+#claimBasedQueries .tab-container .tab-content{
+	min-height:288px;
+}
+#claim-based-lookup .control-label{
+	width:65%;
+}
+#claim-based-lookup .selectpicker{
+	width:35%;
+}
+#claim-based-lookup .first-col .control-label{
+	width:auto;
+}
+#claim-based-lookup .first-col .selectpicker{
+	width:32%;
+	margin-right:1%;
+}
+#claim-based-lookup .results .control-label{
+	width:4%;
+}
+#claim-based-lookup .results .selectpicker{
+	width:96%;
+}
+/*Reference - Claim Based Queries Style Ends */
+
+/*Staff Role Profiles and Access Privileges Starts */
+
+#StaffRoleProfile .modal-dialog {
+    min-height:550px;
+}
+#StaffRoleProfile .staff-role-profile-wraper{
+	padding:15px;
+	clear:both;
+	overflow:hidden;	
+}
+#StaffRoleProfile .staff-role-profile-wraper .tab-display .control-label {
+	width:15%;	
+}
+#StaffRoleProfile .staff-role-profile-wraper .tab-display textarea {
+	 width:84%;
+	 padding:8px;
+}
+#StaffRoleProfile .staff-role-profile-wraper .tab-display .audit-info table tr td .control-label{
+	width:85%;
+}
+#StaffRoleProfile .staff-role-profile-wraper .tab-display .audit-info .checkbox-inline.disabled {
+	color:#a4a4a4;
+}
+
+#StaffRoleProfile .staff-role-profile-wraper .tab-display .form-control {
+	width:84%;
+}
+
+#StaffRoleProfile .staff-role-profile-wraper .user-role-grid .table-responsive {
+	 height:370px;
+	 overflow-y: scroll;
+     overflow-x: hidden;
+}
+#StaffRoleProfile .user-role-grid .button-wrap .btn-secondary{
+	width:100px;
+	float:right;
+	overflow:hidden;
+}
+/*Staff Role Profiles and Access Privileges Ends */
+
+/*Ethic Categories style Starts*/
+#ethnicCategories .modal-dialog, .ethnic-categories .modal-dialog{
+	height:458px;
+}
+#ethnicCategories .button-contr button, .ethnic-categories .button-contr button, #DiagnosisCodeSets .button-contr button, #ServiceCodesCPTs .button-contr button, #RefModifiers .button-contr button, #RefServiceSets .button-contr button{
+	float:left;
+    margin-left:2%;
+    width:48%;
+}
+#ethnicCategories .search-container .first-col .control-label, .ethnic-categories .search-container .first-col .control-label, #DiagnosisCodeSets .search-container .first-col .control-label, #RefModifiers .search-container .first-col .control-label, #RefServiceSets .search-container .first-col .control-label{
+	width:auto;
+}
+#ethnicCategories .search-container .first-col .form-control, .ethnic-categories .search-container .first-col .form-control, #DiagnosisCodeSets .search-container .first-col .form-control, #RefModifiers .search-container .first-col .form-control{
+	width:81%;
+}
+#ethnicCategories .search-container .control-label, .ethnic-categories .search-container .control-label, #DiagnosisCodeSets .search-container .control-label, #RefModifiers .search-container .control-label{
+	width:47%;
+}
+#ethnicCategories .search-container .form-control, .ethnic-categories .search-container .form-control, #DiagnosisCodeSets .search-container .form-control, #RefModifiers .search-container .form-control{
+	width:53%;
+}
+#ethnicCategories .ethnic-right-content, .ethnic-categories .ethnic-right-content, #IcdDsmDiagnosisCodes .diagnosis-right-content, #DiagnosisCodeSets .codesets-right-content, #ServiceCodesCPTs .service-right-content, #RefModifiers .modifiers-right-content, #RefServiceSets .servicesets-right-content{
+	background:#f6f4f4;
+	border:solid 1px #d1d1d1;
+	padding:20px 12px;
+}
+#ethnicCategories .general-info .control-label, .ethnic-categories .general-info .control-label{
+	width:24%;
+}
+#ethnicCategories .general-info .audit-info, .ethnic-categories .general-info .audit-info{
+	margin-top:60px;
+}
+#ethnicCategories .general-info .audit-info .control-label, .ethnic-categories .general-info .audit-info .control-label{
+	width:30%;
+}
+/*Ethic Categories style Ends */
+
+/*Job Categories style Starts */
+#JobStatusCategories .general-info .control-label {
+    width:30%;
+}
+/*Job Categories style Ends */
+/*Member Subscriber style Starts */
+#Member-SubscriberRelationships .search-container .control-label, #Member-SubscriberRelationships .search-container .form-control {
+    width:50%;
+}
+#Member-SubscriberRelationships .search-container .first-col .control-label{
+	width:auto;
+}
+#Member-SubscriberRelationships .search-container .first-col .form-control{
+	width:62%;
+}
+/*Member Subscriber style Ends */
+/*CoverageManualEntryReasons style Starts */
+#CoverageManualEntryReasons .bottom-header, #PayerTypes .bottom-header, #ContractTypes .bottom-header, #CaseTypeListing .bottom-header, #CaseStatusListing .bottom-header{
+    margin-bottom:20px;
+}
+/*CoverageManualEntryReasons style Ends */
+/*CaseTypeListing style Starts */
+#CaseTypeListing .modal-dialog, #CaseStatusListing .modal-dialog, #CasePriorityListing .modal-dialog{
+    min-height:665px;
+}
+#CaseTypeListing .general-info .control-label, #CaseStatusListing .general-info .control-label {
+    width:30%;
+}
+/*CaseTypeListing style Ends */
+/*ICD & DSM Diagnosis Codes style Starts */
+#IcdDsmDiagnosisCodes .modal-dialog{
+	min-height:726px;
+}
+#IcdDsmDiagnosisCodes .general-info .control-label{
+	width:50%;
+}
+#IcdDsmDiagnosisCodes .general-info .form-control{
+	width:50%;
+}
+#IcdDsmDiagnosisCodes .diag-descri .control-label{
+	width:25%;
+}
+#IcdDsmDiagnosisCodes .diag-descri textarea{
+	width:75%;
+}
+#IcdDsmDiagnosisCodes .eff-periode .control-label{
+	width:25%;
+}
+#IcdDsmDiagnosisCodes .eff-periode .small-size-01{
+	width:37%;
+}
+#IcdDsmDiagnosisCodes .health-context-table{
+	margin:12px 0;
+}
+#IcdDsmDiagnosisCodes .health-context-table h2{
+	color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#IcdDsmDiagnosisCodes .health-context-table th:first-child{
+	width:16%;
+}
+#IcdDsmDiagnosisCodes .health-context-table .selectpicker{
+	width:92%;
+}
+#IcdDsmDiagnosisCodes .health-context-table .small-size-01{
+	width:64%;
+	margin:0 2%;
+}
+#IcdDsmDiagnosisCodes .health-context-table span{
+	margin-top:4px;
+	display:block;
+	float:left;
+}
+#IcdDsmDiagnosisCodes .system-admin .checkbox-inline{
+	padding-left:0px;
+}
+#IcdDsmDiagnosisCodes .system-admin .checkbox-inline input{
+	margin-left:12px;
+}
+#IcdDsmDiagnosisCodes .system-admin .disabled{
+	opacity:.6;
+}
+#IcdDsmDiagnosisCodes .audit-info table .control-label{
+	width:100%;
+}
+/*ICD & DSM Diagnosis Codes style Ends */
+
+/*Diagnosis Code Sets style Starts */
+#DiagnosisCodeSets .modal-dialog{
+	min-height:498px;
+}
+#DiagnosisCodeSets .codesets-right-content .full-width .form-control{
+	width:100%;
+}
+#DiagnosisCodeSets .audit-info table, #DiagnosisCodeSets .audit-info .control-label, #RefServiceSets .audit-info .control-label{
+	width:100%;
+}
+#DiagnosisCodeSets .first-col .control-label{
+	width:auto;
+}
+#DiagnosisCodeSets .first-col span{
+	display:block;
+	float:left;
+	margin:6px 0 0 2px;
+}
+/*Diagnosis Code Sets style Ends */
+
+/*Service Codes (CPTs) style Starts */
+#ServiceCodesCPTs .modal-dialog{
+	min-height:428px;
+}
+#ServiceCodesCPTs .search-container .first-col{
+	margin-right:0px;
+}
+#ServiceCodesCPTs .search-container .control-label{
+	width:55%;
+}
+#ServiceCodesCPTs .search-container .form-control{
+	width:45%;
+}
+#ServiceCodesCPTs .search-container .first-col .control-label{
+	width:38%;
+}
+#ServiceCodesCPTs .search-container .first-col .form-control{
+	width:62%;
+}
+#ServiceCodesCPTs h2{
+	color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#ServiceCodesCPTs .general-info .control-label{
+	width:41%;
+}
+#ServiceCodesCPTs .general-info .form-control{
+	width:59%;
+}
+#ServiceCodesCPTs .small-size-01{
+	width:30% !important;
+	margin-right:0 !important;
+}
+#ServiceCodesCPTs .eff-periode .hyphen{
+	width:auto;
+	text-align:center;
+	padding:0px 1px;
+}
+#ServiceCodesCPTs .other-spec .control-label{
+	width:50%;
+}
+#ServiceCodesCPTs .other-spec .form-control, #ServiceCodesCPTs .other-spec .selectpicker{
+	width:50%;
+} 
+#ServiceCodesCPTs #ServiceCodeGeneral .checkbox-inline{
+	padding-left:8px;
+}
+#ServiceCodesCPTs #ServiceCodeGeneral .checkbox-inline input{
+	margin-left:6px;
+}
+#ServiceCodesCPTs .audit-info table .control-label{
+	width:100%;
+}
+#ServiceCodesCPTs #ServiceCodeGeneral .other-spec input[type="checkbox"]{
+	margin-top:7px;
+}
+/*Service Codes (CPTs) style Ends */
+
+/*Ref Modifiers style Starts */
+#RefModifiers .modal-dialog{
+	min-height:430px;
+}
+#RefModifiers .modifiers-right-content .control-label{
+	width:25%;
+}
+#RefModifiers .modifiers-right-content .form-control{
+	width:75%;
+}
+#RefModifiers .modifiers-right-content .first-col .control-label{
+	width:auto;
+}
+#RefModifiers .eff-period .control-label{
+	width:auto;
+}
+#RefModifiers .eff-period .small-size-01{
+	width:20%;
+	margin:0;
+}
+.eff-period .hyphen{
+	text-align:center;
+	padding:0px 1px;
+}
+#RefModifiers .audit-info table .control-label{
+	width:100%;
+}
+/*Ref Modifiers style Ends */
+
+/*Ref Service Sets style Starts */
+#RefServiceSets .modal-dialog{
+	min-height:560px;
+}
+#RefServiceSets .search-container .first-col .form-control{
+	width:70%;
+}
+#RefServiceSets .search-container .control-label{
+	width:26%;
+}
+#RefServiceSets .search-container .form-control{
+	width:74%;
+}
+#RefServiceSets .general-info .control-label{
+	width:25%;
+}
+#RefServiceSets .general-info .form-control{
+	width:75%;
+}
+#RefServiceSets .audit-info table .control-label{
+	width:100%;
+}
+/*Ref Service Sets style Ends */
+
+/*About this Product Starts*/
+
+#AboutThisProduct .modal-dialog {
+	min-height:500px;
+}
+
+#AboutThisProduct .about-this-product-wrapper {
+	padding:15px;
+}
+#AboutThisProduct .about-this-product-wrapper h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#AboutThisProduct .about-this-product-wrapper h2.licensor-head{
+	margin-left:10%;
+}
+#AboutThisProduct .about-this-product-wrapper .product-information .control-label,
+#AboutThisProduct .about-this-product-wrapper .licensor .control-label {
+	width:40%;
+}
+#AboutThisProduct .about-this-product-wrapper .product-information .form-control,
+#AboutThisProduct .about-this-product-wrapper .licensor .form-control {
+	width:59%;
+}
+
+#AboutThisProduct .about-this-product-wrapper .licensee .control-label {
+	width:28%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .control-label {
+	width:58%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .form-control {
+	width:42%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text {
+	 clear:both
+	}
+#AboutThisProduct .about-this-product-wrapper .modules-text textarea.form-control {
+	width:89%;
+	height:200px;
+	overflow:auto;
+	color:#000;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text .control-label {
+	width:9.8%;
+}
+#AboutThisProduct .about-this-product-wrapper .button-wrap .btn-secondary {
+	width:100px;
+	float:right;
+	overflow:hidden;	
+}
+/*About this Product Endss*/
+
+/*Disposition Codes Starts*/
+
+#DispositionCodes .modal-dialog {
+	min-height:657px;
+}
+
+#DispositionCodes .disposition-codes-wrapper {
+	padding:15px;
+}
+#DispositionCodes .disposition-codes-wrapper h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#DispositionCodes .disposition-codes-wrapper .search-container .control-label {
+	width:55%;
+	
+}
+#DispositionCodes .disposition-codes-wrapper .search-container .form-control {
+	width: 45%;
+}
+#DispositionCodes .disposition-codes-wrapper .search-container .button-contr button {
+	float: left;
+    margin-left: 2%;
+    width: 48%;
+}
+#DispositionCodes .disposition-codes-wrapper .grid-contr.query-main-table {
+	height:180px;
+	overflow-y:scroll;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .code .control-label {
+	 width:24%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message .control-label {
+	 width:24.5%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message textarea {
+	width:74%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .control-label {
+	width:22%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .disabled {
+	color:#999;
+	margin-left:24.8%;
+	display:inline;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .selectpicker,
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .form-control {
+	width: 66%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .record-info {
+	 margin-top: 5px;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #AuditInfo table tr td .control-label  {
+	width:94%;
+	
+	}
+/*Disposition Codes Ends*/
+
+/*Relative Value Units Starts*/
+#RelativeValueUnits .modal-dialog{
+	min-height:428px;
+}
+#RelativeValueUnits .search-container .button-contr button{
+	float:left;
+    margin-left:2%;
+    width:48%;
+}
+#RelativeValueUnits .rvu-geo-multi-wrapper h2{
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#RelativeValueUnits .rvu-contr-1 .control-label, #RelativeValueUnits .rvu-contr-1 .form-control{
+	width:50%;
+}
+#RelativeValueUnits .search-container .first-col .control-label{
+	width:auto;
+}
+#RelativeValueUnits .modifiers-right-content .first-col .control-label{
+	width:36%;
+}
+#RelativeValueUnits .modifiers-right-content .first-col .form-control{
+	width:64%;
+}
+#RelativeValueUnits .audit-info table .control-label{
+	width:100%;
+}
+/*Relative Value Units Ends*/
+
+/*RVU Geographic Multiplier Starts*/
+#RvuGeoMulti .modal-dialog {
+	min-height:481px;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper {
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col {
+	 margin-right: 0;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .control-label {
+	width:33%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .form-control {
+	width:63%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .control-label {
+	 width: 48%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .form-control {
+	width: 51%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .button-contr button {
+	float: left;
+    margin-left: 2%;
+    width: 48%;	
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .modifiers-right-content {
+	background: #f6f4f4 none repeat scroll 0 0;
+    border: 1px solid #d1d1d1;
+    padding: 20px 12px;
+	}
+#RvuGeoMulti .rvu-geo-multi-wrapper .audit-info table .control-label {
+    width: 100%;
+}	
+
+#RvuGeoMulti .rvu-geo-multi-wrapper .rvu-geo-grid-wrapper {
+	height:290px;
+	overflow-x:scroll;
+	
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .button-wrap .btn-secondary {
+	float: right;
+    overflow: hidden;
+    width: 100px;
+	margin-left:4px;
+}
+/*RVU Geographic Multiplier Ends*/
+
+/*Member Accumulator Edit Codes Starts*/
+#MemberAccumulatorEdit .modal-dialog {
+	min-height:592px;
+}
+/*Member Accumulator Edit Codes Ends*/
+
+/*Referral / Certification Member Starts*/
+#RefCertMember .modal-dialog {
+	min-height:859px;
+}
+#RefCertMember .bottom-header, #ClaimUnderMember .bottom-header{
+	margin-bottom:12px;
+}
+#RefCertMember .tab-container .tab-content{
+	min-height:550px;
+}
+#RefCertMember .general-info .control-label{
+	width:22%;
+}
+#RefCertMember .general-info .form-control, #RefCertMember .general-info .selectpicker{
+	width:78%;
+}
+#RefCertMember .general-info .two-col .control-label{
+	width:38%;
+}
+#RefCertMember .general-info .two-col .form-control, #RefCertMember .general-info .two-col .selectpicker{
+	width:62%;
+}
+#RefCertMember .general-info .info-field-left{
+	width:72%;
+}
+#RefCertMember .general-info .info-but-right{
+	border:1px solid #c6c5c5;
+	padding:2px 12px;
+	border-radius:0px;
+}
+#RefCertMember .general-info .checkbox-ex{
+	width:100%;
+	margin-top:6px;
+}
+#RefCertMember .general-info .checkbox-inline{	
+	float:right;
+}
+#RefCertMember .general-info .checkbox-ex input{
+	margin:2px 0px 0px 3px;
+	position:static;
+	float:right;
+}
+#RefCertMember .general-info .small-size-02{
+	width:24% !important;
+}
+#RefCertMember .general-info .small-size-03{
+	width:33% !important;
+}
+#RefCertMember .custom-code-cntr .checkbox-ex{
+	width:auto;
+}
+#RefCertMember .custom-code-cntr .checkbox-inline{
+	padding-left:4px;
+	margin-right:3px;
+}
+#RefCertMember .custom-code-cntr .check-box-input input{
+	width:100%;
+}
+#RefCertMember .eff-period .hyphen{
+	width:auto;
+}
+#RefCertMember .eff-period .small-size-01{
+	margin:0px;
+	width:25% !important;
+}
+#RefCertMember .eff-period .time{
+	margin-left:6px;
+}
+#RefCertMember .eff-period .selectpicker{
+	width:25%;
+}
+#RefCertMember h2.provider, #RefCertExaminer h2.provider{
+	margin-top:20px;
+}
+#RefCertMember h2.diagnoses, #RefCertExaminer h2.diagnoses{
+	margin-top:16px
+}
+/*Referral / Certifications under this member Pricing and notes starts*/
+#refCertiPriceNotes .user-definend-fields h2, #refCertiExPriceNotes .user-definend-fields h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#refCertiPriceNotes .user-definend-fields .medical-dir .control-label, #refCertiExPriceNotes .user-definend-fields .medical-dir .control-label {
+	width:85%;
+}
+#refCertiPriceNotes .user-definend-fields textarea, #refCertiExPriceNotes .user-definend-fields textarea {
+	width:100%;
+	padding:5px;
+	height:200px;
+	overflow:scroll;
+}
+/*Referral / Certifications under this member Pricing and notes ends*/
+
+
+/*Referral / Certifications under this member Case History tab starts */
+
+#refCertiCaseHistory h2, #refCertiExCaseHistory h2, #ClaimUnderMember h2, #ClaimsExaminerForm h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+.selected-record-btn {
+	background:#7daeeb;
+	border: medium none;
+    border-radius: 0;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 4px 0;
+    padding: 4px 8px;
+	overflow: hidden;
+    width: auto;
+	margin-right:5px;
+}
+/*Referral / Certifications under this member Case History tab ends */
+
+
+
+/*Referral / Certifications under this member Case Notifications tab starts */
+#refCertiNotify .refCertiNotify-tab {
+	
+}
+#refCertiNotify .refCertiNotify-tab .small-size-01 {
+	margin: 0;
+    width: 32% !important;
+}
+#refCertiNotify .refCertiNotify-tab .eff-period .hyphen {
+    width:2%;
+}
+#refCertiNotify .refCertiNotify-tab .control-label {
+	width: 32%;
+}
+#refCertiNotify .refCertiNotify-tab .audit-info .control-label {
+	width:95%;
+}
+#refCertiNotify .refCertiNotify-tab .audit-info .disabled {
+	color:#999;
+}
+/*Referral / Certifications under this member Case Notifications tab ends */
+
+/*Provider Name & Tax ID Lookup/ Popup Starts*/
+
+#ProviderNameTaxId .modal-dialog {
+    width: 650px;
+	min-height:215px;
+}
+#ProviderNameTaxId .modal-dialog .inner-head {
+	margin-bottom: 20px;
+}
+#ProviderNameTaxId .provider-name-tax-id-lookup .providers-label {
+	width:118px;
+	float:left;
+	margin-right:7px;
+}
+#ProviderNameTaxId .provider-name-tax-id-lookup .no-margin {
+	margin:0;
+}
+#ProviderNameTaxId .provider-name-tax-id-lookup .providers-label .control-label,
+#ProviderNameTaxId .provider-name-tax-id-lookup .providers-label .form-control
+ {
+	width:100%;
+	text-align:left;
+}
+#ProviderNameTaxId .provider-name-tax-id-lookup .btn {
+	width:100px;
+}
+/*Provider Name & Tax ID Lookup/ Popup Ends*/
+
+
+/*Referred/Certified Service/ Popup Start*/
+
+#RefeCertiService .modal-dialog {
+    width: 650px;
+	min-height:411px;
+}
+#RefeCertiService .modal-dialog .inner-head {
+	margin-bottom: 20px;
+}
+#RefeCertiService .refe-certi-service h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#RefeCertiService .refe-certi-service .control-label {
+	width:18%;
+	
+}
+#RefeCertiService .refe-certi-service .form-control {
+	width:70%;
+}
+#RefeCertiService .refe-certi-service .selectpicker {
+	width:39%;
+}
+#RefeCertiService .refe-certi-service .half-size-01 {
+	width:240px !important;
+}
+#RefeCertiService .refe-certi-service .checkbox-inline {
+	margin-left:7px;
+}
+#RefeCertiService .refe-certi-service .modifiers {
+	width:10%;
+}
+#RefeCertiService .refe-certi-service .modifiers-input {
+	width:8.8%;
+}
+#RefeCertiService .refe-certi-service .requsted-input {
+	width:10%;
+}
+#RefeCertiService .refe-certi-service .comma {
+	width:auto;
+	padding:2px;
+}
+#RefeCertiService .refe-certi-service .value {
+	color:#2665d2;
+	text-decoration:underline;
+	width:14%;
+	}
+#RefeCertiService .refe-certi-service .frequency-select {
+	width:25%;
+}
+#RefeCertiService .refe-certi-service .reference-info {
+	border-top:solid 1px #999999;
+	border-bottom:solid 1px #999999;
+	padding:8px 0;
+	margin-bottom:8px;
+}
+#RefeCertiService .refe-certi-service .reference-info  .control-label {
+	width:44%;
+}
+#RefeCertiService .refe-certi-service .reference-info  .form-control {
+	width:55%;	
+}
+#RefeCertiService .refe-certi-service .reference-info .btn {
+	width:153px;
+}
+/*Referred/Certified Service/ Popup Ends*/
+
+/*Referral / Certification Member Ends*/
+
+/*Referral / Certification Examiner Starts*/
+#RefCertExaminer .modal-dialog {
+	min-height:871px;
+}
+#RefCertExaminer .tab-container{
+	margin-top:0px;
+}
+#RefCertExaminer .search-container .first-col .control-label{
+	width:44%;
+}
+#RefCertExaminer .search-container .first-col .form-control{
+	width:56%;
+}
+#RefCertExaminer .general-info .first-col .control-label{
+	width:auto;
+}
+#RefCertExaminer .general-info .record-info{
+	margin-top:5px;
+}
+#RefCertExaminer .general-info .two-col .control-label{
+	width:54%;
+}
+#RefCertExaminer .general-info .two-col .label-right{
+	width:52%;
+}
+#RefCertExaminer .general-info .two-col .form-control, #RefCertExaminer .general-info .two-col .selectpicker{
+	width:48%;
+}
+#RefCertExaminer .tab-container .tab-pane .general-info .small-size-01{
+	width:22% !important;
+}
+#RefCertExaminer .general-info .form-control, #RefCertExaminer .general-info .selectpicker{
+	width:64%;
+}
+#RefCertExaminer .general-info .info-field-left{
+	width:55%;
+}
+#RefCertExaminer .general-info .info-but-right{
+	border:1px solid #c6c5c5;
+	padding:2px 12px;
+	border-radius:0px;
+}
+#RefCertExaminer .eff-period .hyphen{
+	width:auto;
+}
+#RefCertExaminer .eff-period .small-size-01{
+	margin:0px;
+	width:25% !important;
+}
+#RefCertExaminer .eff-period .time{
+	margin-left:6px;
+}
+#RefCertExaminer .eff-period .selectpicker{
+	width:29%;
+}
+#RefCertExaminer .general-info .checkbox-ex{
+	width:100%;
+	margin-top:6px;
+}
+#RefCertExaminer .general-info .checkbox-inline{	
+	float:right;
+}
+#RefCertExaminer .general-info .checkbox-ex input{
+	margin:2px 0px 0px 3px;
+	position:static;
+	float:right;
+}
+#RefCertExaminer .tab-container .tab-pane .general-info .small-size-01{
+	width:18% !important;
+}
+#RefCertExaminer .tab-container .tab-pane .custom-code-cntr .small-size-01{
+	width:31% !important;
+}
+#RefCertExaminer .custom-code-cntr .payers-benefit .control-label{
+	width:32%;
+}
+#RefCertExaminer .tab-container .tab-pane .general-info .small-size-02{
+	width:18% !important;
+}
+#RefCertExaminer .general-info .small-size-03{
+	width:33% !important;
+}
+#RefCertExaminer .custom-code-cntr .checkbox-ex{
+	width:auto;
+}
+#RefCertExaminer .custom-code-cntr .checkbox-inline{
+	padding-left:4px;
+	margin-right:3px;
+}
+#RefCertExaminer .custom-code-cntr .check-box-input{
+	width:61%;
+}
+#RefCertExaminer .custom-code-cntr .check-box-input input{
+	width:100%;
+}
+#RefCertExaminer .custom-code-cntr .utilization .selectpicker{
+	width:26% !important;
+}
+#RefCertExaminer #refCertiPriceNotes .record-info{
+	margin-top:5px;
+	text-align:left;
+}
+#RefCertExaminer #refCertiNotify .eff-period .small-size-01{
+	width:24% !important;
+}
+#RefCertExaminer #refCertiNotify .refCertiNotify-tab .control-label{
+	width:50%;
+}
+#RefCertExaminer #refCertiNotify .refCertiNotify-tab .eff-period .hyphen{
+	width:2%;
+}
+#RefCertExaminer table.examiner-form{
+	min-width:540px;
+}
+#RefCertExaminer .refCertiExNotify-tab .small-size-01 {
+	margin: 0;
+    width: 32% !important;
+}
+#RefCertExaminer .refCertiExNotify-tab .eff-period .hyphen {
+    width:2%;
+}
+#RefCertExaminer .refCertiExNotify-tab .control-label {
+	width: 32%;
+}
+#RefCertExaminer .refCertiExNotify-tab .audit-info .control-label {
+	width:95%;
+}
+#RefCertExaminer .refCertiExNotify-tab .audit-info .disabled {
+	color:#999;
+}
+/*Referral / Certification Examiner Ends*/
+
+/*Claim Under this Member Starts*/
+#ClaimUnderMember .modal-dialog {
+	min-height:859px;
+}
+#ClaimUnderMember .general-info .control-label{
+	width:22%;
+}
+#ClaimUnderMember .general-info .form-control, #ClaimUnderMember .general-info .selectpicker{
+	width:78%;
+}
+#ClaimUnderMember .general-info .two-col .form-control, #ClaimUnderMember .general-info .two-col .selectpicker{
+	width:62%;
+}
+#ClaimUnderMember h2.provider{
+	margin-top:48px;
+	clear:both;
+}
+#ClaimUnderMember .general-info .two-col .control-label{
+	width:38%;
+}
+#ClaimUnderMember .general-info .info-field-left{
+	width:72%;
+}
+#ClaimUnderMember .general-info .info-but-right{
+	border:1px solid #c6c5c5;
+	padding:2px 12px;
+	border-radius:0px;
+}
+#ClaimUnderMember .general-info .checkbox-ex{
+	width:100%;
+	margin-top:6px;
+}
+#ClaimUnderMember .general-info .checkbox-inline{	
+	float:right;
+}
+#ClaimUnderMember .general-info .checkbox-ex input{
+	margin:2px 0px 0px 3px;
+	position:static;
+	float:right;
+}
+#ClaimUnderMember .general-info .small-size-02{
+	width:24% !important;
+}
+#ClaimUnderMember .general-info .small-size-03{
+	width:33% !important;
+}
+#ClaimUnderMember .custom-code-cntr .checkbox-ex{
+	width:auto;
+}
+#ClaimUnderMember .custom-code-cntr .checkbox-inline{
+	padding-left:4px;
+	margin-right:3px;
+}
+#ClaimUnderMember .eff-period .hyphen{
+	width:3%;
+}
+#ClaimUnderMember .general-info .first-col .control-label{
+	width:3%;
+}
+#ClaimUnderMember .general-info .first-col .small-size-01{
+	width:30% !important;
+}
+#ClaimUnderMember .general-info .first-col .small-size-02{
+	width:29% !important
+}
+#ClaimUnderMember .custom-code-cntr .small-size-01{
+	margin-right:0%;
+}
+#ClaimUnderMember .custom-code-cntr .check-box-input .form-control{
+	width:70%;
+}
+#ClaimUnderMember .custom-code-cntr .payers-benefit .control-label{
+	margin-top:9px;
+}
+#ClaimUnderMember .custom-code-cntr .payers-benefit .checkbox-inline{
+	float:left;
+	margin-left:12%;
+	margin-top:7px;
+}
+#ClaimUnderMember .custom-code-cntr .first-col .control-label{
+	width:16%;
+}
+#ClaimUnderMember .custom-code-cntr .first-col .small-size-01{
+	width:30% !important;
+}
+#ClaimUnderMember .custom-code-cntr .first-col .selectpicker{
+	width:17.33%;
+}
+#ClaimUnderMember .custom-code-cntr .first-col .form-control{
+	width:84%;
+}
+#ClaimUnderMember .custom-code-cntr span.liability-cntr{
+	margin-left:9px;
+	margin-top:3px;
+	display:block;
+	float:left;
+}
+#ClaimUnderMember .long-button{
+	width:auto;
+}
+#ClaimUnderMember #ClaimGeneral .record-info{
+	margin-top:5px;
+}
+#ClaimPayStatusNotes .control-label, #PricingPmtNotes .control-label{
+	width:30%;
+}
+#ClaimPayStatusNotes .form-control, #PricingPmtNotes .form-control{
+	width:70%;
+}
+#ClaimPayStatusNotes .record-info, #PricingPmtNotes .record-info{
+	text-align:left;
+	margin-top:5px;
+	width:60%;
+}
+#ClaimPayStatusNotes .hyphen, #PricingPmtNotes .hyphen{
+	width:auto;
+	padding:0 4px 0 3px;
+}
+#ClaimPayStatusNotes .small-size-01, #PricingPmtNotes .small-size-01{
+	width:24% !important;
+	margin-right:0px;
+}
+#ClaimUnderMember .custom-code-cntr span.record-info{
+	margin:6px 5px;
+}
+#ClaimPayStatusNotes .user-definend-fields textarea, #ClaimPayStatusNotes .user-definend-fields textarea, #ClaimNotify textarea, #PricingPmtNotes textarea, #ClaimNotifyAudit textarea{
+	height: 200px;
+    overflow: scroll;
+    padding: 5px;
+    width: 100%;
+}
+#ClaimPayStatusNotes .last-status-cntr label{
+	font-weight:normal;
+}
+#ClaimPayStatusNotes .last-status-cntr .record-info{
+	text-align:right;
+}
+/*Claim Under this Member View Details Style Starts*/
+
+#ClaimUnderMemberDetails .modal-dialog {
+	 width:80%;
+}
+#ClaimUnderMemberDetails .modal-dialog .inner-head {
+	 margin-bottom: 20px;
+}
+#ClaimUnderMemberDetails .billed-service {
+	background:#C30;
+}
+#ClaimUnderMemberDetails .billed-service h2 {
+	clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges {
+	
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .control-label {
+	width:30%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .hyphen {
+	width:2%;
+	padding:0;
+	text-align:center;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .comma {
+	width:2%;
+	padding:0;
+	text-align:center;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-01 {
+	 width:34%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .selectpicker {
+	width:16%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-03 {
+	width:22%;
+}
+.blue-text {
+	color:#2665d2 !important;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table {
+	width:70%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table tr td, 
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table tr th{
+	margin-bottom:4px;
+	padding:0 3px;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table tr th {
+	font-size:11px;
+	width: 14%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table .small-size-01
+ {
+	 width:100%;
+	 margin-bottom:4px;
+
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table .selectpicker {
+	width:100%;
+	margin-bottom:4px; 
+}
+.hide-text {
+  visibility: hidden;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-label {
+	margin-top:18px;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-form-group {
+	 margin-top:-20px;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .btn-secondary {
+	width:34%;
+	margin:0 0 0 7px;
+	background:#545454;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .pt-liability .small-size-01 {
+	width:19.8%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .control-label {
+	width:30%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .control-label.ffs-equi {
+	width:18%;
+	text-align:center;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .form-control {
+	width:34%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges  .checkbox-ex input[type="checkbox"] {
+	margin-top: 3px;
+    margin-left: 10px;
+}
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .checkbox-inline {
+	padding-left: 0;
+    padding-right: 27px;
+	float:left;
+	width:35%;
+	text-align: right;
+}
+
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .manual-dispo .form-control {
+	 width:61%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .form-control {
+	width:68%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .right-text-input::-webkit-input-placeholder { color:#2665d2; } 
+#ClaimUnderMemberDetails .billed-service .service-and-charges .right-text-input::-moz-placeholder { color:#2665d2; } 
+#ClaimUnderMemberDetails .billed-service .service-and-charges .right-text-input:-ms-input-placeholder { color:#2665d2; } 
+#ClaimUnderMemberDetails .billed-service .service-and-charges .right-text-inputinput:-moz-placeholder { color:#2665d2; }
+	
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .right-text-input::-webkit-input-placeholder { color:#2665d2; }
+#ClaimUnderMemberDetails .billed-service .dispo-payment .right-text-input::-moz-placeholder { color:#2665d2; } /* firefox 19+ */
+#ClaimUnderMemberDetails .billed-service .dispo-payment .right-text-input:-ms-input-placeholder { color:#2665d2; } /* ie */
+#ClaimUnderMemberDetails .billed-service .dispo-payment .right-text-inputinput:-moz-placeholder { color:#2665d2; }
+
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .other-denials .form-control  {
+	width:29%;
+}
+
+.text-center {
+	text-align:center !important;
+}
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .control-label {
+	width:30%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .control-label.exempt {
+	width:10%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .btn-secondary {
+	width:28.5%;
+	float:left;
+}
+#ClaimUnderMemberDetails .billed-service .re-belling-recepients {
+	
+}
+/*#ClaimUnderMemberDetails .billed-service .re-belling-recepients .recep-date .control-label {
+	width:15%;
+}*/
+#ClaimUnderMemberDetails .billed-service .re-belling-recepients .recep-date .control-label.chk {
+	width:10%;
+}
+#ClaimUnderMemberDetails .billed-service .re-belling-recepients .recep-date .form-control {
+	width:29%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .pre-tax-padding {
+		padding-left:14px !important;
+		 width: 27%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		padding-right: 5px;
+		text-align: center;
+		color: #2665d2 !important;
+		}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .exempt {
+		margin-left:0;
+		width: 27%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+	
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .value {
+		width: 10%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+		margin-left:23px;
+}
+
+#ClaimUnderMemberDetails  textarea {
+	height: 70px;
+    padding: 5px;
+    width: 100%;
+}
+#ClaimUnderMemberDetails  .attachment-report p {
+	margin-top:5px;
+}
+#ClaimUnderMemberDetails  .attachment-report .form-control {
+	width:100%;
+}
+/*Claim Under this Member View Details Style Ends*/
+#ClaimCaseDiagnoses .first-col .control-label{
+	width:8%;	
+}
+#ClaimCaseDiagnoses .first-col .hyphen{
+	width:auto;
+}
+#ClaimCaseDiagnoses .first-col .small-size-01{
+	width:50% !important;
+}
+#ClaimCaseDiagnoses .first-col .selectpicker{
+	width:31%;
+}
+#ClaimCaseDiagnoses .onset-fields{
+	clear:both;
+}
+#ClaimCaseDiagnoses .onset-fields .form-control{
+	width:32%;
+}
+#ClaimCaseDiagnoses .onset-fields .small-size-01{
+	width:26% !important;
+}
+#ClaimCaseDiagnoses .intake-sec{
+	clear:both;
+}
+.right-full-cntr1 .control-label, .right-full-cntr1 .form-control{
+	text-align:center;
+	width:100%;
+}
+.right-full-cntr1 .record-info{
+	text-align:right;
+}
+#ClaimCertiHx .notes label{
+	font-weight:400;
+	color:#2665d2;
+}
+#ClaimCertiHx .reciepts-posting-grid .record-info{
+	margin-top:0px;
+}
+#ClaimCertiHx .button-recalculate .selected-record-btn{
+	float:left;
+}
+#ClaimUnderMember .refCertiNotify-tab .control-label{
+	width:26%;
+}
+#ClaimUnderMember .refCertiNotify-tab .first-col .control-label{
+	width:18%;
+}
+#ClaimUnderMember .refCertiNotify-tab .audit-info .control-label{
+	width:100%;
+}
+#ClaimUnderMember .refCertiNotify-tab .appeal-mailed-cntr{
+	margin-top:20px;
+}
+/*Benefit  Util Popup Style Starts*/
+
+#BenefitUtil .modal-dialog {
+  width:80%;
+}
+#BenefitUtil .modal-dialog .inner-head {
+  margin-bottom: 20px;
+}
+
+#BenefitUtil .benefit-util h2 {
+ clear: both;
+    color: #2665d2;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 3px 0;
+}
+
+#BenefitUtil .benefit-util .grid-contr {
+ margin-bottom:8px;
+ }
+#BenefitUtil .benefit-util table tr th,
+#BenefitUtil .benefit-util table tr td
+ {
+  white-space: nowrap;
+}
+
+
+/*Benefit  Util Popup Style Ends*/
+/*Claim Under this Member Ends*/
+
+/*Claims Examiner Form Starts*/
+#ClaimsExaminerForm .modal-dialog {
+	min-height:859px;
+}
+#ClaimsExaminerForm .search-container .control-label{
+	width:62%;
+}
+#ClaimsExaminerForm .search-container .form-control{
+	width:38%;
+}
+#ClaimsExaminerForm .search-container .first-col .control-label, #ClaimsExaminerForm .search-container .last-row .control-label{
+	width:62%;
+}
+#ClaimsExaminerForm .search-container .first-col .form-control, #ClaimsExaminerForm .search-container .last-row .form-control{
+	width:38%;
+}
+#ClaimsExaminerForm .nav li a{
+	padding:8px;
+}
+#ClaimsExaminerForm .first-col .control-label{
+	width:auto;
+}
+#ClaimsExaminerForm .first-col .record-info{
+	margin-top:5px;
+}
+#ClaimsExaminerForm .general-info .control-label{
+	width:28%;
+}
+#ClaimsExaminerForm .general-info .form-control, #ClaimsExaminerForm .general-info .selectpicker{
+	width:72%;
+}
+#ClaimsExaminerForm .general-info .two-col .form-control, #ClaimsExaminerForm .general-info .two-col .selectpicker{
+	width:52%;
+}
+#ClaimsExaminerForm h2.provider{
+	margin-top:32px;
+	clear:both;
+}
+#ClaimsExaminerForm .general-info .record-info{
+	margin-top:5px;
+}
+#ClaimsExaminerForm .general-info .custom-code-cntr .record-info{
+	margin-top:6px;
+}
+#ClaimsExaminerForm .general-info .two-col .control-label{
+	width:48%;
+}
+#ClaimsExaminerForm .general-info .info-field-left{
+	width:63.3%;
+}
+#ClaimsExaminerForm .general-info .info-but-right{
+	border:1px solid #c6c5c5;
+	padding:2px 12px;
+	border-radius:0px;
+}
+#ClaimsExaminerForm .general-info .checkbox-ex{
+	width:100%;
+	margin-top:6px;
+}
+#ClaimsExaminerForm .general-info .checkbox-inline{	
+	float:right;
+}
+#ClaimsExaminerForm .general-info .checkbox-ex input{
+	margin:2px 0px 0px 3px;
+	position:static;
+	float:right;
+}
+#ClaimsExaminerForm .general-info .small-size-02{
+	width:24% !important;
+}
+#ClaimsExaminerForm .general-info .small-size-03{
+	width:33% !important;
+}
+#ClaimsExaminerForm .custom-code-cntr .checkbox-ex{
+	width:auto;
+}
+#ClaimsExaminerForm .custom-code-cntr .checkbox-inline{
+	padding-left:4px;
+	margin-right:3px;
+}
+#ClaimsExaminerForm .eff-period .hyphen{
+	width:3%;
+}
+#ClaimsExaminerForm .general-info .first-col .control-label{
+	width:5%;
+}
+#ClaimsExaminerForm .general-info .first-col .small-size-01{
+	width:27% !important;
+}
+#ClaimsExaminerForm .general-info .first-col .small-size-02{
+	width:29% !important
+}
+#ClaimsExaminerForm .custom-code-cntr .small-size-01{
+	margin-right:0%;
+	width:34.5% !important;
+}
+#ClaimsExaminerForm .custom-code-cntr .check-box-input .form-control{
+	width:99.9%;
+}
+#ClaimsExaminerForm .payers-benefit .btn-secondary{
+	margin-right:0px;
+}
+#ClaimsExaminerForm .custom-code-cntr{
+	margin-top:15px;
+}
+#ClaimsExaminerForm .custom-code-cntr .payers-benefit .control-label{
+	margin-top:9px;
+	width:20%;
+}
+#ClaimsExaminerForm .custom-code-cntr .payers-benefit .checkbox-inline{
+	float:left;
+	margin-left:12%;
+	margin-top:7px;
+}
+#ClaimsExaminerForm .custom-code-cntr .first-col .control-label{
+	width:16%;
+}
+#ClaimsExaminerForm .custom-code-cntr .reported-on .control-label{
+	width:24%;
+}
+#ClaimsExaminerForm .custom-code-cntr .first-col .small-size-01{
+	width:25% !important;
+}
+#ClaimsExaminerForm .custom-code-cntr .first-col .selectpicker{
+	width:17.33%;
+}
+#ClaimsExaminerForm .custom-code-cntr .first-col .form-control{
+	width:84%;
+}
+#ClaimsExaminerForm .custom-code-cntr span.liability-cntr{
+	margin-left:9px;
+	margin-top:3px;
+	display:block;
+	float:left;
+}
+#ClaimsExaminerForm .right-full-cntr1 .control-label{
+	width:18%;
+}
+#ClaimsExaminerForm .right-full-cntr1 .form-control{
+	width:32%;
+	margin-bottom:12px;
+}
+
+#ClaimsExaminerForm .btn-bottom02{
+	width:auto;
+}
+#PricingPmtNotes .control-label{
+	width:16%;
+}
+#PricingPmtNotes .form-control{
+	width:84%;
+}
+#PricingPmtNotes .medical-dir .control-label{
+	width:40%;
+}
+#PricingPmtNotes .medical-dir .form-control{
+	width:60%;
+}
+#PricingPmtNotes .record-info{
+	text-align:left;
+	margin-top:5px;
+	width:60%;
+}
+#PricingPmtNotes .hyphen{
+	width:auto;
+	padding:0 4px 0 3px;
+}
+#PricingPmtNotes .small-size-01{
+	width:24% !important;
+	margin-right:0px;
+}
+#PricingPmtNotes .last-status-cntr .record-info{
+	text-align:left;
+	width:100%;
+	margin-top:0px;
+}
+#ClaimsExaminerForm #ClaimCaseDiagnoses .first-col .control-label{
+	width:10%;
+}
+#ClaimsExaminerForm #ClaimCaseDiagnoses .first-col .small-size-01{
+	width:46% !important;
+}
+#ClaimsExaminerForm #ClaimCaseDiagnoses .onset-fields .first-col .control-label{
+	width:auto;
+}
+#ClaimsExaminerForm #ClaimCaseDiagnoses .onset-fields .form-control{
+	width:17%;
+}
+#ClaimsExaminerForm #ClaimCaseDiagnoses .onset-fields .small-size-01{
+	width:21% !important;
+}
+#ClaimsExaminerForm #ClaimCertiHx .control-label{
+	width:48%;
+}
+#ClaimsExaminerForm #ClaimCertiHx .form-control{
+	width:52%;
+}
+#ClaimsExaminerForm #ClaimCertiHx .allocation .control-label{
+	width:34%;
+}
+#ClaimsExaminerForm #ClaimCertiHx .allocation .btn-bottom01{
+	width:34%;
+}
+#ClaimsExaminerForm #ClaimNotify .control-label{
+	width:40%;
+}
+#ClaimsExaminerForm #ClaimNotify .form-control{
+	width:60%;
+}
+/*Case Hx Tab Style Starts*/
+#CaseHx .first-col .control-label{
+	width:8%;	
+}
+#CaseHx .first-col .hyphen{
+	width:auto;
+}#CaseHx .first-col .small-size-01{
+	width:50% !important;
+}
+#CaseHx .first-col .selectpicker{
+	width:31%;
+}#CaseHx .onset-fields{
+	clear:both;
+}
+#CaseHx .onset-fields .form-control{
+	width:32%;
+}#CaseHx .onset-fields .small-size-01{
+	width:26% !important;
+}
+#CaseHx .intake-sec{
+	clear:both;
+}
+#ClaimsExaminerForm #CaseHx .first-col .control-label{
+	width:10%;
+}
+#ClaimsExaminerForm #CaseHx .first-col .small-size-01{
+	width:46% !important;
+}#ClaimsExaminerForm #CaseHx .onset-fields .first-col .control-label{
+	width:auto;
+}
+#ClaimsExaminerForm #CaseHx .onset-fields .form-control{
+	width:17%;
+}#ClaimsExaminerForm #CaseHx .onset-fields .small-size-01{
+	width:21% !important;
+}
+/*Case Hx Tab Style Ends*/
+/*Ref/Cert Hx,Reciepts Tab Style Starts*/
+#RefCertHx .notes label{
+	font-weight:400;
+}
+#RefCertHx .notes .record-info{
+	margin-top:0px;
+}
+#RefCertHx .reciepts-posting-grid .record-info{
+	margin-top:0px;
+}
+#RefCertHx .button-recalculate .selected-record-btn{
+	float:left;
+}
+#ClaimsExaminerForm #RefCertHx .control-label{
+	width:48%;
+}
+#ClaimsExaminerForm #RefCertHx .form-control{
+	width:52%;
+}
+#ClaimsExaminerForm #RefCertHx .allocation .control-label{
+	width:34%;
+}
+#ClaimsExaminerForm #RefCertHx .allocation .btn-bottom01{
+	width:34%;
+}
+#RefCertHx .btn-bottom01, #RefCertHx .btn-bottom02{
+	width:85px;
+}
+/*Ref/Cert Hx,Reciepts Tab Style Ends*/
+/*Notifications and Audit Info Tab Style Starts*/
+#ClaimsExaminerForm #ClaimNotifyAudit .control-label{
+	width:40%;
+}
+#ClaimsExaminerForm #ClaimNotifyAudit .form-control{
+	width:60%;
+}
+#ClaimsExaminerForm #ClaimNotifyAudit .appeal-mailed{
+	margin-top:14px;
+}
+#ClaimsExaminerForm #ClaimNotifyAudit .audit-info .control-label{
+	width:100%;
+}
+/*Notifications and Audit Info Tab Style Ends*/
+/*Claims Examiner Form Ends*/
+
+/*Payers Benefit Plan General Tab Styles Starts*/
+
+#PayersBenefitPlan .modal-dialog{
+	min-height:795px;
+}
+.payers-benefit-plan .tab-container {
+	margin-top: 0px;
+}
+.payers-benefit-plan .tab-container .tab-pane .general-info .first-col .form-control {
+	width:62%;
+}
+.payers-benefit-plan .btn-primary, .payers-benefit-plan .btn-secondary {
+	width: 48%;
+}
+.payers-benefit-plan .search-container .first-col .control-label{
+	width:50%;
+}
+.payers-benefit-plan .search-container .first-col .form-control{
+	width:42%;
+}
+.payers-benefit-plan .search-container .name-begins .control-label {
+	width:40%;
+}
+.payers-benefit-plan .search-container .name-begins .form-control {
+	width:56%;
+}
+.payers-benefit-plan .search-container .control-label{
+	width:60%;
+}
+.payers-benefit-plan .search-container .form-control {
+	width:40%;
+}
+.payers-benefit-plan .tab-container .tab-pane .general-info .first-col .control-label {
+	width:22%;
+}
+.payers-benefit-plan .product .control-label {
+	width:13%;
+}
+.payers-benefit-plan .product .form-control {
+	width:33.2%!important;
+}
+
+.payers-benefit-plan .product .control-label {
+	width:13%;
+}
+.payers-benefit-plan .address-cntr .form-control {
+	width:70%;
+}
+.payers-benefit-plan .address-cntr .selectpicker {
+	width:70%;
+}
+.payers-benefit-plan .address-cntr .control-label {
+	width:30%;
+}
+.payers-benefit-plan .general-admin {
+	margin-top:-57px !important;
+}
+.payers-benefit-plan .product .hyphen
+ {
+	text-align: center;
+    float: left;
+    margin:0 4px;
+	margin-top:4px;
+}
+.payers-benefit-plan .eff-period .hyphen {
+	text-align: center;
+    float: left;
+    margin-right:4px;
+	margin-top:4px;
+}
+.payers-benefit-plan .tab-container .tab-pane .small-size-01 {
+	width:25.5%!important;
+}
+.payers-benefit-plan .eff-period .selectpicker {
+	width:12.8% !important;
+	margin-right:5px;
+}
+.payers-benefit-plan .depent-coverage-rule .control-label {
+	width:74%;
+}
+.payers-benefit-plan .depent-coverage-rule .form-control {
+	width:25%!important;
+}
+.payers-benefit-plan .user-field-contr .checkbox-inline {
+	padding-left:0;
+}
+.payers-benefit-plan .user-field-contr .checkbox-ex input[type="checkbox"] {
+    margin-left: 8px;
+}
+.payers-benefit-plan .custom-code-cntr .checkbox-inline {
+	padding-left:15px;
+}
+.payers-benefit-plan .custom-code-cntr .checkbox-ex input[type="checkbox"] {
+	margin-top: 2px;
+    margin-left: 8px;
+}
+.payers-benefit-plan .copys-info {
+	 padding-left:15px !important;
+	}
+	
+.payers-benefit-plan .copys-info .control-label {
+	width:48%
+}
+.payers-benefit-plan .copys-info .form-control {
+	width:51%
+}
+.payers-benefit-plan .copys-info .user-fields .form-control {
+	width:23.5%
+}
+.payers-benefit-plan .tab-container .tab-pane .copys-info .small-size-01 {
+	 width:45% !important;
+}
+.payers-benefit-plan .ref-manually .checkbox-inline {
+	padding-left:18%;
+}
+.payers-benefit-plan .ref-manually input[type="checkbox"] {
+	margin-left: 6px;
+}
+.payers-benefit-plan .general-ur-req .checkbox-inline {
+	padding-left:0
+}
+.payers-benefit-plan .general-ur-req .checkbox-ex input[type="checkbox"] {
+	    margin-left: 8px;
+}
+.payers-benefit-plan .user-field-contr {
+	padding-left:39px;
+}
+.payers-benefit-plan .general-ur-req .checkbox-inline {
+	padding-left:18%;
+	} 
+.small-label {
+	float: left;
+    margin:0 4px;
+    margin-top: 4px;
+    text-align: center;
+	font-weight:normal;
+}
+/*Payers Benefit Plan General Tab Styles Ends*/
+
+
+/*Payers Benefit Plan Service Rule Tab Styles Starts*/
+
+.payers-benefit-plan  .tab-content .service-rules  .table-responsive {
+	max-height:555px;
+	
+}
+.payers-benefit-plan  .tab-content .service-rules table td .form-group  {
+	margin:0;
+}
+/*Payers Benefit Plan Service Rule Tab Styles Ends*/
+
+
+/*Payers Benefit Plan Claim Pricing Tab Styles Starts*/
+
+.payers-benefit-plan  .tab-content .claim-pricing .table-responsive {
+	max-height:555px;
+}
+
+/*Payers Benefit Plan Claim Pricing Tab Styles Ends*/
+
+/*Payers Benefit Plan Premium Rates Tab Styles Starts*/
+
+.payers-benefit-plan  .tab-content .premium-rates .table-responsive {
+	max-height:555px;
+}
+.payers-benefit-plan  .tab-content .premium-rates table td .form-group {
+	margin:0;
+}
+.payers-benefit-plan  .tab-content .premium-rates table td .selectpicker {
+	width:100%;
+}
+/*Payers Benefit Plan Premium Rates Tab Styles Ends*/
+
+
+/*Payers Benefit Plan Funds Tab Styles Starts*/
+
+.payers-benefit-plan  .tab-content .funds .table-responsive {
+	max-height:505px;
+}
+.payers-benefit-plan  .tab-content .funds .top-level .control-label {
+	width:48%;
+}
+.payers-benefit-plan  .tab-content .funds .top-level .selectpicker {
+	width:52%;
+}
+.payers-benefit-plan  .tab-content .funds h2 {
+	font-size: 12px;
+    color: #2665d2;
+    font-weight: 400;
+    margin: 6px 0px;
+    clear: both;
+}
+/*Payers Benefit Plan Funds Tab Styles Ends*/
+
+/*Payers Benefit Plan Notes Tab Styles Starts*/
+
+.payers-benefit-plan  .tab-content .notes textarea {
+	width:100%;
+	height:432px;
+}
+/*Payers Benefit Plan Notes Tab Styles Ends*/
+
+/*Copy Tiers Schedules Style Starts*/
+
+#CopyTiersSchedules .modal-dialog{
+	min-height:720px;
+}
+.copy-tiers-schedules {
+	margin-top: 0px;
+}
+#CopyTiersSchedules .search-container .first-col .control-label{
+	width:auto;
+}
+.copy-tiers-schedules  .search-container  .button-contr .btn-primary,
+.copy-tiers-schedules  .search-container  .button-contr .btn-secondary {
+	width: 48%;
+}
+.copy-tiers-schedules .right-section h2 {
+	font-size: 12px;
+    color: #2665d2;
+    font-weight: 400;
+    margin:6px 0 6px 0px;
+    clear: both;
+}
+.copy-tiers-schedules .right-section textarea {
+	width:100%;
+	height:80px;
+	padding:0 5px;
+}
+.copy-tiers-schedules .audit-info .control-label, .third-party-carriers .audit-info .control-label{
+	width:100%;
+}
+/*Copy Tiers Schedules Style Ends*/
+
+/*Payers Employer Groups Coverage Styles Starts*/
+#EmployerGroupsCoverage .modal-dialog{
+	min-height:638px;
+}
+.employer-group-coverage .checkbox-ex .checkbox-inline{
+	padding-left:0px;
+}
+.employer-group-coverage .checkbox-ex input[type="checkbox"]{
+	margin-left:10px;
+}
+.employer-group-coverage .address-info{
+	margin-top:-30px;
+}
+.employer-group-coverage .user-field-contr2 .control-label{
+	width:36%;
+}
+.employer-group-coverage .user-field-contr2 .selectpicker, .employer-group-coverage .user-field-contr2 .form-control{
+	width:64%;
+}
+.employer-group-coverage .audit-info table .control-label{
+	width:100%;
+}
+/*Payers Employer Groups Coverage Styles Ends*/
+
+/*Legal Representative Attorneys Styles Starts*/
+#LegalRepresentativeAttorneys .modal-dialog, #ThirdPartyCarriers .modal-dialog{
+	min-height:532px;
+}
+#LegalRepresentativeAttorneys .search-container .first-col .control-label{
+	width:35%;
+}
+#LegalRepresentativeAttorneys .search-container .first-col .form-control{
+	width:60%;
+}
+#LegalRepresentativeAttorneys .search-container .control-label, #LegalRepresentativeAttorneys .search-container .form-control{
+	width:50%;
+}
+#LegalRepresentativeAttorneys .address-info, #ThirdPartyCarriers .address-info{
+	margin-top:0px;
+}
+/*Legal Representative Attorneys Styles Ends*/
+
+/*Third Party Carriers Styles Starts*/
+.third-party-carriers .search-container .button-contr .btn-primary,
+.third-party-carriers .search-container .button-contr .btn-secondary {
+	 width: 48%;
+}
+.third-party-carriers .search-container .first-col .control-label {
+    width: 35%;
+}
+.third-party-carriers .search-container .first-col .form-control {
+    width: 64%;
+}
+.third-party-carriers .right-section {
+	background: #f6f4f4 none repeat scroll 0 0;
+    border: 1px solid #d1d1d1;
+    padding: 20px 15px;
+}
+.third-party-carriers .right-section .half-size-01 {
+    margin-right: 1%;
+    width: 24% !important;
+}
+.third-party-carriers .right-section .address-info .gender {
+	width: 18% !important;
+}
+.third-party-carriers .right-section .address-info .small-size-02 {
+	 margin-left: 1%;
+    width: 18% !important;
+}
+.third-party-carriers .right-section .small-size-03 {
+	width: 24% !important;
+}
+.third-party-carriers .right-section .small-size-04 {
+	width:25% !important
+}
+.third-party-carriers .right-section .birth-date {
+	width: 13% !important;
+}
+.third-party-carriers .right-section .audit-info {
+	width:100%;
+}
+/*Third Party Carriers Styles Ends*/
+
+/*Lines Of Business Styles Starts*/
+
+
+#LinesOfBusiness .modal-dialog {
+	min-height:546px;
+}
+.lines-of-business .grid-contr {
+	margin-top:8px;
+	
+}
+.lines-of-business .tab-container .tab-pane .general-info .first-col .control-label,
+.lines-of-business .tab-container .control-label {
+	width:32%;
+}
+.lines-of-business .tab-container .tab-pane .general-info .first-col .form-control,
+.lines-of-business .tab-container .address-info .form-control
+ {
+	width:60%;
+}
+.lines-of-business .tab-container .address-info .gender,
+.lines-of-business .half-size-01 {
+	width:19%;
+}
+.lines-of-business .half-size-01 {
+	    width: 16% !important;
+}
+.lines-of-business .tab-container .tab-pane .small-size-03 {
+	width:26% !important;
+}
+.lines-of-business .tab-container .tab-pane .address-info .small-size-02 {
+	width:20% !important;
+}
+.lines-of-business .tab-container .tab-pane .birth-date {
+	width:7% !important;
+}
+.lines-of-business .small-size-04 {
+	width:26% !important;
+}
+.lines-of-business .tab-container .address-info .gender {
+    font-size: 12px;
+    font-weight: 400;
+    width: 19%;
+    float: left;
+    height: 26px;
+    border: solid 1px #c6c5c5;
+    border-radius: 0px;
+    padding: 3px 3px;
+}
+/*Lines Of Business Styles Ends*/
+
+
+/*Funds Styles Starts*/
+
+#Fund .modal-dialog {
+ 	min-height:591px;
+}
+.funds .search-container .first-col .control-label {
+	width:34%;
+}
+.funds .search-container .first-col .form-control {
+	width:65%;
+}
+.funds .search-container .button-contr .btn-primary,
+.funds .search-container .button-contr .btn-secondary {
+	width:48%; 
+ }
+.funds .tab-container .tab-pane .general-info .first-col .control-label,
+.funds .tab-container .control-label {
+    width: 32%;
+}
+.funds .tab-container .tab-pane .general-info .first-col .form-control,
+.funds .tab-container .address-info .form-control {
+	width: 60%;
+}
+.funds .tab-container .tab-pane .gender  {
+    border: 1px solid #c6c5c5;
+    border-radius: 0;
+    float: left;
+    font-size: 12px;
+    font-weight: 400;
+    height: 26px;
+    padding: 3px;
+    width: 60% !important;
+}
+.funds textarea {
+	width:100%;
+	padding:0 7px;
+}
+/*Funds Styles Ends*/
+
+/*Practitioners Facilities Styles Starts*/
+#PractitionersFacilities .employer-group-coverage .btn-primary, #PractitionersFacilities .employer-group-coverage .btn-secondary{
+	width:100%;
+}
+#PractitionersFacilities .employer-group-coverage .search-container .first-col .control-label{
+	width:44%;
+}
+#PractitionersFacilities .employer-group-coverage .search-container .first-col .form-control{
+	width:56%;
+}
+#PractitionersFacilities .employer-group-coverage .search-container .last-row .control-label{
+	width:58%;
+}
+#PractitionersFacilities .employer-group-coverage .search-container .last-row .form-control{
+	width:42%;
+}
+/*Practitioners Facilities Styles Ends*/
+
+/*Notify Codes Ends*/
+.notify .modal-dialog{
+	width:360px;
+	min-height:150px !important;
+}
+.notify .inner-head{
+	margin-bottom:20px;
+}
+.notify .full-width-form{
+	text-align:center;
+	padding:12px 0;
+}
+.notify .btn-contr{
+	text-align:center;
+}
+.notify .btn{
+	float:none;
+	display:inline;
+}
+/*Notify Codes Ends*/
+/*Grid New Styles Starts*/
+.ui-grid-top-panel {
+    background:#c0c0c0 !important;
+    color:#000000 !important;
+}
+.ui-grid-header-cell {
+    border-color:#e6e5e5 !important;
+}
+.ui-grid-row-selected.ui-grid-row > [ui-grid-row] > .ui-grid-cell {
+    background-color:#cce1fb !important;
+}
+:nth-child(2n).ui-grid-row .ui-grid-cell {
+    background-color:#e6e6e6 !important;
+    border-top:1px solid #ddd !important;
+    border-bottom:1px solid #ddd !important;
+}
+[disabled].form-control, [readonly].form-control, fieldset[disabled] .form-control {
+    background-color:#f4f4f4 !important;
+}
+/*Grid New Styles Ends*/
+@media only screen and (min-width: 1230px){	
+	
+	#MemberGuardians .guardian-info .form-control, #MemberGuardians .guardian-info .selectpicker{
+		width:54%;
+	}
+	#MemberGuardians .medical-con-cntr .guardian-info .form-control{
+		width:53%;
+	}
+	#MemberGuardians .gender01 .selectpicker{
+		width:46%;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	.search-container .first-col{
+		margin-right:0px;
+	}
+	.search-container .first-col .control-label{
+		width:40%;
+	}
+	.search-container .first-col .form-control{
+		width:60%;
+	}
+	.inner-window .search-container .last-row{
+		padding-left:0px;
+	}
+	.last-row .form-group{
+		clear:none;
+	}
+	.inner-window .search-container .last-row .form-group{
+		width:50%;
+		float:left;
+		margin-top:0px;
+	}
+	.inner-window .search-container .last-row .control-label{
+		width:40%;
+	}
+	.inner-window .search-container .last-row .custom-code-brgins .control-label{
+		width:40%;
+	}
+	.inner-window .search-container .last-row .custom-code-brgins .form-control{
+		width:60%;
+	}
+	.inner-window .search-container .last-row .form-control{
+		width:60%;
+	}	
+	.table-responsive{
+    	width: 100%;
+		white-space:nowrap;
+		background:#fff;		
+		-webkit-overflow-scrolling: touch;
+	}
+	.tab-container .control-label{
+		width:30%;
+	}
+	.tab-container .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .general-info .first-col .control-label{
+		width:30%;
+	}
+	.tab-container .tab-pane .general-info .first-col .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .general-info .first-col .half-size-01, .tab-container .tab-pane .general-info .first-col .small-size-01{
+		width:24% !important;
+	}
+	.tab-container .tab-pane .general-info .first-col .small-size-02{
+		width:20% !important;
+	}
+	.tab-container .tab-pane .gender{
+		width: 24% !important;
+	}
+	.tab-container .tab-pane .birth-date{
+		width: 25% !important;
+	}
+	.tab-container .tab-pane .small-size-03{
+		width: 20% !important;
+	}
+	.tab-container .address-info .gender{
+		width: 20% !important;
+	}
+	.tab-content .custom-code-cntr{
+		padding-left:0px;
+	}
+	.tab-container .other-demo .control-label{
+		width:30%;
+	}
+	.tab-container .other-demo .selectpicker{
+		width:70%
+	}
+	.tab-container .address-info .col-sm-10, .tab-container .other-demo .col-sm-10{
+		padding-left:0px;
+	}
+	.tab-container .address-info .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .address-info .small-size-02{
+		width:19% !important;
+	}
+	
+	.tab-content .social-security{
+		padding-left:0px;
+	}
+	.tab-container .other-demo .control-label{
+		width:58%;
+	}	
+	.tab-container .other-demo .selectpicker{
+		width:42%;
+		padding:3px 2px;
+	}
+	.tab-container .address-info .col-md-2 .control-label, .tab-container .address-info .col-md-3 .control-label{
+		width:25%;
+	}
+	.tab-container .address-info .col-md-2 .form-control, .tab-container .address-info .col-md-3 .form-control{
+		width:75%;
+	}
+	.caret{
+		border-top-width:5px;
+		border-left-width:5px;
+		border-bottom-width:5px;
+	}
+	#PayerList .control-label, #PayerList .form-control, #PayerList .search-container .first-col .control-label, #PayerList .search-container .first-col .form-control{
+		width:50%;
+	}
+	#PayerList .tab-container .tab-pane .general-info .first-col .control-label, #PayerList .custom-code-cntr .control-label, #PayerList .tab-container .address-info .control-label, #PayerList .tab-container .address-cntr .control-label{
+		width:25%;
+	}
+	#PayerList .tab-container .tab-pane .general-info .first-col .form-control, #PayerList .custom-code-cntr .form-control, #PayerList .custom-code-cntr .selectpicker, #PayerList .tab-container .address-info .form-control, #PayerList .tab-container .address-cntr .form-control{
+		width:73%;
+	}
+	#PayerList .tab-container .tab-pane .half-size-01{
+		width: 26% !important;
+	}
+	#PayerList .tab-container .tab-pane .birth-date{
+		width:21% !important;
+	}
+	#PayerList .tab-container .tab-pane .small-size-03{
+	width:26% !important;
+	}
+	
+	#PayerList .tab-container .tab-pane .small-size-04{
+		width:25% !important;
+	}
+	#PayerList .tab-container .user-field-contr{
+		padding-left:0px;
+	}
+	.checkbox-ex input[type="checkbox"]{
+		margin-top:1px;
+		margin-left:-19px;
+	}
+	#PayerList .checkbox-ex label.checkbox-inline{
+		height:auto;
+		overflow:hidden;
+	}
+	#PayerList .table-responsive{
+		min-height:606px;
+	}
+	.full-width-form .control-label{
+		width:38%;
+	}
+	.full-width-form .form-control, .full-width-form .selectpicker{
+		width:62%;
+	}
+	#MemberGuardians .first-col .half-size-01{
+		width: 24% !important;
+	}
+	
+	#MemberGuardians .guardian-info .control-label{
+		width: 53%;
+	}
+	#MemberGuardians .guardian-info .form-control, #MemberGuardians .guardian-info .selectpicker{
+		width: 41%;
+	}
+	#MemberGuardians .guardian-info .first-col .control-label{
+		width: 44%;
+	}
+	#MemberGuardians .guardian-info .first-col .form-control{
+		width: 53%;
+	}
+	#MemberGuardians .medical-con-addr1 .half-size-01{
+		width: 31% !important;
+	}
+	#MemberGuardians .medical-con-cntr .guardian-info .control-label{
+		width: 57%;
+	}
+	#MemberGuardians .medical-con-cntr .first-col .control-label{
+		width: auto;
+	}
+	#MemberGuardians .gender01 .selectpicker{
+		width:35%;
+	}
+	#MemberPatient .tab-container .nav li a{
+		padding: 10px 8px;
+	}
+	#MemberPatient .audit-info table{
+		width:290px;
+	}
+	.audit-info table{
+		width:500px;
+	}
+	.personal-health .prior-treatment-summary .control-label {
+		width: 18% !important;
+	}
+	.personal-health .prior-treatment-summary .half-size-01 {
+		width: 13% !important;
+	}
+	.special-note {
+		width:18% !important;
+	}
+	.personal-health .contact-info .small-size-01 {
+		width: 20% !important;
+	}
+	.personal-health .contact-info .gender {
+		 width: 20% !important;
+	}
+/*Setup & Licensee Information  Style Starts   */           	
+#SetupLicensee .setup-licensee-wraper .company-info .company-name-label {
+	width:24%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .company-name-input {
+	width:75.5%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .tax-id {
+	 width:51%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .tax-id-input {
+	width:49%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .current-employee-label {
+	width:73%;
+	
+}
+#SetupLicensee .setup-licensee-wraper .company-info .current-employee-input {
+	width:26%;
+}
+#SetupLicensee .setup-licensee-wraper .default-value .control-label {
+	width:30%;
+}
+#SetupLicensee .setup-licensee-wraper .default-value .selectpicker,
+ #SetupLicensee .setup-licensee-wraper .default-value .form-control {
+	width:50%;
+}
+#SetupLicensee .setup-licensee-wraper .company-info .web-page-label {
+	width:29%;
+	}
+#SetupLicensee .setup-licensee-wraper .user-login .control-label {
+	width:47%;
+}
+#SetupLicensee .setup-licensee-wraper .user-login .selectpicker {
+	width:53%;
+}
+
+#SetupLicensee .setup-licensee-wraper .last-edited .control-label {
+	width:auto;
+	}
+/*Setup & Licensee Information  Style Ends   */   
+
+/*Staff/Users & System Security  Starts  */ 
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .staff-security-user-dtls .control-label{
+	width:27%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .date-range .control-label,
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .date-range .form-control {
+	width:31%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .os-login .control-label {
+	width:27%;
+}
+/*Staff/Users & System Security  Ends  */
+#claimBasedQueries .button-contr button{
+	margin-top:5px;
+}
+#claimBasedQueries .search-container .control-label{
+	 width: 48%;
+}
+#claimBasedQueries .search-container .form-control{
+	 width: 52%;
+}
+#claimBasedQueries .audit-info{
+	width:500px;
+}
+#claimBasedQueries .last-col input[type="checkbox"], .audit-info .checkbox-inline input[type="checkbox"]{
+	margin-top:0px;
+}
+/*Staff Role Profiles and Access Privileges Starts*/
+#StaffRoleProfile .staff-role-profile-wraper .tab-display .audit-info table {
+	width:437px;
+}
+/*Staff Role Profiles and Access Privileges Ends*/
+/*Ethic Categories style starts */
+#ethnicCategories .search-container .first-col .form-control, .ethnic-categories .search-container .first-col .form-control{
+	width:75%;
+}
+#ethnicCategories .search-container .control-label, #ethnicCategories .search-container .form-control, .ethnic-categories .search-container .control-label, .ethnic-categories .search-container .form-control{
+	width:50%;
+}
+#ethnicCategories .general-info .control-label, .ethnic-categories .general-info .control-label{
+	width:34%;
+}
+#ethnicCategories .audit-info table, .ethnic-categories .audit-info table{
+	width:400px;
+}
+/*Ethic Categories style Ends */
+
+/*ICD & DSM Diagnosis Codes style Starts */
+#IcdDsmDiagnosisCodes .search-container .control-label, #IcdDsmDiagnosisCodes .search-container .form-control{
+	width:50%;
+}
+#IcdDsmDiagnosisCodes .general-info .control-label{
+	width:62%;
+}
+#IcdDsmDiagnosisCodes .general-info .form-control{
+	width:38%;
+}
+#IcdDsmDiagnosisCodes .diag-descri .control-label{
+	width:31%;
+}
+#IcdDsmDiagnosisCodes .diag-descri textarea{
+	width:69%;
+}
+#IcdDsmDiagnosisCodes .diagno-cat .control-label{
+	width:46%;
+}
+#IcdDsmDiagnosisCodes .diagno-cat .selectpicker{
+	width:54%;
+}
+#IcdDsmDiagnosisCodes .eff-periode .control-label{
+	width:31%;
+}
+#IcdDsmDiagnosisCodes .eff-periode .small-size-01{
+	width:34%;
+}
+#IcdDsmDiagnosisCodes .health-context-table .small-size-01{
+	width:60%;
+}
+#IcdDsmDiagnosisCodes .audit-info table{
+	width:300px;
+}
+/*ICD & DSM Diagnosis Codes style Ends */
+
+/*About this Product Starts*/
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .control-label {
+	width:61%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .form-control {
+	width:39%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text .control-label {
+	width:10%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text textarea.form-control {
+	width: 88.5%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text textarea.form-control {
+	height: 152px;
+}
+#AboutThisProduct .about-this-product-wrapper h2.licensor-head{
+	margin-left:0%;
+}
+/*About this Product Ends*/#IcdDsmDiagnosisCodes .audit-info table{
+	width:300px;
+}
+/*Diagnosis Code Sets starts*/
+#DiagnosisCodeSets .search-container .first-col .form-control{
+	width:72%;
+}
+#DiagnosisCodeSets .audit-info, #DiagnosisCodeSets .first-col{
+	padding:0 15px;
+}
+#DiagnosisCodeSets .audit-info .control-label{
+	width:100%;
+}
+/*Diagnosis Code Sets Ends*/
+/*Service Codes CPTs starts*/
+#ServiceCodesCPTs .search-container .first-col .control-label{
+	width:46%;
+}
+#ServiceCodesCPTs .search-container .first-col .form-control{
+	width:54%;
+}
+#ServiceCodesCPTs .search-container .control-label{
+	width:68%;
+}
+#ServiceCodesCPTs .search-container .form-control{
+	width:32%;
+}
+#ServiceCodesCPTs .general-info .control-label{
+	width:50%;
+}
+#ServiceCodesCPTs .general-info .form-control{
+	width:50%;
+}
+#ServiceCodesCPTs .other-spec .control-label{
+	width:30%;
+}#IcdDsmDiagnosisCodes .audit-info table{
+	width:300px;
+}
+#ServiceCodesCPTs .form-control, #ServiceCodesCPTs .selectpicker{
+	width:70%;
+}
+#ServiceCodesCPTs .other-spec .form-control, #ServiceCodesCPTs .other-spec .selectpicker{
+	width:70%;
+}
+#ServiceCodesCPTs .small-size-01{
+	34% !important
+	margin-right:0 !important;
+}
+#ServiceCodesCPTs .audit-info table{
+	width:300px;
+}
+/*Service Codes CPTs Ends*/
+/*Modifiers Starts*/
+#RefModifiers .search-container .first-col .form-control{
+	width:74%;
+}
+#RefModifiers .general-info .control-label{
+	width:48%;
+}
+#RefModifiers .general-info .form-control{
+	width:52%;
+}
+#RefModifiers .eff-period .control-label{
+	width:auto;
+}
+#RefModifiers .eff-period .small-size-01{
+	width:25%;
+}
+#RefModifiers .eff-period .hyphen{
+	width:auto;
+}
+#RefModifiers .audit-info table{
+	width:300px;
+}
+/*Modifiers Ends*/
+/*Disposition Codes Starts*/
+
+#DispositionCodes .disposition-codes-wrapper .search-container .control-label {
+	width: 65%;
+}
+#DispositionCodes .disposition-codes-wrapper .search-container .form-control {
+	 width: 35%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message .control-label {
+	width:30%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message textarea {
+	width:66%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .control-label {
+	width: 27%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .code .control-label {
+	width: 29.4%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .code .form-control {
+	  width: 64%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .disabled {
+	margin-left: 23%;
+}
+/*Disposition Codes Ends*/
+/*Ref Service Sets style Starts */
+#RefServiceSets .search-container .first-col .form-control{
+	width:64%;
+}
+#RefServiceSets .search-container .control-label{
+	width:30%;
+}
+#RefServiceSets .search-container .form-control{
+	width:70%;
+}
+#RefServiceSets .general-info .control-label{
+	width:48%;
+}
+#RefServiceSets .general-info .form-control{
+	width:52%;
+}
+/*Ref Service Sets style Ends */
+/*RVU Geographic Multiplier Starts*/
+#RvuGeoMulti .rvu-geo-multi-wrapper .audit-info table {
+	width:300px;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .control-label, #RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .form-control{
+	 width: 50%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .control-label, #RvuGeoMulti .rvu-geo-multi-wrapper .search-container .form-control{
+	 width: 50%;
+}
+#RvuGeoMulti .modifiers-right-content .control-label{
+	width:42%;
+}
+#RvuGeoMulti .modifiers-right-content .form-control{
+	width:58%;
+}
+#RvuGeoMulti .modifiers-right-content .rvu-componant-multi .control-label{
+	width:60%;
+}
+#RvuGeoMulti .modifiers-right-content .rvu-componant-multi .form-control{
+	width:40%;
+}
+/*RVU Geographic Multiplier Ends*/
+
+/*Referral / Certification Member Starts*/
+#RefCertMember .general-info .control-label{
+	width:27%;
+}
+#RefCertMember .general-info .form-control, #RefCertMember .general-info .selectpicker{
+	width:73%;
+}
+#RefCertMember .general-info .two-col .control-label{
+	width:46%;
+}
+#RefCertMember .general-info .two-col .form-control, #RefCertMember .general-info .two-col .selectpicker{
+	width:54%;
+}
+#RefCertMember .general-info .info-field-left{
+	width:65%;
+}
+#RefCertMember .general-info .small-size-03{
+	width:20%;
+}
+#RefCertMember .eff-period .hyphen{
+	width:auto;
+}
+#RefCertMember .general-info .small-size-01, #RefCertMember .general-info .small-size-02{
+	width:23% !important;
+	margin-right:0% !important;
+}
+#RefCertMember .custom-code-cntr{
+	padding-left:15px;
+}
+#RefCertMember .eff-period .selectpicker{
+	width:24%;
+}
+#RefCertMember .custom-code-cntr .check-box-input{
+		width:70%;
+	}
+/*Referral / Certifications under this member Case Notifications tab starts */
+
+#refCertiNotify .refCertiNotify-tab .control-label {
+	 width: 39%;
+}
+#refCertiNotify .refCertiNotify-tab .small-size-01 {
+	width:29% !important;
+}
+#refCertiNotify .refCertiNotify-tab .eff-period .hyphen {
+	width:1%;
+}
+#refCertiNotify .refCertiNotify-tab .audit-info table {
+	width: 425px;
+}
+/*Referral / Certifications under this member Case Notifications tab ends */
+	
+/*Referral / Certification Member Ends*/
+
+/*Referral / Certification Examiner Starts*/
+#RefCertExaminer .table-responsive{
+	max-height:250px;
+	overflow:scroll;
+}
+#RefCertExaminer .search-container .first-col .control-label{
+	width:58%;
+}
+#RefCertExaminer .search-container .first-col .form-control{
+	width:42%;
+}
+#RefCertExaminer .general-info .two-col .control-label{
+	width:51%;
+}
+#RefCertExaminer .general-info .two-col .label-right{
+	width:38%;
+}
+#RefCertExaminer .general-info .info-field-left{
+	width:57%;
+}
+#RefCertExaminer .custom-code-cntr .check-box-input{
+	width:64%;
+}
+#RefCertExaminer .custom-code-cntr .checkbox-ex{
+	width:30%;
+}
+/*Referral / Certification Examiner Ends*/
+/*Claim Under Member Starts*/
+#ClaimUnderMember .tab-content .custom-code-cntr{
+	padding-left:30px;
+}
+#ClaimUnderMember .general-info .info-field-left{
+	width:72%;
+}
+#ClaimUnderMember .tab-container .tab-pane .general-info .small-size-01{
+	width:30% !important;
+}
+#ClaimUnderMember .tab-container .tab-pane .custom-code-cntr .small-size-01{
+	width:37% !important;
+}
+#ClaimUnderMember .custom-code-cntr .check-box-input .form-control{
+	width:100%;
+}
+#ClaimUnderMember .general-info .reffered-on{
+	width:42% !important;
+}
+#ClaimUnderMember .general-info .reffered-on .control-label{
+	width:52%;
+}
+#ClaimUnderMember .general-info .reffered-on .form-control{
+	width:48%;
+}
+#ClaimUnderMember .custom-code-cntr .reported-on .control-label{
+	width:20%;
+}
+#ClaimUnderMember .custom-code-cntr .reported-on .form-control{
+	width:27% !important;
+}
+#ClaimUnderMember .custom-code-cntr span.liability-cntr{
+	float:right;
+}
+#ClaimPayStatusNotes .last-status-cntr .form-group{
+	float:left;
+	width:50%;
+	clear:none;
+	margin-top:20px;
+}
+.right-full-cntr1 {
+	margin-top:20px;
+}
+.right-full-cntr1 .control-label{
+	text-align:right;
+	width:15%;
+}
+.right-full-cntr1 .form-control{
+	text-align:right;
+	width:35%;
+}
+
+#ClaimCertiHx .btn-bottom01, #ClaimCertiHx .btn-bottom02{
+	width:85px;
+}
+#ClaimUnderMember .refCertiNotify-tab .control-label{
+	width:30%;
+}
+#ClaimUnderMember .refCertiNotify-tab .first-col .control-label{
+	width:22%;
+}
+/*Claim Under this Member View Details Style Starts*/
+
+#ClaimUnderMemberDetails .billed-service .service-and-charges .control-label {
+	width:33%
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-01 {
+		width:31%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-03 {
+		 width:19.4%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .comma {
+		width:4%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .selectpicker {
+		width:13.5%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table {
+		width:67%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .control-label {
+		width:33%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .form-control {
+		width:30%;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .checkbox-inline {
+		width:41%;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .control-label{
+		width:33%;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .control-label.blue-text{
+		width:27%;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .btn-secondary {
+		width:30.5%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .pt-liability .small-size-01 {
+		width: 16.8%;
+	}
+	#ClaimUnderMemberDetails .billed-service .service-and-charges .hyphen {
+		width:2% !important;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .manual-dispo .form-control {
+		width:49%;
+		}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .other-denials .form-control {
+		width:23%;
+		}
+	#ClaimUnderMemberDetails .billed-service .re-belling-recepients .recep-date .form-control {
+		width:25%;
+	}
+	#ClaimUnderMemberDetails .billed-service .dispo-payment .form-control {
+		width:61%;
+	}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .pre-tax-padding {
+		padding-left:23px !important;
+		 width: 27%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		padding-right: 5px;
+		text-align: center;
+		color: #2665d2 !important;
+		}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .exempt {
+		margin-left:-18px;
+		width: 14%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+	
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .value {
+		width: 10%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+		margin-left:31px;
+}
+		
+	
+	/*Claim Under this Member View Details Style Ends*/
+	/*Claim Under Member Ends*/
+	
+	/*Claims Examiner Form Style Starts*/
+	#ClaimsExaminerForm .search-container .control-label, #ClaimsExaminerForm .search-container .first-col .control-label, #ClaimsExaminerForm .search-container .last-row .control-label{
+		width:40%;
+	}
+	#ClaimsExaminerForm .search-container .form-control, #ClaimsExaminerForm .search-container .first-col .form-control, #ClaimsExaminerForm .search-container .last-row .form-control{
+		width:50%;
+	}
+	#ClaimsExaminerForm .search-container .col-md-12{
+		padding-left:0px;
+	}
+	#ClaimsExaminerForm .inner-window .search-container .last-row .form-group{
+		width:100%;
+	}
+	#ClaimsExaminerForm .grid-contr .table-responsive{
+		max-height:200px;
+	}
+	#ClaimsExaminerForm .tab-content .custom-code-cntr{
+		padding-left:20px;
+	}
+	/*Claims Examiner Form Style Ends*/
+	
+	/*Payers Benefit Plan General Tab Styles Starts*/
+	
+	.payers-benefit-plan .search-container .first-col .control-label {
+		width:61%;
+		}
+		
+	.payers-benefit-plan .search-container .first-col .form-control {
+		width:39%;
+	}
+	.payers-benefit-plan .search-container .name-begins .control-label {
+		width:58%;
+	}
+	.payers-benefit-plan .search-container .name-begins .form-control {
+		width:42%;
+	}
+	.payers-benefit-plan .search-container .form-control {
+		width:35%;
+	}
+	
+	.payers-benefit-plan .general-admin {
+		margin-top:0px !important;
+	}
+	.payers-benefit-plan .depent-coverage-rule .control-label {
+		 width:73%;
+	}
+	.payers-benefit-plan .user-field-contr .checkbox-inline {
+		padding-left: 25%;
+	}
+	.payers-benefit-plan .copys-info{
+		padding-left:0px !important;
+	}
+	
+	/*Payers Benefit Plan General Tab Styles Ends*/
+	
+	/*Relative Value Units style starts*/
+	#RelativeValueUnits .tab-container .control-label{
+		width:42%;
+	}
+	#RelativeValueUnits .tab-container .form-control{
+		width:58%;
+	}
+	#RelativeValueUnits .rvu-contr-0 .control-label{
+		width:55%;
+	}
+	#RelativeValueUnits .rvu-contr-0 .form-control{
+		width:45%;
+	}
+	#RelativeValueUnits .rvu-contr-1 .control-label{
+		width:75%;
+	}
+	#RelativeValueUnits .rvu-contr-1 .form-control{
+		width:25%;
+	}
+	#RelativeValueUnits .modifiers-right-content .first-col .control-label{
+		width:30%;
+	}
+	#RelativeValueUnits .modifiers-right-content .first-col .form-control{
+		width:70%;
+	}
+	#RelativeValueUnits .audit-info table{
+		width:100%;
+	}
+	/*Relative Value Units style starts*/
+	
+	/*Employer Groups Coverage style starts*/
+	.employer-group-coverage .search-container .control-label{
+		width:42%;
+	}	
+	.employer-group-coverage .search-container .form-control{
+		width:58%;
+	}	
+	.employer-group-coverage .search-container .first-col .control-label{
+		width:40%;
+	}
+	.employer-group-coverage .user-field-contr{
+		padding-left:0px;
+	}
+	.employer-group-coverage .custom-code-cntr .control-label, .employer-group-coverage .user-field-contr .control-label{
+		width:20%;
+	}
+	.employer-group-coverage .custom-code-cntr .form-control, .employer-group-coverage .user-field-contr .form-control{
+		width:78%;
+	}
+	.employer-group-coverage .address-info{
+		margin-top:0px;
+	}
+	.employer-group-coverage .user-field-contr2 .control-label{
+		width:62%;
+	}
+	.employer-group-coverage .user-field-contr2 .selectpicker, .employer-group-coverage .user-field-contr2 .form-control{
+		width:36%;
+	}
+	.employer-group-coverage .audit-info table{
+		width:100%;
+	}
+	.employer-group-coverage #EmployerGroupHistory .btn-secondary{
+		width:100%;
+	}
+	/*Employer Groups Coverage style starts*/
+	
+	/*Copy Tiers Schedules Style Starts*/
+	#CopyTiersSchedules .audit-info table {
+		width:100%;
+	}
+	/*Copy Tiers Schedules Style Ends*/
+	/*Legal Representative Attorneys Styles Starts*/
+	#LegalRepresentativeAttorneys .search-container .control-label{
+		width:62%;
+	}
+	#LegalRepresentativeAttorneys .search-container .form-control{
+		width:38%;
+	}
+	#LegalRepresentativeAttorneys .search-container .first-col .control-label{
+		width:40%;
+	}
+	/*Legal Representative Attorneys Styles ends*/
+	
+	/*Third Party Carriers Styles Starts*/
+	.third-party-carriers .search-container .first-col .control-label {
+		width:39%;
+	}
+	.third-party-carriers .search-container .first-col .form-control{
+		width:60%;
+	}
+	.third-party-carriers .right-section .audit-info table {
+		width:100%;
+	}
+    /*Third Party Carriers Styles Ends*/
+	#claim-based-lookup .first-col .selectpicker{
+		width:27%;
+	}
+	#claim-based-lookup .results .control-label{
+		width:5%;
+	}
+	#claim-based-lookup .results .selectpicker{
+		width:95%;
+	}
+	/*Lines Of Business Styles Starts*/
+	.lines-of-business .tab-container .tab-pane .general-info .first-col .control-label, .lines-of-business .tab-container .control-label{
+		width:30%;
+	}
+	.lines-of-business .tab-container .tab-pane .address-info .small-size-02{
+		width:22% !important;
+	}
+	/*Lines Of Business Styles Ends*/
+
+}
+
+@media only screen and (max-width: 1024px){
+	.header .top-header li.dropdown-submenu{
+		position:static;
+		padding-left:4px;
+	}
+	.header .top-header li.dropdown-submenu li:first-child:hover a{
+		background-image:none;
+	}
+	.header .top-header ul li:nth-last-child(4) ul ul, .header .top-header ul li:nth-last-child(5) ul ul, .header .top-header ul li:nth-last-child(6) ul ul{
+		position:static;
+		box-shadow:none;
+		border:none;
+		background:#dcdbdb;
+		margin-top:-5px;
+		width:100%;
+		border-radius:0px;
+	}	
+	.header .top-header li.dropdown-submenu li:first-child a{
+		background-image:none;
+		padding-left:4px;
+	}
+	.header .top-header li.dropdown-submenu li a{
+		padding-left:4px;
+	}
+	#MemberGuardians .medical-con-cntr .guardian-info .control-label{
+		width: 47%;
+	}
+	#MemberGuardians .medical-con-cntr .first-col .half-size-01{
+		width: 24% !important;
+	}
+	#MemberGuardians .medical-con-cntr .guardian-info .form-control, #MemberGuardians .medical-con-cntr .guardian-info .selectpicker{
+		width: 48%;
+	}
+	#MemberGuardians .medical-con-cntr .medical-con-addr1 .half-size-01{
+		width: 31% !important;
+	}
+	#MemberPatient .bottom-header .sort-and-filter{
+		float:left !important;
+	}
+	#MemberPatient .bottom-header .sort-and-filter .control-label{
+		width:18%;
+	}
+	#MemberPatient .member-patient-grid{
+		margin-top:30px;
+	}
+	#RefCertMember .custom-code-cntr .check-box-input{
+		width:69%;
+	}
+	#ClaimUnderMember .general-info .info-field-left{
+	width:70.8%;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.header .top-header ul li{
+		margin:0 3px;
+	}
+	.header .top-header ul li:nth-last-child(4) ul, .header .top-header ul li:nth-last-child(5) ul, .header .top-header ul li:nth-last-child(6) ul{
+		right:0px;
+		position:absolute;
+		left:auto;
+	}
+	
+	.header .top-header ul li a{
+		font-size:11px;
+	}
+	.search-container .col-sm-12{
+		padding-left:0px;
+	}
+	.search-container .first-col .control-label{
+		width:30%;
+	}
+	.search-container .first-col .form-control, .inner-window .search-container .last-row .custom-code-brgins .form-control{
+		width:70%;
+	}
+	.inner-window .inner-head{
+		font-size:13px;
+	}
+	.inner-window .search-container .custom-code-brgins .control-label{
+		width:40%;
+	}
+	.inner-window .search-container .custom-code-brgins .form-control{
+		width:60%;
+	}
+	.inner-window .search-container .custom-code-brgins{		
+		margin-right:0px;
+		padding-right:0px;
+	}
+	.tab-container .nav-tabs li a{
+		font-size:10px;
+		padding:10px;
+	}
+	.tab-container .control-label{
+		width:30%;
+	}
+	.tab-container .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .general-info .first-col .control-label{
+		width:30%;
+	}
+	.tab-container .tab-pane .general-info .first-col .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .general-info .first-col .half-size-01, .tab-container .tab-pane .general-info .first-col .small-size-01{
+		width:24% !important;
+	}
+	.tab-container .tab-pane .general-info .first-col .small-size-02{
+		width:20% !important;
+	}
+	.tab-container .tab-pane .gender{
+		width: 24% !important;
+	}
+	.tab-container .tab-pane .birth-date{
+		width: 25% !important;
+	}
+	.tab-container .tab-pane .small-size-03{
+		width: 20% !important;
+	}
+	.tab-container .address-info .gender{
+		width: 20% !important;
+	}
+	.tab-content .custom-code-cntr{
+		padding-left:0px;
+	}
+	.tab-container .other-demo .control-label{
+		width:30%;
+	}
+	.tab-container .other-demo .selectpicker{
+		width:70%
+	}
+	.tab-container .address-info .col-sm-10, .tab-container .other-demo .col-sm-10{
+		padding-left:0px;
+	}
+	.tab-container .address-info .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .address-info .small-size-02{
+		width:19% !important;
+	}
+	.control-label{
+		width:30%;
+	}
+	.form-control, .selectpicker{
+		width:70%;
+	}
+	.inner-window .search-container .last-row .form-group{
+		width:100%;
+		float:none;
+	}
+	.inner-window .search-container .last-row .control-label{
+		width:30%;
+	}
+	.inner-window .search-container .last-row .custom-code-brgins .control-label{
+		width:30%;
+	}
+	.inner-window .search-container .last-row .form-control{
+		width:70%;
+	}
+	.tab-container .other-demo .other-contact-info{
+		width:100%;
+		clear:both;
+		margin-top:3px;
+		margin-left:0px;
+		background:none;
+		padding:3px 0 0 0px;
+		border-top:solid 1px #CCC;
+	}
+	.tab-container .other-demo .other-contact-info .control-label{
+		width:30%;
+		margin-top:5px;
+		text-align:right;
+	}
+	.tab-container .other-demo .other-contact-info .form-control{
+		width:70%;
+	}
+	.tab-container .address-info .col-md-5 .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .col-md-5 .form-control{
+		width:70%;
+	}
+	.tab-container .address-info .col-md-2 .control-label, .tab-container .address-info .col-md-3 .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .col-md-2 .form-control, .tab-container .address-info .col-md-3 .form-control{
+		width:70%;
+	}
+	#PayerList .btn-primary, #PayerList .btn-secondary{
+		width:100%;
+	}
+	#PayerList .table-responsive{
+		min-height:2px;
+	}
+	.full-width-form .control-label{
+		width:30%;
+	}
+	.full-width-form .form-control, .full-width-form .selectpicker{
+		width:70%;
+	}
+	#MemberCoverage .eff-period .half-size-01{
+		width:35% !important;
+	}
+	#MemberCoverage .work-city .gender{
+		width:34%;
+	}	
+	#MemberGuardians .first-col .control-label{
+		width:30%;
+	}
+	#MemberGuardians .first-col .half-size-01, #MemberGuardians .medical-con-cntr .first-col .half-size-01{
+		width: 18% !important;
+	}
+	#MemberGuardians .first-col .half-size-02{
+		width: 13%;
+	}
+	#MemberGuardians .guardian-info .first-col .control-label, #MemberGuardians .guardian-info .control-label, #MemberGuardians .medical-con-cntr .first-col .control-label, #MemberGuardians .medical-con-cntr .guardian-info .control-label{
+		width:30%;
+	}
+	#MemberGuardians .guardian-info .first-col .form-control, #MemberGuardians .guardian-info .form-control, #MemberGuardians .guardian-info .selectpicker, #MemberGuardians .level-care .selectpicker, #MemberGuardians .medical-con-cntr .guardian-info .form-control, #MemberGuardians .medical-con-cntr .guardian-info .selectpicker{
+		width:70%;
+	}
+	#MemberGuardians .guardians-facility td:nth-child(2), #MemberGuardians .guardians-facility td:nth-child(3){
+		width:12%;
+	}
+	#MemberGuardians .period-guard .half-size-01{
+		width:35% !important;
+		margin-right:0;
+	}
+	.personal-health .prior-treatment-summary .half-size-01 {
+		width: 11% !important;
+	}
+	
+	.personal-health .prior-treatment-summary textarea {
+		width: 83%;
+	}
+	
+	.personal-health .prior-treatment-summary .control-label {
+		width:15% !important;
+	}
+
+	.personal-health .contact-info .half-size-01 {
+		width: 20% !important;
+	}
+	
+	.sm-margin-left {
+		margin-left:16.6667%;
+	}
+	.elected-provider .form-control{
+		width:62%
+	}
+	
+/*Setup & Licensee Information  Starts  */  
+#SetupLicensee .setup-licensee-wraper .company-info {
+	border-bottom:1px solid #999999;
+	border-right: none;
+}
+#SetupLicensee .setup-licensee-wraper .setupaddress-info .control-label {
+		width:20%;
+	}
+#SetupLicensee .setup-licensee-wraper .company-info .web-page-label {
+	width:19%;
+}
+#SetupLicensee .setup-licensee-wraper .user-login .control-label {
+	width:31%;
+	}
+#SetupLicensee .setup-licensee-wraper .user-login .selectpicker {
+	width:55%;
+}	
+#SetupLicensee .setup-licensee-wraper .default-value .control-label {
+	width:30%;
+}
+#SetupLicensee .setup-licensee-wraper .default-value .selectpicker,
+#SetupLicensee .setup-licensee-wraper .default-value .form-control {
+	width:50%;
+}
+/*Setup & Licensee Information  Ends  */ 	
+
+
+/*Staff/Users & System Security  Starts  */
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .date-range .control-label {
+	width:27%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .os-login .control-label {
+	width: 27%;
+}
+#StaffSecurity .staff-security-wrapper .staff-security-user-info .security-profile .system-admin {
+	padding-left:28%;
+}
+/*Staff/Users & System Security  Ends  */
+#claimBasedQueries .search-container .control-label{
+	 width: 32%;
+}
+#claimBasedQueries .search-container .form-control{
+	 width: 68%;
+}
+#claimBasedQueries .button-contr button{
+	width:100%;
+}
+#ethnicCategories .search-container .first-col .control-label, #ethnicCategories .search-container .control-label, .ethnic-categories .search-container .first-col .control-label, .ethnic-categories .search-container .control-label{
+	width:37%;
+}
+#ethnicCategories .search-container .first-col .form-control, #ethnicCategories .search-container .form-control, .ethnic-categories .search-container .first-col .form-control, .ethnic-categories .search-container .form-control{
+	width:63%;
+}
+#ethnicCategories .general-info .control-label, .ethnic-categories .general-info .control-label{
+	width:23%;
+}
+#ethnicCategories .general-info .audit-info, .ethnic-categories .general-info .audit-info{
+	margin-top:12px;
+}
+/*About this Product  Starts  */
+
+#AboutThisProduct .about-this-product-wrapper .licensee .control-label {
+	width:33%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .form-control {
+	width: 48%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .control-label {
+	width: 33%;
+}
+#AboutThisProduct .about-this-product-wrapper .licensee .max-user .form-control {
+	width:48%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text .control-label {
+	 width: 10.8%;
+}
+#AboutThisProduct .about-this-product-wrapper .modules-text textarea.form-control {
+	height: 129px;
+	width: 87%;
+}
+
+/*About this Product  Ends  */
+
+/*ICD & DSM Diagnosis Codes style Starts */
+#IcdDsmDiagnosisCodes .search-container .control-label{
+	width:35% !important;
+}
+#IcdDsmDiagnosisCodes .search-container .form-control{
+	width:65% !important;
+}
+#IcdDsmDiagnosisCodes .diagnosis-right-content .control-label{
+	width:25% !important;
+}
+#IcdDsmDiagnosisCodes .diagnosis-right-content .form-control, #IcdDsmDiagnosisCodes .diagnosis-right-content textarea, #IcdDsmDiagnosisCodes .diagnosis-right-content .selectpicker{
+	width:60% !important;
+}
+/*ICD & DSM Diagnosis Codes style ends */
+#DiagnosisCodeSets .audit-info .control-label{
+	width:100%;
+}
+#DiagnosisCodeSets .search-container .first-col{
+	padding-right:0px;
+	padding-left:0px;
+}
+#DiagnosisCodeSets .search-container .control-label{
+	width:30% !important;
+}
+#DiagnosisCodeSets .search-container .form-control{
+	width:70% !important;
+}
+#ServiceCodesCPTs .search-container .first-col .control-label, #ServiceCodesCPTs .search-container .control-label, #ServiceCodesCPTs .general-info .control-label{
+	width:30%;
+}
+#ServiceCodesCPTs .search-container .first-col .form-control, #ServiceCodesCPTs .search-container .form-control, #ServiceCodesCPTs .general-info .form-control{
+	width:70%;
+}
+#RefModifiers .search-container .first-col .control-label, #RefModifiers .search-container .control-label{
+	width:30%;
+}
+#RefModifiers .general-info .control-label, #RefModifiers .eff-period .control-label, #RefModifiers .modifiers-right-content .first-col .control-label{
+	width:24%;
+}
+#RefModifiers .eff-period .hyphen{
+	width:auto;
+}
+#RefModifiers .search-container .first-col .form-control, #RefModifiers .search-container .form-control, #RefModifiers .general-info .form-control{
+	width:70%;
+}
+#RefModifiers .eff-period .small-size-01{
+	width:25%;
+}
+#RefServiceSets .search-container .first-col .control-label, #RefServiceSets .search-container .control-label{
+	width:30%;
+}
+#RefServiceSets .general-info .control-label{
+	width:24%;
+}
+#RefServiceSets .search-container .first-col .form-control, #RefServiceSets .search-container .form-control, #RefServiceSets .general-info .form-control{
+	width:70%;
+}
+/*Disposition Codes Starts*/
+
+#DispositionCodes .disposition-codes-wrapper .search-container .control-label {
+	width:38%
+}
+#DispositionCodes .disposition-codes-wrapper .search-container .form-control {
+	width:60%
+}
+
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message textarea,
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .selectpicker,
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .form-control {
+	width:64%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .control-label,
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .member-message .control-label{
+	width: 29.4%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #GeneralInformation .required .disabled {
+	margin-left: 30.8%;
+}
+#DispositionCodes .disposition-codes-wrapper .tab-content #AuditInfo table tr td .control-label {
+	width:60%;
+}
+
+/*Disposition Codes Ends*/
+/*RVU Geographic Multiplier Starts*/
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .control-label, #RvuGeoMulti .rvu-geo-multi-wrapper .search-container .control-label{
+	 width: 38%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .search-container .first-col .form-control, #RvuGeoMulti .rvu-geo-multi-wrapper .search-container .form-control{
+	width: 62%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .modifiers-right-content .control-label{
+	 width: 32%;
+}
+#RvuGeoMulti .modifiers-right-content .form-control, #RvuGeoMulti .modifiers-right-content .rvu-componant-multi .form-control{
+	width: 56%;
+}
+#RvuGeoMulti .rvu-geo-multi-wrapper .audit-info table {
+	width:300px;
+}
+/*RVU Geographic Multiplier Ends*/
+
+/*Referral / Certification Member Starts*/
+#RefCertMember .general-info .two-col .control-label{
+	width:54%;
+}
+#RefCertMember .general-info .two-col .form-control, #RefCertMember .general-info .two-col .selectpicker{
+	width:46%;
+}
+#RefCertMember .general-info .info-field-left{
+	width:67%;
+}
+#RefCertMember .custom-code-cntr{
+	padding-left:0px;
+}
+#RefCertMember .custom-code-cntr .checkbox-ex{
+	width:27%;
+}
+#RefCertMember .custom-code-cntr .check-box-input{
+	width:73%;
+}
+/*Referral / Certifications under this member Pricing and notes starts*/
+#refCertiPriceNotes .user-definend-fields .medical-dir .control-label {
+	width:42%;
+}
+#refCertiPriceNotes .user-definend-fields textarea {
+	height:100px;
+}
+/*Referral / Certifications under this member Pricing and notes ends*/
+/*Referral / Certification Member Ends*/
+
+/*Referral / Certification Examiner Starts*/
+#RefCertExaminer .search-container .control-label, #RefCertExaminer .search-container .first-col .control-label{
+	width:38%;
+}
+#RefCertExaminer .search-container .form-control, #RefCertExaminer .search-container .first-col .form-control{
+	width:62%;
+}
+#RefCertExaminer .general-info .two-col .control-label, #RefCertExaminer .general-info .two-col .label-right{
+	width:30%;
+}
+#RefCertExaminer .general-info .two-col .form-control, #RefCertExaminer .general-info .two-col .selectpicker{
+	width:64%;
+}
+#RefCertExaminer .tab-container .tab-pane .general-info .small-size-01{
+	width:31.5% !important;
+}
+#RefCertExaminer .custom-code-cntr .utilization .selectpicker{
+	width:27% !important;
+}
+#RefCertExaminer .general-info .info-field-left{
+	width:58%;
+}
+#RefCertExaminer .tab-container .tab-pane .general-info .icd-codes .small-size-01{
+	width:18% !important;
+}
+#RefCertExaminer .general-info .small-size-03{
+	width:34% !important;
+}
+/*Referral / Certification Examiner Ends*/
+/*Claim Under Member Starts*/
+#ClaimUnderMember .general-info .info-field-left{
+	width: 72.333%;
+}
+#ClaimUnderMember .general-info .checkbox-ex{
+	margin:10px 0;
+}
+#ClaimUnderMember .general-info .two-col .control-label{
+	width:44%;
+}
+#ClaimUnderMember .general-info .two-col .form-control{
+	width:56%;
+}
+#ClaimUnderMember .general-info .reffered-on{
+	width:50% !important;
+}
+#ClaimUnderMember .tab-container .tab-pane .check-box-input{
+	margin-bottom:20px;
+}
+#ClaimUnderMember .tab-container .tab-pane .custom-code-cntr .small-size-01{
+	width:37.5% !important;
+}
+#ClaimUnderMember .tab-container .tab-pane .reported-on .small-size-01{
+	width:22% !important;
+}
+#ClaimUnderMember .tab-content .custom-code-cntr {
+	 padding-left:0px;
+}
+.billed-service .service-and-charges .checkbox-inline, .billed-service .service-and-charges .radio-inline {
+	 padding-left: 22px;
+}
+.billed-service  .disposition {
+	padding-left:0 !important;
+}
+.text-right .refresh-btn {
+	margin-right:0 !important;
+}
+.right-full-cntr1 {
+	margin-top:20px;
+}
+.right-full-cntr1 .control-label{
+	text-align:right;
+	width:20%;
+}
+.right-full-cntr1 .form-control{
+	text-align:right;
+	width:30%;
+}
+#ClaimUnderMember .refCertiNotify-tab .first-col .control-label{
+	width:30%;
+}
+#ClaimUnderMember .refCertiNotify-tab .first-col .control-label.record-info{
+	text-align:left;
+}
+/*Claim Under this Member View Details Style Starts*/
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .checkbox-inline {
+	width:35%;
+}
+#ClaimUnderMemberDetails .billed-service .adjust {
+	width:33% !important;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .manual-dispo .form-control {
+	width:49%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .other-denials .form-control {
+	width:22.5%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .form-control {
+	width:45%;
+}
+#ClaimUnderMemberDetails .billed-service .re-belling-recepients .recep-date .form-control {
+	width:17.5%;
+	}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .form-control {
+	width:28.7%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .selectpicker {
+	width: 12.3%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-03 {
+	width:19.3%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .pt-liability .small-size-01 {
+	width:13.8%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .btn-secondary {
+	width:31%;
+	}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-01 {
+	width:28.6%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .small-size-03 {
+	width:17.8%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .ref-table {
+	width:62%;
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .control-label {
+	width:33%;
+}
+#ClaimUnderMember .custom-code-cntr .reported-on .control-label{
+	width:16%;
+}
+#ClaimUnderMemberDetails .billed-service .service-and-charges .rbrvs-units .control-label.ffs-equi {
+	width:16%;
+}
+
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .pre-tax-padding {
+		padding-left:27px !important;
+		 width: 27%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		padding-right: 5px;
+		text-align: center;
+		color: #2665d2 !important;
+		}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .exempt {
+		margin-left:-18px;
+		width: 10%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+	
+}
+#ClaimUnderMemberDetails .billed-service .dispo-payment .pre-tax .value {
+		width: 10%;
+		float: left;
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 5px;
+		color: #2665d2 !important;
+		margin-left:14px;
+}
+/*Claim Under this Member View Details Style Ends*/
+/*Claim Under Member Ends*/
+/*Claims Examiner Form Style Starts*/
+	#ClaimsExaminerForm .search-container .control-label, #ClaimsExaminerForm .search-container .first-col .control-label, #ClaimsExaminerForm .search-container .last-row .control-label{
+		width:44%;
+	}
+	#ClaimsExaminerForm .general-info .control-label{
+		width:30%;
+	}
+	#ClaimsExaminerForm .general-info .form-control, #ClaimsExaminerForm .general-info .selectpicker{
+		width:70%;
+	}
+	#ClaimsExaminerForm .general-info .two-col .control-label{
+		width:60%;
+	}
+	#ClaimsExaminerForm .general-info .two-col .form-control, #ClaimsExaminerForm .general-info .two-col .selectpicker{
+		width:40%;
+	}
+	#ClaimsExaminerForm .general-info .info-field-left{
+		width:64%;
+	}
+	#ClaimsExaminerForm .general-info .checkbox-ex{
+		margin-top:9px;
+		margin-bottom:9px;
+	}
+	#ClaimsExaminerForm .eff-period .hyphen{
+		width:auto
+	}
+	#ClaimsExaminerForm #RefCertHx .allocation .btn-bottom01{
+		width:90px;
+	}
+	#ClaimsExaminerForm .tab-content .custom-code-cntr{
+		padding-left:0px !important;
+	}
+	#ClaimsExaminerForm .general-info .custom-code-cntr  .eff-period .control-label{
+		width:29%;
+	}
+	#ClaimsExaminerForm .general-info .custom-code-cntr .eff-period .hyphen{
+		width:2%;
+	}
+	#ClaimsExaminerForm .custom-code-cntr .reported-on .control-label {
+		width:16%;
+	}
+	
+/*Claims Examiner Form Style Ends*/
+
+/*Payers Benefit Plan General Tab Styles Starts*/
+	
+	.payers-benefit-plan .search-container .first-col .control-label {
+		width:39%;
+		}
+		
+	.payers-benefit-plan .search-container .first-col .form-control {
+		width:39%;
+	}
+	.payers-benefit-plan .search-container .name-begins .control-label {
+		width:39%;
+	}
+	.payers-benefit-plan .search-container .control-label {
+		 width: 39%;
+	}
+	.payers-benefit-plan .search-container .name-begins .form-control {
+		width:39%;
+	}
+	.payers-benefit-plan .search-container .form-control {
+		width:39%;
+	}	
+	.payers-benefit-plan .address-cntr .control-label, .payers-benefit-plan .tab-container .control-label, .payers-benefit-plan .tab-container .address-info .control-label{
+		width:48%;
+		padding-left:0px;
+	}
+	.payers-benefit-plan .address-cntr .form-control, .payers-benefit-plan .address-cntr .selectpicker, .payers-benefit-plan .tab-container .form-control{
+		width:52%;
+	}	
+	.payers-benefit-plan .product .form-control{
+		width: 24% !important;
+	}
+	.payers-benefit-plan .eff-period .selectpicker{
+		width: 7% !important;
+	}
+	.payers-benefit-plan .depent-coverage-rule .form-control{
+		width:49% !important;
+	}
+	.payers-benefit-plan .tab-container .tab-pane .small-size-01{
+		width: 19% !important;
+	}
+	.payers-benefit-plan .general-admin {
+		margin-top:0px !important;
+	}
+	.payers-benefit-plan .depent-coverage-rule .control-label {
+		 width:73%;
+	}
+	.payers-benefit-plan .user-field-contr .checkbox-inline {
+		padding-left: 25%;
+	}
+	.payers-benefit-plan .tab-content .notes textarea{
+		height:250px;
+	}	
+	/*Payers Benefit Plan General Tab Styles Ends*/
+	
+	/*Relative Value Units Styles Starts*/
+	#RelativeValueUnits .search-container .button-contr .btn-primary{
+		margin-right:0%;
+	}
+	#RelativeValueUnits .tab-container .control-label, #RelativeValueUnits .modifiers-right-content .first-col .control-label, #RelativeValueUnits .rvu-contr-0 .control-label, #RelativeValueUnits .rvu-contr-1 .control-label{
+		width:30%;
+	}
+	#RelativeValueUnits .modifiers-right-content .first-col .form-control, #RelativeValueUnits .rvu-contr-0 .form-control, #RelativeValueUnits .modifiers-right-content .first-col .form-control, #RelativeValueUnits .rvu-contr-1 .form-control{
+		width:58%;
+	}
+	/*Relative Value Units Styles Ends*/
+	
+	/*Relative Value Units Styles Starts*/
+	.employer-group-coverage .btn-primary, .employer-group-coverage .btn-secondary{
+		width:100%;
+	}
+	.employer-group-coverage .search-container .control-label{
+		width:40%;
+	}
+	.employer-group-coverage .search-container .form-control{
+		width:60%;
+	}
+	/*Relative Value Units Styles Ends*/
+	
+	/*Copy Tiers Schedules Style Starts*/
+	
+	.copy-tiers-schedules .search-container .button-contr .btn-primary,
+	 .copy-tiers-schedules .search-container .button-contr .btn-secondary {
+		 width:44%;
+	 }
+	.copy-tiers-schedules .right-section h2 {
+		margin-top:6px;
+	}
+
+	/*Copy Tiers Schedules Style Ends*/
+	/*Legal Representative Attorneys Styles Starts*/
+	#LegalRepresentativeAttorneys .search-container .control-label{
+		width:40%;
+	}
+	#LegalRepresentativeAttorneys .search-container .form-control{
+		width:60%;
+	}
+	#LegalRepresentativeAttorneys .search-container .first-col .control-label{
+		width:40%;
+	}
+	#LegalRepresentativeAttorneys .tab-pane .address-info .small-size-02{
+		width:27% !important;
+	}
+	/*Legal Representative Attorneys Styles ends*/
+	
+	/*Third Party Carriers Styles Starts*/
+	.third-party-carriers .search-container .first-col .control-label {
+		width:30%;
+	}
+	.third-party-carriers .search-container .first-col .form-control{
+		width:70%;
+	}
+	.third-party-carriers .search-container .form-control {
+		 width: 70%;
+	}
+	.third-party-carriers .right-section .address-info .gender {
+		width:21% !important;
+	}
+	.third-party-carriers .right-section .address-info .small-size-02 {
+		width:23% !important;
+	}
+	.third-party-carriers .right-section .birth-date {
+		width:21% !important
+	}
+	.third-party-carriers .right-section .audit-info table {
+		width:100%;
+	}
+	/*Third Party Carriers Styles Ends*/
+	/*Lines Of Business Styles Starts*/
+	.lines-of-business .tab-container .tab-pane .general-info .first-col .control-label, .lines-of-business .tab-container .control-label {
+		width:30%;
+	}
+	.lines-of-business .half-size-01 {
+		width:18% !important;
+	}
+	.lines-of-business .tab-container .tab-pane .address-info .small-size-02{
+		width:20% !important;
+	}
+	/*Lines Of Business Styles Ends*/
+	/*Funds Styles Starts*/
+	.funds .search-container .first-col .control-label{
+		width:30%;
+	}
+	.funds .search-container .first-col .form-control{
+		width:70%;
+	}
+	/*Funds Styles Ends*/
+}
+
+@media only screen and (max-width: 768px){
+	
+	.bottom-header ul{
+		margin:0px;
+	}
+	.bottom-header ul li{
+		margin-top:4px;
+	}
+	.search-container .control-label, .inner-window .search-container .last-row .control-label, .inner-window .search-container .custom-code-brgins .control-label{
+		width:30%;
+	}
+	.search-container .form-control, .inner-window .search-container .last-row .form-control, .inner-window .search-container .custom-code-brgins .form-control{
+		width:70%;
+	}
+	.search-container .btn-primary, .search-container .btn-secondary{
+		width:97%;
+		margin-left:3%;
+	}	
+	.tab-container .address-info .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .address-info .small-size-02{
+		width:19% !important;
+		margin-left:1%;
+	}
+	.tab-container .other-demo .control-label{
+		width:30%;
+	}
+	.tab-container .other-demo .form-control{
+		width:70%
+	}
+	.tab-container .address-info .control-label{
+		width:30%;
+	}
+	.tab-container .address-info .form-control{
+		width:70%;
+	}
+	.tab-container .tab-pane .address-info .small-size-02{
+		width:19% !important;
+	}
+	.other-demo .col-sm-4{
+		padding-left:0px;
+	}
+	
+	.button-contr{
+		padding:0px;
+	}
+	.btn-primary, .btn-secondary{
+		width:48%;
+		float:left;
+	}
+	.btn-primary{
+		margin-right:4%;
+	}
+	.tab-container .other-demo .selectpicker{
+		width:70%;
+	}
+	#PayerList .table-responsive{
+		min-height:2px;
+	}
+	.personal-health .contact-info .small-size-01 {
+		 width: 24% !important;
+	}
+}
+@media only screen and (max-width: 767px){
+	.header .top-header.navbar{
+		min-height:50px;
+	}	
+	.header .top-header{
+		z-index:999;
+	}
+	.header .top-header ul{
+		background:#000;
+		padding:20px;
+	}
+	.header .top-header li{
+		float:none;
+		width:100%;
+	}
+	.header .top-header ul li a{
+		color:#fff;
+	}
+	.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
+	color:#e84c3d;
+	background:none;
+	}
+	.navbar-nav .open .dropdown-menu > li > a{
+		line-height:5px;
+	}
+	.header .top-header ul li li span{
+		color:#fff;
+	}
+	.search-container .btn-primary, .search-container .btn-secondary{
+		width:100%;
+		margin-left:0;
+	}
+	.nav-tabs > li{
+		width:50% !important;
+	}
+}
+@media only screen and (max-width: 655px){
+	.modal-dialog{
+		width:98%;
+	}
+	.bottom-header{
+		width:15%;
+		float:left;
+		overflow:hidden;
+		height:100%;
+		background:#7daeeb;
+		padding:0px;
+	}
+	.bottom-header li{
+		border-bottom:1px solid #4e505d;
+		border-right:0px;
+		margin:4px 0;
+		width:100%;
+		clear:both;
+	}
+	.bottom-header li a{
+		padding:0px;
+	}
+	.inner-window .search-container, .grid-contr{
+		width:85%;
+		float:left;
+		clear:none;
+	}
+	.login-contr .bottom-header{
+		float:none;
+		width:100%;
+		height:auto;
+	}
+	.login-contr .bottom-header li{
+		width:auto;
+		clear:none;
+	}
+}
+@media only screen and (max-width: 499px){
+	.control-label{
+		width:100% !important;
+		text-align:left;
+	}
+	.form-control, .selectpicker, .tab-container .tab-pane .general-info .first-col .half-size-01, .tab-container .tab-pane .general-info .first-col .small-size-01, .tab-container .tab-pane .general-info .first-col .small-size-02, .tab-container .tab-pane .gender, .tab-container .tab-pane .general-info .first-col .form-control, .tab-container .tab-pane .half-size-01, .tab-container .tab-pane .address-info .small-size-02{
+		width:100% !important;
+		margin-left:0% !important;
+	}
+	.search-container div, .search-container div.first-col{
+		padding-left:0px;
+	}
+	.tab-container .other-demo .other-contact-info .control-label{
+		text-align:left;
+	}
+	.nav-tabs > li{
+		width:100% !important;
+	}
+}
+
+/*@media screen and ( min-width: 768px ) and ( max-height: 1228px ){
+	.bottom-header, .inner-window{
+		height:1228px;
+	}
+}
+
+@media screen and ( min-width: 768px ) and ( min-height: 1229px ){
+	.bottom-header, .inner-window{
+		height:auto;
+	}
+}
+
+@media screen and ( min-width: 991px ) and ( max-height: 810px ){
+	.bottom-header, .inner-window{
+		height:810px;
+	}
+}
+
+@media screen and ( min-width: 991px ) and ( min-height: 811px ){
+	.bottom-header, .inner-window{
+		height:auto;
+	}
+}
+
+@media screen and ( min-width: 1200px ) and ( max-height: 750px ){
+    .bottom-header, .inner-window{
+		height:750px;
+	}
+}
+@media screen and ( min-width: 1200px ) and ( min-height: 751px ){
+    .bottom-header, .inner-window{
+		height:100%;
+	}
+}*/
+
+.glyphicon-lock:before {
+  content: "🔒";
+}
