@@ -26,6 +26,17 @@ namespace MOP
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/MainLayout").Include(
+                "~/Content/MainLayout/css/bootstrap.min.css",
+                "~/Content/MainLayout/css/custom.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/Bundles/MainLayout").Include(
+                "~/Content/MainLayout/js/jquery-1.12.0.min.js",
+                "~/Content/MainLayout/js/bootstrap.min.js",
+                "~/Content/MainLayout/js/custom.js"
+                ));
         }
     }
 }
