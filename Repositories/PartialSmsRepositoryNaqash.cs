@@ -131,15 +131,12 @@ namespace Repositories
         public static List<Class> GetAllClasses()
         {
             var classList = new List<Class>();
-
             using (SMSContext db = new SMSContext())
             {
                 classList = db.Classes.ToList();
             }
-
             return classList;
         }
-
         public static List<Section> GetAllSections()
         {
             var sectionList = new List<Section>();
@@ -149,7 +146,6 @@ namespace Repositories
             }
             return sectionList;
         }
-
         public static List<Grade> GetAllGrades()
         {
             var gradeList = new List<Grade>();
@@ -159,7 +155,6 @@ namespace Repositories
             }
             return gradeList;
         }
-
         public static List<SystemLog> GetAllSystemLog()
         {
             var systemLogList = new List<SystemLog>();
@@ -169,7 +164,6 @@ namespace Repositories
             }
             return systemLogList;
         }
-
         public static List<Module> GetAllModule()
         {
             var moduleList = new List<Module>();
@@ -179,7 +173,6 @@ namespace Repositories
             }
             return moduleList;
         }
-
         public static List<Session> GetAllSession()
         {
             var sessionList = new List<Session>();
@@ -189,8 +182,6 @@ namespace Repositories
             }
             return sessionList;
         }
-
-
         public static List<Subject> GetAllSubject()
         {
             var subjectList = new List<Subject>();
@@ -200,7 +191,6 @@ namespace Repositories
             }
             return subjectList;
         }
-
         public static List<SystemItem> GetAllSystemItem()
         {
             var systemItemList = new List<SystemItem>();
@@ -210,7 +200,6 @@ namespace Repositories
             }
             return systemItemList;
         }
-
         public static List<User> GetAllUser()
         {
             var userList = new List<User>();
@@ -220,7 +209,6 @@ namespace Repositories
             }
             return userList;
         }
-
         public static List<Role> GetAllRoles()
         {
             var roleList = new List<Role>();
@@ -251,7 +239,6 @@ namespace Repositories
 
         #endregion
         #region Insert
-
         public static void InsertSystemLog(SystemLog systemLog)
         {
             using (SMSContext db = new SMSContext())
@@ -371,9 +358,6 @@ namespace Repositories
                  tempSection.ClassId = section.ClassId;
                  tempSection.Class = section.Class;
                  db.SaveChanges();
-             }
-             {
-                 
              }
          }
          public static void UpdateGrade(Grade grade)
