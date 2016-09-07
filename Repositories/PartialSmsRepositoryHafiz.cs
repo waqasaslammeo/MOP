@@ -10,14 +10,8 @@ namespace Repositories
     public static class PartialSmsRepositoryHafiz
     {
         #region Insert
-        public static void InsertRole(Role role)
-        {
-            using (SMSContext db = new SMSContext())
-            {
-                db.Roles.Add(role);
-                db.SaveChanges();
-            }
-        }
+
+
         #endregion
         #region Update
         public static void UpdateRole(Role role)
@@ -29,37 +23,47 @@ namespace Repositories
                 db.SaveChanges();
             }
         }
-        #endregion
 
-        #region Delete
-        public static void DeleteRole(int roleId)
+        public static void UpdateUserRole(UserRole userRole)
         {
             using (SMSContext db = new SMSContext())
             {
-                var tempRole = db.Roles.Single(x => x.Id == roleId);
-                db.Roles.Remove(tempRole);
+                var objUserRole = db.UserRoles.Single(x => x.Id == userRole.Id);
+                objUserRole.UserId = userRole.UserId;
+                objUserRole.User = userRole.User;
+                objUserRole.RoleId = userRole.RoleId;
+                objUserRole.Role = userRole.Role;
+                db.SaveChanges();
+            }
+        }
+
+        public static void UpdateRoleItem(RoleItem roleItem)
+        {
+            using (SMSContext db = new SMSContext())
+            {
+                var objRoleitem = db.RoleItems.Single(x => x.Id == roleItem.Id);
+                objRoleitem.RoleId = roleItem.RoleId;
+                objRoleitem.Role = roleItem.Role;
+                objRoleitem.ItemId = roleItem.ItemId;
+                objRoleitem.Item = roleItem.Item;
                 db.SaveChanges();
             }
         }
         #endregion
 
+        #region Delete
+
+
+        #endregion
+
         #region GetById
-		 public static Role GetRoleById(int roleId)
-         {
-             Role roleobj = new Role();
-             using (SMSContext db = new SMSContext())
-             {
-                 roleobj = db.Roles.Single(x => x.Id == roleId);
-             }
-             return roleobj;
-         }
+
 	#endregion
 
+         #region List
+
+         #endregion
+
     }
-
-
-
-
-
 
 }
