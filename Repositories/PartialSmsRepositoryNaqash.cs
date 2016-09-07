@@ -99,6 +99,33 @@ namespace Repositories
             }
             return roleobj;
         }
+        public static SystemLog GetSystemLogById(int systemLogId)
+        {
+            SystemLog systemLog = new SystemLog();
+            using (SMSContext db = new SMSContext())
+            {
+                systemLog = db.SystemLogs.Single(x => x.Id == systemLogId);
+            }
+            return systemLog;
+        }
+        public static UserRole GetIdByUserRole(int userRoleId)
+        {
+            UserRole userRoleObj = new UserRole();
+            using (SMSContext db = new SMSContext())
+            {
+                userRoleObj = db.UserRoles.Single(x => x.Id == userRoleId);
+            }
+            return userRoleObj;
+        }
+        public static RoleItem GetIdByRoleItem(int roleItemId)
+        {
+            RoleItem roleItemObj = new RoleItem();
+            using (SMSContext db = new SMSContext())
+            {
+                roleItemObj = db.RoleItems.Single(x => x.Id == roleItemId);
+            }
+            return roleItemObj;
+        }
         #endregion
         #region List
         public static List<Class> GetAllClasses()
@@ -132,9 +159,107 @@ namespace Repositories
             }
             return gradeList;
         }
+
+        public static List<SystemLog> GetAllSystemLog()
+        {
+            var systemLogList = new List<SystemLog>();
+            using (SMSContext db = new SMSContext())
+            {
+                systemLogList = db.SystemLogs.ToList();
+            }
+            return systemLogList;
+        }
+
+        public static List<Module> GetAllModule()
+        {
+            var moduleList = new List<Module>();
+            using (SMSContext db = new SMSContext())
+            {
+                moduleList = db.Modules.ToList();
+            }
+            return moduleList;
+        }
+
+        public static List<Session> GetAllSession()
+        {
+            var sessionList = new List<Session>();
+            using (SMSContext db = new SMSContext())
+            {
+                sessionList = db.Sessions.ToList();
+            }
+            return sessionList;
+        }
+
+
+        public static List<Subject> GetAllSubject()
+        {
+            var subjectList = new List<Subject>();
+            using (SMSContext db = new SMSContext())
+            {
+                subjectList = db.Subjects.ToList();
+            }
+            return subjectList;
+        }
+
+        public static List<SystemItem> GetAllSystemItem()
+        {
+            var systemItemList = new List<SystemItem>();
+            using (SMSContext db = new SMSContext())
+            {
+                systemItemList = db.SystemItems.ToList();
+            }
+            return systemItemList;
+        }
+
+        public static List<User> GetAllUser()
+        {
+            var userList = new List<User>();
+            using (SMSContext db = new SMSContext())
+            {
+                userList = db.Users.ToList();
+            }
+            return userList;
+        }
+
+        public static List<Role> GetAllRoles()
+        {
+            var roleList = new List<Role>();
+            using (SMSContext db = new SMSContext())
+            {
+                roleList = db.Roles.ToList();
+            }
+            return roleList;
+        }
+        public static List<UserRole> GetAllUserRoles()
+        {
+            var userRoleList = new List<UserRole>();
+            using (SMSContext db = new SMSContext())
+            {
+                userRoleList = db.UserRoles.ToList();
+            }
+            return userRoleList;
+        }
+        public static List<RoleItem> GetAllRoleItems()
+        {
+            var roleItemList = new List<RoleItem>();
+            using (SMSContext db = new SMSContext())
+            {
+                roleItemList = db.RoleItems.ToList();
+            }
+            return roleItemList;
+        }
+
         #endregion
         #region Insert
 
+        public static void InsertSystemLog(SystemLog systemLog)
+        {
+            using (SMSContext db = new SMSContext())
+            {
+                db.SystemLogs.Add(systemLog);
+                db.SaveChanges();
+            }
+        }
          public static void InsertClass(Class classObj)
          {
              using (SMSContext db = new SMSContext())
@@ -207,6 +332,22 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
+         public static void InsertUserRole(UserRole userRole)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 db.UserRoles.Add(userRole);
+                 db.SaveChanges();
+             }
+         }
+         public static void InsertRoleItem(RoleItem roleItem)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 db.RoleItems.Add(roleItem);
+                 db.SaveChanges();
+             }
+         }
 
         #endregion
         #region Update
@@ -221,7 +362,6 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
-
          public static void UpdateSection(Section section)
          {
              using (SMSContext db = new SMSContext())
@@ -236,7 +376,6 @@ namespace Repositories
                  
              }
          }
-
          public static void UpdateGrade(Grade grade)
          {
              using (SMSContext db = new SMSContext())
@@ -257,7 +396,6 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
-
          public static void UpdateSession(Session session)
          {
              using (SMSContext db = new SMSContext())
@@ -268,7 +406,6 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
-
          public static void UpdateSubject(Subject subject)
          {
              using (SMSContext db = new SMSContext())
@@ -309,6 +446,30 @@ namespace Repositories
                  tempUser.EmailAddress = user.EmailAddress;
                  tempUser.Phone1 = user.Phone1;
                  tempUser.Phone2 = user.Phone2;
+                 db.SaveChanges();
+             }
+         }
+         public static void UpdateUserRole(UserRole userRole)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var objUserRole = db.UserRoles.Single(x => x.Id == userRole.Id);
+                 objUserRole.UserId = userRole.UserId;
+                 objUserRole.User = userRole.User;
+                 objUserRole.RoleId = userRole.RoleId;
+                 objUserRole.Role = userRole.Role;
+                 db.SaveChanges();
+             }
+         }
+         public static void UpdateRoleItem(RoleItem roleItem)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var objRoleitem = db.RoleItems.Single(x => x.Id == roleItem.Id);
+                 objRoleitem.RoleId = roleItem.RoleId;
+                 objRoleitem.Role = roleItem.Role;
+                 objRoleitem.ItemId = roleItem.ItemId;
+                 objRoleitem.Item = roleItem.Item;
                  db.SaveChanges();
              }
          }
@@ -393,6 +554,53 @@ namespace Repositories
              {
                  var tempRole = db.Roles.Single(x => x.Id == roleId);
                  db.Roles.Remove(tempRole);
+                 db.SaveChanges();
+             }
+         }
+        
+
+         public static void DeleteUserRole(int userRoleId)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var tempUserRole = db.UserRoles.Single(x => x.Id == userRoleId);
+                 db.UserRoles.Remove(tempUserRole);
+                 db.SaveChanges();
+             }
+         }
+
+         public static void DeleteRoleItem(int roleItemId)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var tempRoleItem = db.RoleItems.Single(x => x.Id == roleItemId);
+                 db.RoleItems.Remove(tempRoleItem);
+                 db.SaveChanges();
+             }
+         }
+         public static void DeleteSystemLog(int id)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+
+                 var obj = db.SystemLogs.Where(x => x.Id == id).FirstOrDefault();
+
+                 db.SystemLogs.Remove(obj);
+                 db.SaveChanges();
+             }
+         }
+
+         public static void UpdateSystemLog(SystemLog systemLog)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var obj = db.SystemLogs.Where(x => x.Id == systemLog.Id).SingleOrDefault();
+
+                 obj.Date = systemLog.Date;
+                 obj.Event = systemLog.Event;
+                 obj.Time = systemLog.Time;
+                 obj.LoggedInUser = systemLog.LoggedInUser;
+
                  db.SaveChanges();
              }
          }
