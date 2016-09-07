@@ -10,6 +10,129 @@ namespace Repositories
 {
      partial class PartialSmsRepositoryNaqash
     {
+        #region Get
+        public static Class GetClassById(int classId)
+        {
+            Class classobj = new Class();
+
+            using (SMSContext db = new SMSContext())
+            {
+                classobj = db.Classes.Single(x => x.Id == classId);
+            }
+            return classobj;
+        }
+        public static Section GetSectionById(int sectionId)
+        {
+            var section = new Section();
+            using (SMSContext db = new SMSContext())
+            {
+                section = db.Sections.Single(x => x.Id == sectionId);
+            }
+            return section;
+        }
+        public static Grade GetGradeById(int gradeId)
+        {
+            var grade = new Grade();
+            using (SMSContext db = new SMSContext())
+            {
+                grade = db.Grades.Single(x => x.Id == gradeId);
+            }
+            return grade;
+
+        }
+        public static Module GetModuleById(int moduleId)
+        {
+            var moduleobj = new Module();
+
+            using (SMSContext db = new SMSContext())
+            {
+                moduleobj = db.Modules.Single(x => x.Id == moduleId);
+            }
+            return moduleobj;
+        }
+        public static Session GetSessionById(int sessionId)
+        {
+            var sessionObj = new Session();
+
+            using (SMSContext db = new SMSContext())
+            {
+                sessionObj = db.Sessions.Single(x => x.Id == sessionId);
+            }
+            return sessionObj;
+        }
+        public static Subject GetSubjectById(int subjectId)
+        {
+            var subjectObj = new Subject();
+
+            using (SMSContext db = new SMSContext())
+            {
+                subjectObj = db.Subjects.Single(x => x.Id == subjectId);
+            }
+            return subjectObj;
+        }
+        public static SystemItem GetSystemItemById(int systemId)
+        {
+            var systemItemObj = new SystemItem();
+
+            using (SMSContext db = new SMSContext())
+            {
+                systemItemObj = db.SystemItems.Single(x => x.Id == systemId);
+            }
+            return systemItemObj;
+        }
+        public static User GetUserById(int userId)
+        {
+            var userObj = new User();
+
+            using (SMSContext db = new SMSContext())
+            {
+                userObj = db.Users.Single(x => x.Id == userId);
+            }
+            return userObj;
+        }
+        public static Role GetRoleById(int roleId)
+        {
+            Role roleobj = new Role();
+            using (SMSContext db = new SMSContext())
+            {
+                roleobj = db.Roles.Single(x => x.Id == roleId);
+            }
+            return roleobj;
+        }
+        #endregion
+        #region List
+        public static List<Class> GetAllClasses()
+        {
+            var classList = new List<Class>();
+
+            using (SMSContext db = new SMSContext())
+            {
+                classList = db.Classes.ToList();
+            }
+
+            return classList;
+        }
+
+        public static List<Section> GetAllSections()
+        {
+            var sectionList = new List<Section>();
+            using (SMSContext db = new SMSContext())
+            {
+                sectionList = db.Sections.ToList();
+            }
+            return sectionList;
+        }
+
+        public static List<Grade> GetAllGrades()
+        {
+            var gradeList = new List<Grade>();
+            using (SMSContext db = new SMSContext())
+            {
+                gradeList = db.Grades.ToList();
+            }
+            return gradeList;
+        }
+        #endregion
         #region Insert
 
          public static void InsertClass(Class classObj)
@@ -73,6 +196,14 @@ namespace Repositories
              using (SMSContext db = new SMSContext())
              {
                  db.Users.Add(user);
+                 db.SaveChanges();
+             }
+         }
+         public static void InsertRole(Role role)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 db.Roles.Add(role);
                  db.SaveChanges();
              }
          }
@@ -158,7 +289,15 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
-
+         public static void UpdateRole(Role role)
+         {
+             using (SMSContext db = new SMSContext())
+             {
+                 var objrole = db.Roles.Single(x => x.Id == role.Id);
+                 objrole.RoleName = role.RoleName;
+                 db.SaveChanges();
+             }
+         }
          public static void UpdateUser(User user)
          {
              using (SMSContext db = new SMSContext())
@@ -248,124 +387,16 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
-
-        #endregion 
-        
-         #region GetById
-         public static Class GetClassById(int classId)
+         public static void DeleteRole(int roleId)
          {
-             Class classobj = new Class();
-
              using (SMSContext db = new SMSContext())
              {
-                 classobj = db.Classes.Single(x => x.Id == classId);
+                 var tempRole = db.Roles.Single(x => x.Id == roleId);
+                 db.Roles.Remove(tempRole);
+                 db.SaveChanges();
              }
-             return classobj;
-         }
-         public static Section GetSectionById(int sectionId)
-         {
-             var section = new Section();
-             using (SMSContext db = new SMSContext())
-             {
-                 section = db.Sections.Single(x => x.Id == sectionId);
-             }
-             return section;
-         }
-         public static Grade GetGradeById(int gradeId)
-         {
-             var grade = new Grade();
-             using (SMSContext db = new SMSContext())
-             {
-                 grade = db.Grades.Single(x => x.Id == gradeId);
-             }
-             return grade;
-
-         }
-         public static Module GetModuleById(int moduleId)
-         {
-             var moduleobj = new Module();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 moduleobj = db.Modules.Single(x => x.Id == moduleId);
-             }
-             return moduleobj;
-         }
-         public static Session GetSessionById(int sessionId)
-         {
-             var sessionObj = new Session();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 sessionObj = db.Sessions.Single(x => x.Id == sessionId);
-             }
-             return sessionObj;
-         }
-         public static Subject GetSubjectById(int subjectId)
-         {
-             var subjectObj = new Subject();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 subjectObj = db.Subjects.Single(x => x.Id == subjectId);
-             }
-             return subjectObj;
-         }
-         public static SystemItem GetSystemItemById(int systemId)
-         {
-             var systemItemObj = new SystemItem();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 systemItemObj = db.SystemItems.Single(x => x.Id == systemId);
-             }
-             return systemItemObj;
-         }
-         public static User GetUserById(int userId)
-         {
-             var userObj = new User();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 userObj = db.Users.Single(x => x.Id == userId);
-             }
-             return userObj;
-         }
-  
-        #endregion
-
-        #region List
-         public static List<Class> GetAllClasses()
-         {
-             var classList = new List<Class>();
-
-             using (SMSContext db = new SMSContext())
-             {
-                 classList = db.Classes.ToList();
-             }
-
-             return classList;
          }
 
-         public static List<Section> GetAllSections()
-         {
-             var sectionList = new List<Section>();
-             using (SMSContext db = new SMSContext())
-             {
-                 sectionList = db.Sections.ToList();
-             }
-             return sectionList;
-         }
-
-         public static List<Grade> GetAllGrades()
-         {
-             var gradeList = new List<Grade>();
-             using (SMSContext db = new SMSContext())
-             {
-                 gradeList = db.Grades.ToList();
-             }
-             return gradeList;
-         } 
-        #endregion
+        #endregion   
     }
 }
