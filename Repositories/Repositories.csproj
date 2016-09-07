@@ -79,11 +79,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PartialSmsRepositoryHafiz.cs" />
     <Compile Include="PartialSmsRepositoryKami.cs" />
+    <Compile Include="PartialSmsRepositoryNaqash.cs" />
+    <Compile Include="PartialSmsRepositoryUsama.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

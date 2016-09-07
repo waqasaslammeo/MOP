@@ -22,6 +22,11 @@ namespace BusinessEntity.Context
         public DbSet<RoleItem> RoleItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<PhoneDirectory> PhoneDirectories { get; set; }
+        public DbSet<PhoneDirectoryDetail> PhoneDirectoryDetails { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Branch> Branches { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
     }
 }

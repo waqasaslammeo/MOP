@@ -13,6 +13,11 @@ namespace MOP.Controllers
             return View();
         }
 
+        public PartialViewResult demo1()
+        {
+            return PartialView("demo1");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
