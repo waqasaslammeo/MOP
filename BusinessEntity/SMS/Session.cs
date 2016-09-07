@@ -9,7 +9,6 @@ namespace BusinessEntity.SMS
     {
         public int Id { get; set; }
         public String SessionName { get; set; }
-
         public bool IsCurrent { get; set; }
 
     }
