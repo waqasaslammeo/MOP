@@ -22,6 +22,9 @@ namespace BusinessEntity.Context
         public DbSet<RoleItem> RoleItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentEnrollment> StudentEnrollments { get; set; }
+        public DbSet<PreviousSchool> PreviousSchools { get; set; }
 
     }
 }

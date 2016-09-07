@@ -70,10 +70,13 @@
     <Compile Include="SMS\Class.cs" />
     <Compile Include="SMS\Grade.cs" />
     <Compile Include="SMS\Module.cs" />
+    <Compile Include="SMS\PreviousSchool.cs" />
     <Compile Include="SMS\Role.cs" />
     <Compile Include="SMS\RoleItem.cs" />
     <Compile Include="SMS\Section.cs" />
     <Compile Include="SMS\Session.cs" />
+    <Compile Include="SMS\Student.cs" />
+    <Compile Include="SMS\StudentEnrollment.cs" />
     <Compile Include="SMS\Subject.cs" />
     <Compile Include="SMS\SystemItem.cs" />
     <Compile Include="SMS\SystemLog.cs" />
