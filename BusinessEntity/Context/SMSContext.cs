@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.Entity;
 using System.Web;
 using BusinessEntity.SMS;
-using BusinessEntity.Context;
 using System.Configuration;
 namespace BusinessEntity.Context
 {
