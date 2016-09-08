@@ -5,11 +5,11 @@ using System.Web;
 
 namespace BusinessEntity.SMS
 {
-    public class Session
+    public class Branch
     {
         public int Id { get; set; }
-        public String SessionName { get; set; }
-        public bool IsCurrent { get; set; }
-
+        public string BranchName { get; set; }
+        public int CityId { get; set; }
+        public virtual City City { get; set; }
     }
 }
