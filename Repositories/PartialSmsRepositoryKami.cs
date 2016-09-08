@@ -12,67 +12,67 @@ namespace Repositories
     public class PartialSmsRepositoryKami
     {   
         #region Insert
-        public static int InsertCategory(Category category)
+        public static void InsertCategory(Category category)
         {
             using (var db = new InventoryContext())
             {
                 db.Categories.Add(category);
                 db.SaveChanges();
-                return category.Id;
+              
             }
         }
-        public static int InsertCustomer(Customer customer)
+        public static void InsertCustomer(Customer customer)
         {
             using (var db = new InventoryContext())
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return customer.Id;
+              
             }
         }
-        public static int InsertEmployee(Employee employee)
+        public static void InsertEmployee(Employee employee)
         {
             using (var db = new InventoryContext())
             {
                 db.Employees.Add(employee);
                 db.SaveChanges();
-                return employee.Id;
+             
             }
         }
-        public static int InsertOrder(Order order)
+        public static void InsertOrder(Order order)
         {
             using (var db = new InventoryContext())
             {
                 db.Orders.Add(order);
                 db.SaveChanges();
-                return order.Id;
+                
             }
         }
-        public static int InsertProduct(OrderDetail orderDetail)
+        public static void InsertProduct(OrderDetail orderDetail)
         {
             using (var db = new InventoryContext())
             {
                 db.OrderDetails.Add(orderDetail);
                 db.SaveChanges();
-                return orderDetail.Id;
+                
             }
         }
-        public static int InsertOrderDetail(Product product)
+        public static void InsertOrderDetail(Product product)
         {
             using (var db = new InventoryContext())
             {
                 db.Products.Add(product);
                 db.SaveChanges();
-                return product.Id;
+             
             }
         }
-        public static int InsertSupplier(Supplier supplier)
+        public static void InsertSupplier(Supplier supplier)
         {
             using (var db = new InventoryContext())
             {
                 db.Suppliers.Add(supplier);
                 db.SaveChanges();
-                return supplier.Id;
+                
             }
         }
         #endregion
@@ -189,7 +189,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempCategory = db.Categories.Single(x => x.Id == categoryId);
+
                 db.Categories.Remove(tempCategory);
+
                 db.SaveChanges();
             }
         }
@@ -198,7 +200,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempCustomer = db.Customers.Single(x => x.Id == customerId);
+
                 db.Customers.Remove(tempCustomer);
+
                 db.SaveChanges();
             }
         }
@@ -207,7 +211,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempEmployee = db.Employees.Single(x => x.Id == employeeId);
+
                 db.Employees.Remove(tempEmployee);
+
                 db.SaveChanges();
             }
         }
@@ -216,7 +222,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempOrder = db.Orders.Single(x => x.Id == orderId);
+
                 db.Orders.Remove(tempOrder);
+
                 db.SaveChanges();
             }
         }
@@ -225,7 +233,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempOrderDetail = db.OrderDetails.Single(x => x.Id == orderDetailId);
+
                 db.OrderDetails.Remove(tempOrderDetail);
+
                 db.SaveChanges();
             }
         }
@@ -234,7 +244,9 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempProduct = db.Products.Single(x => x.Id == productId);
+
                 db.Products.Remove(tempProduct);
+
                 db.SaveChanges();
             }
         }
@@ -243,54 +255,74 @@ namespace Repositories
             using (var db = new InventoryContext())
             {
                 var tempSupplier = db.Suppliers.Single(x => x.Id == supplierId);
+
                 db.Suppliers.Remove(tempSupplier);
+
                 db.SaveChanges();
             }
         }
         #endregion
-        #region GetById
-        public static Category GetCategoryById(int id)
+        #region Get
+        public static Category GetCategoryById(int categoryId)
         {
+            var tempCategory = new Category();
+
             using (var db = new InventoryContext())
             {
-                return db.Categories.Single(x => x.Id == id);
+                tempCategory = db.Categories.Single(x => x.Id == categoryId);
             }
+            return tempCategory;
         }
         
-        public static Customer GetCustomerById(int id)
+        public static Customer GetCustomerById(int customerId)
         {
+            var tempCustomer= new Customer();
+
             using (var db = new InventoryContext())
             {
-                return db.Customers.Single(x => x.Id == id);
+                tempCustomer = db.Customers.Single(x => x.Id == customerId);
             }
+            return tempCustomer;
         }
-        public static Employee GetEmployeeById(int id)
+        public static Employee GetEmployeeById(int employeeId)
         {
+            var tempEmployee = new Employee();
+
             using (var db = new InventoryContext())
             {
-                return db.Employees.Single(x => x.Id == id);
+                tempEmployee = db.Employees.Single(x => x.Id == employeeId);
             }
+            return tempEmployee;
         }
-        public static OrderDetail GetOrderDetailsById(int id)
+        public static OrderDetail GetOrderDetailsById(int orderDetailsId)
         {
+            var tempOrderDetail = new OrderDetail();
+
             using (var db = new InventoryContext())
             {
-                return db.OrderDetails.Single(x => x.Id == id);
+                tempOrderDetail = db.OrderDetails.Single(x => x.Id == orderDetailsId);
             }
+            return tempOrderDetail;
         }
-        public static Product GetProductById(int id)
+        public static Product GetProductById(int productId)
         {
+            var tempProduct = new Product();
+
             using (var db = new InventoryContext())
             {
-                return db.Products.Single(x => x.Id == id);
+                tempProduct =db.Products.Single(x => x.Id == productId);
             }
+            return tempProduct;
         }
-        public static Supplier GetSupplierById(int id)
+        public static Supplier GetSupplierById(int supplierId)
         {
+            var tempSupplier = new Supplier();
+
             using (var db = new InventoryContext())
             {
-                return db.Suppliers.Single(x => x.Id == id);
+                tempSupplier = db.Suppliers.Single(x => x.Id == supplierId);
             }
+            return tempSupplier;
         }
         #endregion
         #region List

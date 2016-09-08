@@ -27,6 +27,8 @@ namespace BusinessEntity.Context
         public DbSet<City> Cities { get; set; }
         public DbSet<Branch> Branches { get; set; }
         public DbSet<Company> Companies { get; set; }
-
+        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentEnrollment> StudentEnrollments { get; set; }
+        public DbSet<PreviousSchool> PreviousSchools { get; set; }
     }
 }

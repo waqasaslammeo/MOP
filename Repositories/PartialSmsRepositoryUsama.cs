@@ -12,7 +12,7 @@ namespace Repositories
         #region Insert
         public static void InsertStudent(Student student)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 db.Students.Add(student);
                 db.SaveChanges();
@@ -21,7 +21,7 @@ namespace Repositories
 
         public static void InsertPreviousSchool(PreviousSchool previousSchool)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 db.PreviousSchools.Add(previousSchool);
                 db.SaveChanges();
@@ -30,7 +30,7 @@ namespace Repositories
 
         public static void InsertStudentEnrollment(StudentEnrollment studentEnrollment)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 db.StudentEnrollments.Add(studentEnrollment);
                 db.SaveChanges();
@@ -42,7 +42,7 @@ namespace Repositories
         #region Update
         public static void UpdateStudent(Student student)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempStudent = db.Students.Single(x => x.Id == student.Id);
                 tempStudent.FirstName = student.FirstName;
@@ -68,7 +68,7 @@ namespace Repositories
 
         public static void UpdateStudentEnrollment(StudentEnrollment studentEnrollment)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollment.Id);
                 tempStudentEnrollment.StudentId = studentEnrollment.StudentId;
@@ -81,7 +81,7 @@ namespace Repositories
 
         public static void UpdatePreviousSchool(PreviousSchool previousSchool)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempPreviousSchool = db.PreviousSchools.Single(x => x.Id == previousSchool.Id);
                 tempPreviousSchool.StudentId = previousSchool.StudentId;
@@ -96,7 +96,7 @@ namespace Repositories
         #region Delete
         public static void DeleteStudent(int studentId)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempStudent = db.Students.Single(x => x.Id == studentId);
                 db.Students.Remove(tempStudent);
@@ -107,7 +107,7 @@ namespace Repositories
 
         public static void DeleteStudentEnrollment(int studentEnrollmentId)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollmentId);
                 db.StudentEnrollments.Remove(tempStudentEnrollment);
@@ -118,7 +118,7 @@ namespace Repositories
 
         public static void DeletePreviousSchool(int previousSchoolId)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 var tempPreviousSchcool = db.PreviousSchools.Single(x => x.Id == previousSchoolId);
                 db.PreviousSchools.Remove(tempPreviousSchcool);
@@ -132,7 +132,7 @@ namespace Repositories
         public static Student GetStudentById(int studentId)
         {
             var student = new Student();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 student = db.Students.Single(x => x.Id == studentId);
             }
@@ -142,7 +142,7 @@ namespace Repositories
         public static Student GetStudentByFatherName(string fatherName)
         {
             var student = new Student();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 student = db.Students.Single(x => x.FatherName == fatherName);
             }
@@ -152,7 +152,7 @@ namespace Repositories
         public static Student GetStudentByFatherCNIC(string cnic)
         {
             var student = new Student();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 student = db.Students.Single(x => x.FatherCNIC == cnic);
             }
@@ -162,7 +162,7 @@ namespace Repositories
         public static Student GetStudentByGuardianCNIC(string cnic)
         {
             var student = new Student();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 student = db.Students.Single(x => x.GuardianCNIC == cnic);
             }
@@ -172,7 +172,7 @@ namespace Repositories
         public static Student GetStudentByEmailAddress(string emailAddress)
         {
             var student = new Student();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 student = db.Students.Single(x => x.EmailAddress == emailAddress);
             }
@@ -182,7 +182,7 @@ namespace Repositories
         public static PreviousSchool GetPreviousSchoolByStudentId(int studentId)
         {
             var previousSchoolStudentId = new PreviousSchool();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 previousSchoolStudentId = db.PreviousSchools.Single(x => x.Id == studentId);
             }
@@ -196,7 +196,7 @@ namespace Repositories
         public static List<Student> GetAllStudents()
         {
             var studentList = new List<Student>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 studentList = db.Students.ToList();
             }
@@ -206,7 +206,7 @@ namespace Repositories
         public static List<Student> GetAllStudentByFatherCNIC(string fatherCNIC)
         {
             var studentList = new List<Student>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 studentList = db.Students.Where(x=> x.FatherCNIC==fatherCNIC).ToList();
             }
@@ -216,7 +216,7 @@ namespace Repositories
         public static List<Student> GetAllStudentByFatherName(string fatherName)
         {
             var studentList = new List<Student>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 studentList = db.Students.Where(x=> x.FatherName==fatherName).ToList();
             }
@@ -226,7 +226,7 @@ namespace Repositories
         public static List<PreviousSchool> GetAllPreviousSchools()
         {
             var previousSchool = new List<PreviousSchool>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 previousSchool = db.PreviousSchools.ToList();
             }
@@ -236,7 +236,7 @@ namespace Repositories
         public static List<PreviousSchool> GetAllStudentsByInstituteName(string instituteName)
         {
             var studentByInstituteList = new List<PreviousSchool>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 studentByInstituteList = db.PreviousSchools.Where(x => x.InstituteName == instituteName).ToList();
             }

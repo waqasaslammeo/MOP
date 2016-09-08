@@ -13,9 +13,9 @@ namespace Repositories
         #region Get
         public static Class GetClassById(int classId)
         {
-            Class classobj = new Class();
+            var classobj = new Class();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 classobj = db.Classes.Single(x => x.Id == classId);
             }
@@ -24,7 +24,7 @@ namespace Repositories
         public static Section GetSectionById(int sectionId)
         {
             var section = new Section();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 section = db.Sections.Single(x => x.Id == sectionId);
             }
@@ -33,7 +33,7 @@ namespace Repositories
         public static Grade GetGradeById(int gradeId)
         {
             var grade = new Grade();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 grade = db.Grades.Single(x => x.Id == gradeId);
             }
@@ -44,7 +44,7 @@ namespace Repositories
         {
             var moduleobj = new Module();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 moduleobj = db.Modules.Single(x => x.Id == moduleId);
             }
@@ -54,7 +54,7 @@ namespace Repositories
         {
             var sessionObj = new Session();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 sessionObj = db.Sessions.Single(x => x.Id == sessionId);
             }
@@ -64,7 +64,7 @@ namespace Repositories
         {
             var subjectObj = new Subject();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 subjectObj = db.Subjects.Single(x => x.Id == subjectId);
             }
@@ -74,7 +74,7 @@ namespace Repositories
         {
             var systemItemObj = new SystemItem();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 systemItemObj = db.SystemItems.Single(x => x.Id == systemId);
             }
@@ -84,7 +84,7 @@ namespace Repositories
         {
             var userObj = new User();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 userObj = db.Users.Single(x => x.Id == userId);
             }
@@ -105,7 +105,7 @@ namespace Repositories
         public static Role GetRoleById(int roleId)
         {
             Role roleobj = new Role();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 roleobj = db.Roles.Single(x => x.Id == roleId);
             }
@@ -113,8 +113,8 @@ namespace Repositories
         }
         public static SystemLog GetSystemLogById(int systemLogId)
         {
-            SystemLog systemLog = new SystemLog();
-            using (SMSContext db = new SMSContext())
+            var systemLog = new SystemLog();
+            using (var db = new SMSContext())
             {
                 systemLog = db.SystemLogs.Single(x => x.Id == systemLogId);
             }
@@ -122,8 +122,8 @@ namespace Repositories
         }
         public static UserRole GetIdByUserRole(int userRoleId)
         {
-            UserRole userRoleObj = new UserRole();
-            using (SMSContext db = new SMSContext())
+            var userRoleObj = new UserRole();
+            using (var db = new SMSContext())
             {
                 userRoleObj = db.UserRoles.Single(x => x.Id == userRoleId);
             }
@@ -131,8 +131,8 @@ namespace Repositories
         }
         public static RoleItem GetIdByRoleItem(int roleItemId)
         {
-            RoleItem roleItemObj = new RoleItem();
-            using (SMSContext db = new SMSContext())
+            var roleItemObj = new RoleItem();
+            using (var db = new SMSContext())
             {
                 roleItemObj = db.RoleItems.Single(x => x.Id == roleItemId);
             }
@@ -144,7 +144,7 @@ namespace Repositories
         {
             var classList = new List<Class>();
 
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 classList = db.Classes.ToList();
             }
@@ -155,7 +155,7 @@ namespace Repositories
         public static List<Section> GetAllSections()
         {
             var sectionList = new List<Section>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 sectionList = db.Sections.ToList();
             }
@@ -165,7 +165,7 @@ namespace Repositories
         public static List<Grade> GetAllGrades()
         {
             var gradeList = new List<Grade>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 gradeList = db.Grades.ToList();
             }
@@ -175,7 +175,7 @@ namespace Repositories
         public static List<SystemLog> GetAllSystemLog()
         {
             var systemLogList = new List<SystemLog>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 systemLogList = db.SystemLogs.ToList();
             }
@@ -185,7 +185,7 @@ namespace Repositories
         public static List<Module> GetAllModule()
         {
             var moduleList = new List<Module>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 moduleList = db.Modules.ToList();
             }
@@ -195,7 +195,7 @@ namespace Repositories
         public static List<Session> GetAllSession()
         {
             var sessionList = new List<Session>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 sessionList = db.Sessions.ToList();
             }
@@ -206,7 +206,7 @@ namespace Repositories
         public static List<Subject> GetAllSubject()
         {
             var subjectList = new List<Subject>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 subjectList = db.Subjects.ToList();
             }
@@ -216,7 +216,7 @@ namespace Repositories
         public static List<SystemItem> GetAllSystemItem()
         {
             var systemItemList = new List<SystemItem>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 systemItemList = db.SystemItems.ToList();
             }
@@ -226,7 +226,7 @@ namespace Repositories
         public static List<User> GetAllUser()
         {
             var userList = new List<User>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 userList = db.Users.ToList();
             }
@@ -236,7 +236,7 @@ namespace Repositories
         public static List<Role> GetAllRoles()
         {
             var roleList = new List<Role>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 roleList = db.Roles.ToList();
             }
@@ -245,7 +245,7 @@ namespace Repositories
         public static List<UserRole> GetAllUserRoles()
         {
             var userRoleList = new List<UserRole>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 userRoleList = db.UserRoles.ToList();
             }
@@ -254,7 +254,7 @@ namespace Repositories
         public static List<RoleItem> GetAllRoleItems()
         {
             var roleItemList = new List<RoleItem>();
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 roleItemList = db.RoleItems.ToList();
             }
@@ -263,10 +263,9 @@ namespace Repositories
 
         #endregion
         #region Insert
-
         public static void InsertSystemLog(SystemLog systemLog)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 db.SystemLogs.Add(systemLog);
                 db.SaveChanges();
@@ -274,7 +273,7 @@ namespace Repositories
         }
          public static void InsertClass(Class classObj)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Classes.Add(classObj);
                  db.SaveChanges();
@@ -282,7 +281,7 @@ namespace Repositories
          }
          public static void InsertSection(Section section)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Sections.Add(section);
                  db.SaveChanges();
@@ -290,7 +289,7 @@ namespace Repositories
          }
          public static void InsertGrade(Grade grade)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Grades.Add(grade);
                  db.SaveChanges();
@@ -298,7 +297,7 @@ namespace Repositories
          }
          public static void InsertModule(Module module)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Modules.Add(module);
                  db.SaveChanges();
@@ -306,7 +305,7 @@ namespace Repositories
          }
          public static void InsertSessions(Session session)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Sessions.Add(session);
                  db.SaveChanges();
@@ -314,7 +313,7 @@ namespace Repositories
          }
          public static void InsertSubjects(Subject subject)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Subjects.Add(subject);
                  db.SaveChanges();
@@ -322,7 +321,7 @@ namespace Repositories
          }
          public static void InsertSystemItem(SystemItem systemItem)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.SystemItems.Add(systemItem);
                  db.SaveChanges();
@@ -330,7 +329,7 @@ namespace Repositories
          }
          public static void InsertUser(User user)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Users.Add(user);
                  db.SaveChanges();
@@ -338,7 +337,7 @@ namespace Repositories
          }
          public static void InsertRole(Role role)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.Roles.Add(role);
                  db.SaveChanges();
@@ -346,7 +345,7 @@ namespace Repositories
          }
          public static void InsertUserRole(UserRole userRole)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.UserRoles.Add(userRole);
                  db.SaveChanges();
@@ -354,7 +353,7 @@ namespace Repositories
          }
          public static void InsertRoleItem(RoleItem roleItem)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  db.RoleItems.Add(roleItem);
                  db.SaveChanges();
@@ -365,7 +364,7 @@ namespace Repositories
         #region Update
          public static void UpdateClass(Class classObj)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempClass = db.Classes.Single(x => x.Id == classObj.Id);
                  tempClass.ClassName = classObj.ClassName;
@@ -376,7 +375,7 @@ namespace Repositories
          }
          public static void UpdateSection(Section section)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSection = db.Sections.Single(x => x.Id == section.Id);
                  tempSection.SectionName = section.SectionName;
@@ -390,7 +389,7 @@ namespace Repositories
          }
          public static void UpdateGrade(Grade grade)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempGrade = db.Grades.Single(x => x.Id == grade.Id);
                  tempGrade.Grades = grade.Grades;
@@ -399,7 +398,7 @@ namespace Repositories
          }
          public static void UpdateModule(Module module)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempModule = db.Modules.Single(x => x.Id == module.Id);
                  tempModule.ModuleName = module.ModuleName;
@@ -410,7 +409,7 @@ namespace Repositories
          }
          public static void UpdateSession(Session session)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSession = db.Sessions.Single(x => x.Id == session.Id);
                  tempSession.SessionName = session.SessionName;
@@ -420,7 +419,7 @@ namespace Repositories
          }
          public static void UpdateSubject(Subject subject)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSubject = db.Subjects.Single(x => x.Id == subject.Id);
                  tempSubject.SubjectName = subject.SubjectName;
@@ -430,7 +429,7 @@ namespace Repositories
          }
          public static void UpdateSystemItem(SystemItem systemItem)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItem.Id);
                  tempSystemItem.SystemItemName = systemItem.SystemItemName;
@@ -440,7 +439,7 @@ namespace Repositories
          }
          public static void UpdateRole(Role role)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var objrole = db.Roles.Single(x => x.Id == role.Id);
                  objrole.RoleName = role.RoleName;
@@ -449,7 +448,7 @@ namespace Repositories
          }
          public static void UpdateUser(User user)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempUser = db.Users.Single(x => x.Id == user.Id);
                  tempUser.FirstName = user.FirstName;
@@ -463,7 +462,7 @@ namespace Repositories
          }
          public static void UpdateUserRole(UserRole userRole)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var objUserRole = db.UserRoles.Single(x => x.Id == userRole.Id);
                  objUserRole.UserId = userRole.UserId;
@@ -475,7 +474,7 @@ namespace Repositories
          }
          public static void UpdateRoleItem(RoleItem roleItem)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var objRoleitem = db.RoleItems.Single(x => x.Id == roleItem.Id);
                  objRoleitem.RoleId = roleItem.RoleId;
@@ -485,11 +484,24 @@ namespace Repositories
                  db.SaveChanges();
              }
          }
+         public static void UpdateSystemLog(SystemLog systemLog)
+         {
+             using (var db = new SMSContext())
+             {
+                 var obj = db.SystemLogs.Where(x => x.Id == systemLog.Id).SingleOrDefault();
+
+                 obj.Date = systemLog.Date;
+                 obj.Event = systemLog.Event;
+                 obj.Time = systemLog.Time;
+                 obj.LoggedInUser = systemLog.LoggedInUser;
+                 db.SaveChanges();
+             }
+         }
         #endregion
         #region Delete
          public static void DeleteClass(int classId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempClass = db.Classes.Single(x => x.Id == classId);
                  db.Classes.Remove(tempClass);
@@ -498,7 +510,7 @@ namespace Repositories
          }
          public static void DeleteSection(int sectionId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSection = db.Sections.Single(x => x.Id == sectionId);
                  db.Sections.Remove(tempSection);
@@ -508,7 +520,7 @@ namespace Repositories
          }
          public static void DeleteGrade(int gradeId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempGrade = db.Grades.Single(x => x.Id == gradeId);
                  db.Grades.Remove(tempGrade);
@@ -517,7 +529,7 @@ namespace Repositories
          }
          public static void DeleteModule(int moduleId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempModules = db.Modules.Single(x => x.Id == moduleId);
                  db.Modules.Remove(tempModules);
@@ -526,7 +538,7 @@ namespace Repositories
          }
          public static void DeleteSession(int sessionId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSession = db.Sessions.Single(x => x.Id == sessionId);
                  db.Sessions.Remove(tempSession);
@@ -535,7 +547,7 @@ namespace Repositories
          }
          public static void DeleteSubject(int subjectId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSubject = db.Subjects.Single(x => x.Id == subjectId);
                  db.Subjects.Remove(tempSubject);
@@ -544,7 +556,7 @@ namespace Repositories
          }
          public static void DeleteSystemItem(int systemItemId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItemId);
                  db.SystemItems.Remove(tempSystemItem);
@@ -553,7 +565,7 @@ namespace Repositories
          }
          public static void DeleteUser(int userId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempUser = db.Users.Single(x => x.Id == userId);
                  db.Users.Remove(tempUser);
@@ -562,60 +574,44 @@ namespace Repositories
          }
          public static void DeleteRole(int roleId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempRole = db.Roles.Single(x => x.Id == roleId);
                  db.Roles.Remove(tempRole);
                  db.SaveChanges();
              }
          }
-        
-
          public static void DeleteUserRole(int userRoleId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempUserRole = db.UserRoles.Single(x => x.Id == userRoleId);
                  db.UserRoles.Remove(tempUserRole);
                  db.SaveChanges();
              }
          }
-
          public static void DeleteRoleItem(int roleItemId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
                  var tempRoleItem = db.RoleItems.Single(x => x.Id == roleItemId);
                  db.RoleItems.Remove(tempRoleItem);
                  db.SaveChanges();
              }
          }
-         public static void DeleteSystemLog(int id)
+         public static void DeleteSystemLog(int systemLogId)
          {
-             using (SMSContext db = new SMSContext())
+             using (var db = new SMSContext())
              {
 
-                 var obj = db.SystemLogs.Where(x => x.Id == id).FirstOrDefault();
+                 var obj = db.SystemLogs.Where(x => x.Id == systemLogId).FirstOrDefault();
 
                  db.SystemLogs.Remove(obj);
                  db.SaveChanges();
              }
          }
 
-         public static void UpdateSystemLog(SystemLog systemLog)
-         {
-             using (SMSContext db = new SMSContext())
-             {
-                 var obj = db.SystemLogs.Where(x => x.Id == systemLog.Id).SingleOrDefault();
-
-                 obj.Date = systemLog.Date;
-                 obj.Event = systemLog.Event;
-                 obj.Time = systemLog.Time;
-                 obj.LoggedInUser = systemLog.LoggedInUser;
-
-                 db.SaveChanges();
-             }
-         }
+        
 
         #endregion   
     }

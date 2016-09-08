@@ -13,7 +13,7 @@ namespace Repositories
 
         public static void InsertCompany(Company company)
         {
-            using (SMSContext db = new SMSContext())
+            using (var db = new SMSContext())
             {
                 db.Companies.Add(company);
                 db.SaveChanges();
@@ -177,7 +177,7 @@ namespace Repositories
 
         public static Company GetCompany(int companyId)
         {
-            Company companyObj = new Company();
+            var companyObj = new Company();
             using (var db = new SMSContext())
             {
                 companyObj = db.Companies.Single(x => x.Id == companyId);
