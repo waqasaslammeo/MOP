@@ -10,6 +10,17 @@ namespace MOP.Controllers
     {
         public ActionResult Index()
         {
+
+            return View();
+        }
+
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
+        public ActionResult Index1()
+        {
             return View();
         }
 

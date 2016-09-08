@@ -8,7 +8,7 @@ using BusinessEntity.Context;
 
 namespace Repositories
 {
-     partial class PartialSmsRepositoryNaqash
+    public static class PartialSmsRepositoryNaqash
     {
         #region Get
         public static Class GetClassById(int classId)
@@ -89,6 +89,18 @@ namespace Repositories
                 userObj = db.Users.Single(x => x.Id == userId);
             }
             return userObj;
+        }
+
+        public static User GetUserValidate(string username,string password)
+        {
+            var user = new User();
+            using (var db = new SMSContext())
+            {
+                user = db.Users.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
+
+            }
+
+            return user;
         }
         public static Role GetRoleById(int roleId)
         {

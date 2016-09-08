@@ -69,10 +69,6 @@
       <Project>{409abe16-9894-4aad-b8c1-7b3389447d31}</Project>
       <Name>BusinessEntity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MOP\MOP.csproj">
-      <Project>{5156d3f2-cd5e-4309-a80e-e1b8fe995af2}</Project>
-      <Name>MOP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Utility\Utility.csproj">
       <Project>{b8fa00ca-7266-4660-bd9c-647aedfd1d15}</Project>
       <Name>Utility</Name>
@@ -86,6 +82,8 @@
   <ItemGroup>
     <Compile Include="PartialSmsRepositoryHafiz.cs" />
     <Compile Include="PartialSmsRepositoryKami.cs" />
+    <Compile Include="PartialSmsRepositoryNaqash.cs" />
+    <Compile Include="PartialSmsRepositoryUsama.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
