@@ -1,0 +1,6 @@
+D:\ERP\MOP\BusinessEntity\obj\Debug\BusinessEntity.csprojResolveAssemblyReference.cache
+D:\ERP\MOP\BusinessEntity\bin\BusinessEntity.dll.config
+D:\ERP\MOP\BusinessEntity\bin\BusinessEntity.dll
+D:\ERP\MOP\BusinessEntity\bin\BusinessEntity.pdb
+D:\ERP\MOP\BusinessEntity\obj\Debug\BusinessEntity.dll
+D:\ERP\MOP\BusinessEntity\obj\Debug\BusinessEntity.pdb

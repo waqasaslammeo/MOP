@@ -1,0 +1,8 @@
+D:\ERP\MOP\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+D:\ERP\MOP\Repositories\bin\Repositories.dll.config
+D:\ERP\MOP\Repositories\bin\Repositories.dll
+D:\ERP\MOP\Repositories\bin\Repositories.pdb
+D:\ERP\MOP\Repositories\bin\BusinessEntity.dll
+D:\ERP\MOP\Repositories\bin\BusinessEntity.pdb
+D:\ERP\MOP\Repositories\obj\Debug\Repositories.dll
+D:\ERP\MOP\Repositories\obj\Debug\Repositories.pdb
