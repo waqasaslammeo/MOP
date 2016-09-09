@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BusinessEntity.SMS;
+using Utility;
+
 
 namespace Repositories
 {
@@ -13,110 +15,195 @@ namespace Repositories
 
         public static void InsertCompany(Company company)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.Companies.Add(company);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.Companies.Add(company);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message); 
+            }
+            
         }
 
         public static void InsertPhoneDirectory(PhoneDirectory phoneDirectory)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.PhoneDirectories.Add(phoneDirectory);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.PhoneDirectories.Add(phoneDirectory);
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
 
         public static void InsertPhoneDirectoryDetail(PhoneDirectoryDetail phoneDirectoryDetail)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.PhoneDirectoryDetails.Add(phoneDirectoryDetail);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.PhoneDirectoryDetails.Add(phoneDirectoryDetail);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }
+            
         }
 
         public static void InsertCity(City city)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.Cities.Add(city);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.Cities.Add(city);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }
+            
         }
 
         public static void InsertBranch(Branch branch)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.Branches.Add(branch);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.Branches.Add(branch);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }
+            
         }
         #endregion
+
         #region Update
 
         public static void UpdateCompany(Company company)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempCompany = db.Companies.Single(x => x.Id == company.Id);
-                tempCompany.CompanyName = company.CompanyName;
-                tempCompany.Logo = company.Logo;
-                tempCompany.TagLink = company.TagLink;
-                tempCompany.DetailDescription = company.DetailDescription;
-                tempCompany.ShortDescription = company.ShortDescription;
-                tempCompany.PhoneNumber = company.PhoneNumber;
-                tempCompany.FounderName = company.FounderName;
-                tempCompany.FoundedOn = company.FoundedOn;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempCompany = db.Companies.Single(x => x.Id == company.Id);
+                    tempCompany.CompanyName = company.CompanyName;
+                    tempCompany.Logo = company.Logo;
+                    tempCompany.TagLink = company.TagLink;
+                    tempCompany.DetailDescription = company.DetailDescription;
+                    tempCompany.ShortDescription = company.ShortDescription;
+                    tempCompany.PhoneNumber = company.PhoneNumber;
+                    tempCompany.FounderName = company.FounderName;
+                    tempCompany.FoundedOn = company.FoundedOn;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void UpdatePhoneDirectory(PhoneDirectory phoneDirectory)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPhoneDirectory = db.PhoneDirectories.Single(x => x.Id == phoneDirectory.Id);
-                tempPhoneDirectory.ContactPerson = phoneDirectory.ContactPerson;
-                tempPhoneDirectory.Description = phoneDirectory.Description;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempPhoneDirectory = db.PhoneDirectories.Single(x => x.Id == phoneDirectory.Id);
+                    tempPhoneDirectory.ContactPerson = phoneDirectory.ContactPerson;
+                    tempPhoneDirectory.Description = phoneDirectory.Description;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void UpdatePhoneDirectoryDetail(PhoneDirectoryDetail phoneDirectoryDetail)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPhoneDirectoryDetail = db.PhoneDirectoryDetails.Single(x => x.Id == phoneDirectoryDetail.Id);
-                tempPhoneDirectoryDetail.PhoneDirectoryId = phoneDirectoryDetail.PhoneDirectoryId;
-                tempPhoneDirectoryDetail.PhoneNumber = phoneDirectoryDetail.PhoneNumber;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempPhoneDirectoryDetail = db.PhoneDirectoryDetails.Single(x => x.Id == phoneDirectoryDetail.Id);
+                    tempPhoneDirectoryDetail.PhoneDirectoryId = phoneDirectoryDetail.PhoneDirectoryId;
+                    tempPhoneDirectoryDetail.PhoneNumber = phoneDirectoryDetail.PhoneNumber;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             
         }
 
         public static void UpdateCity(City city)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempCity = db.Cities.Single(x => x.Id == city.Id);
-                tempCity.CityName = city.CityName;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempCity = db.Cities.Single(x => x.Id == city.Id);
+                    tempCity.CityName = city.CityName;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void UpdateBranch(Branch branch)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempBranch = db.Branches.Single(x => x.Id == branch.Id);
-                tempBranch.BranchName = branch.BranchName;
-                tempBranch.CityId = branch.CityId;
-                db.SaveChanges();
-            } 
+                using (var db = new SMSContext())
+                {
+                    var tempBranch = db.Branches.Single(x => x.Id == branch.Id);
+                    tempBranch.BranchName = branch.BranchName;
+                    tempBranch.CityId = branch.CityId;
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }  
         }
         #endregion
 
@@ -124,52 +211,92 @@ namespace Repositories
 
         public static void DeleteCompany(int companyId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempCompany = db.Companies.Single(x => x.Id == companyId);
-                db.Companies.Remove(tempCompany);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempCompany = db.Companies.Single(x => x.Id == companyId);
+                    db.Companies.Remove(tempCompany);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void DeletePhoneDirectory(int phoneDirectoryId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPhoneDirectory = db.PhoneDirectories.Single(x => x.Id == phoneDirectoryId);
-                db.PhoneDirectories.Remove(tempPhoneDirectory);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempPhoneDirectory = db.PhoneDirectories.Single(x => x.Id == phoneDirectoryId);
+                    db.PhoneDirectories.Remove(tempPhoneDirectory);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void DeletePhoneDirectoryDetail(int phoneDirectoryDetailId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPhoneDirectoryDetail = db.PhoneDirectoryDetails.Single(x => x.Id == phoneDirectoryDetailId);
-                db.PhoneDirectoryDetails.Remove(tempPhoneDirectoryDetail);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempPhoneDirectoryDetail = db.PhoneDirectoryDetails.Single(x => x.Id == phoneDirectoryDetailId);
+                    db.PhoneDirectoryDetails.Remove(tempPhoneDirectoryDetail);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void DeleteCity(int cityId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempCity = db.Cities.Single(x => x.Id == cityId);
-                db.Cities.Remove(tempCity);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempCity = db.Cities.Single(x => x.Id == cityId);
+                    db.Cities.Remove(tempCity);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void DeleteBranch(Branch branch)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempBranch = db.Branches.Single(x => x.Id == branch.Id);
-                db.Branches.Remove(tempBranch);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempBranch = db.Branches.Single(x => x.Id == branch.Id);
+                    db.Branches.Remove(tempBranch);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
         #endregion
 
@@ -178,30 +305,54 @@ namespace Repositories
         public static Company GetCompany(int companyId)
         {
             var companyObj = new Company();
-            using (var db = new SMSContext())
+            try
             {
-                companyObj = db.Companies.Single(x => x.Id == companyId);
+                using (var db = new SMSContext())
+                {
+                    companyObj = db.Companies.Single(x => x.Id == companyId);
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return companyObj;
         }
 
         public static PhoneDirectory GetPhoneDirectory(int phoneDirectoryId)
         {
             var phoneDirectoryObj = new PhoneDirectory();
-            using (var db = new SMSContext())
+            try
             {
-                phoneDirectoryObj = db.PhoneDirectories.Single(x => x.Id == phoneDirectoryId);
+                using (var db = new SMSContext())
+                {
+                    phoneDirectoryObj = db.PhoneDirectories.Single(x => x.Id == phoneDirectoryId);
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return phoneDirectoryObj;
         }
 
         public static City GetCity(int cityId)
         {
             var cityObj = new City();
-            using (var db = new SMSContext())
+            try
             {
-                cityObj = db.Cities.Single(x=>x.Id==cityId);
+                using (var db = new SMSContext())
+                {
+                    cityObj = db.Cities.Single(x => x.Id == cityId);
+                }
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return cityObj;
         }
 
@@ -218,9 +369,18 @@ namespace Repositories
         public static Branch GetBranchByCityId(int cityId)
         {
             var branchByCityIdObj = new Branch();
-            using (var db = new SMSContext())
+            try
             {
-                branchByCityIdObj = db.Branches.Single(x=>x.CityId==cityId);
+                using (var db = new SMSContext())
+                {
+                    branchByCityIdObj = db.Branches.Single(x => x.CityId == cityId);
+                }
+                
+            }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return branchByCityIdObj;
         }
@@ -231,50 +391,95 @@ namespace Repositories
         public static List<PhoneDirectory> GetListPhoneDirectories()
         {
             var phoneDirectoryList = new List<PhoneDirectory>();
-            using (var db = new SMSContext())
+            try
             {
-                phoneDirectoryList = db.PhoneDirectories.ToList();
+                using (var db = new SMSContext())
+                {
+                    phoneDirectoryList = db.PhoneDirectories.ToList();
+                }
+
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return phoneDirectoryList;
         }
 
         public static List<PhoneDirectoryDetail> GetListPhoneDirectoryDetails()
         {
             var phoneDirectoryDetailList = new List<PhoneDirectoryDetail>();
-            using (var db = new SMSContext())
+            try
             {
-                phoneDirectoryDetailList = db.PhoneDirectoryDetails.ToList();
+                using (var db = new SMSContext())
+                {
+                    phoneDirectoryDetailList = db.PhoneDirectoryDetails.ToList();
+                }
+
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return phoneDirectoryDetailList;
         }
 
         public static List<City> GetListCities()
         {
             var cityList = new List<City>();
-            using (var db = new SMSContext())
+            try
             {
-                cityList = db.Cities.ToList();
+                using (var db = new SMSContext())
+                {
+                    cityList = db.Cities.ToList();
+                }
+
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return cityList;
         }
 
         public static List<Branch> GetListBranches()
         {
             var branchObj = new List<Branch>();
-            using (var db = new SMSContext())
+            try
             {
-                branchObj = db.Branches.ToList();
+                using (var db = new SMSContext())
+                {
+                    branchObj = db.Branches.ToList();
+                }
+
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return branchObj;
         }
 
         public static List<Branch> GetListBranchesByCityId(int cityId)
         {
             var branchObj = new List<Branch>();
-            using (var db = new SMSContext())
+            try
             {
-                branchObj = db.Branches.Where(x => x.CityId == cityId).ToList();
+                using (var db = new SMSContext())
+                {
+                    branchObj = db.Branches.Where(x => x.CityId == cityId).ToList();
+                }
+
             }
+            catch (Exception exception)
+            {
+
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return branchObj;
         }
          #endregion
