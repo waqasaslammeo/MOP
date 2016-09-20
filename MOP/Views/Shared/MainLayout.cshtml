@@ -18,6 +18,7 @@
 
 </head>
 <body>
+   
     <div class="container-fluid">
         <div class="row">
             <div class="header">
@@ -30,11 +31,11 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Member Activity<span class="caret"></span></a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">SMS<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-demographics.html" data-target="#MemberList">Member Demographics</a></li>
-                                        <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-accumulator-edit.html" data-target="#MemberAccumulatorEdit">Member Accumulator Edit</a></li>
-                                        <li><span>UR &amp; CLAIMS</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="referral-certifications-member.html" data-target="#RefCertMember">Referral/Certifications under this Member</a></li>
+                                        <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-demographics.html" data-target="#MemberList">BASIC</a></li>
+                                        <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="member-accumulator-edit.html" data-target="#PhoneDirectory">Phone Directory</a></li>
+                                        <li><span>Student &amp; Form</span><a class="nav-menu member-list main_link" oncontextmenu="return false" href="referral-certifications-member.html" data-target="#Student">Student</a></li>
                                         <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="referral-certifications-examiner.html" data-target="#RefCertExaminer">Referral/Certification Examiner Form</a></li>
                                         <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="claim-under-member.html" data-target="#ClaimUnderMember">Claims under this Member</a></li>
                                         <li><a class="nav-menu member-list main_link" oncontextmenu="return false" href="claims-examiner-form.html" data-target="#ClaimsExaminerForm">Claims Examiner Form</a></li>
@@ -233,28 +234,905 @@
                 </nav>
                 <!--Top Header ends here-->
             </div>
-            
-            
-            <!--Member List Popup contant starts here-->
+
+            <!--Basic Form starts here-->
             <div id="MemberList" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <!--Content stretch from member-demographics.html-->
+                        <div class="inner-window">
+                            <div class="inner-head">
+                                BASIC FORM
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!--Edit buttons starts here-->
+                            <div class="col-sm-12 bottom-header">
+                                <ul>
+                                    <li><a href="#"><img src="images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                                    <li><a href="#"><img src="images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                                    <li><a href="#"><img src="images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                                    <li><a href="#"><img src="images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
+                                    <li><a href="#"><img src="images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                                </ul>
+                            </div>
+                            <!--Edit buttons ends here-->
+                            <!--Tab container starts here-->
+
+                            <div class="col-sm-12 tab-container">
+                                <!-- Nav tabs -->
+                                <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#City" aria-controls="City" role="tab" data-toggle="tab">1 - City</a></li>
+                                    <li role="presentation"><a href="#Branch" aria-controls="Branch" role="tab" data-toggle="tab">2 - Branch</a></li>
+                                    <li role="presentation"><a href="#Grade" aria-controls="Grade" role="tab" data-toggle="tab">3 - Grade</a></li>
+                                    <li role="presentation"><a href="#Classes" aria-controls="Classes" role="tab" data-toggle="tab">4 - Classes</a></li>
+                                    <li role="presentation"><a href="#Section" aria-controls="Section" role="tab" data-toggle="tab">5- Section</a></li>
+                                    <li role="presentation"><a href="#Session" aria-controls="Session" role="tab" data-toggle="tab">6 - Session</a></li>
+                                    <li role="presentation"><a href="#Subject" aria-controls="Subject" role="tab" data-toggle="tab">7 - Subject</a></li>
+                                    <li role="presentation"><a href="#Module" aria-controls="Module" role="tab" data-toggle="tab">8 - Module</a></li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <!--City Tab Start-->
+                                    <div role="tabpanel" class="tab-pane active" id="City">
+                                        <!--City Information Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>City Name</th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-sm-5 col-md-7"><h2>City Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">City Name : </label>
+                                                    <input class="form-control" type="text" id="cityName" name="cityName" placeholder="City Name">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add City</button>
+                                            </div>
+                                        </div>
+                                        <!--City Information End-->
+                                    </div>
+                                    <!--City Tab End-->
+                                    <!--Branch Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Branch">
+                                        <!--Branch Information Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Branch Name</th>
+                                                                    <th>City ID</th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Branch Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="branchId" name="branchId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Branch Name : </label>
+                                                    <input class="form-control" type="text" id="branchName" name="branchName" placeholder="Branch Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">City ID : </label>
+                                                    <input class="form-control" type="text" id="cityId" name="cityId" placeholder="City ID">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Branch</button>
+                                            </div>
+                                        </div>
+                                        <!--Branch Information Ends-->
+                                    </div>
+                                    <!--Branch Tab End-->
+                                    <!--Grade Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Grade">
+                                        <!--Grade Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Grades</th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Grade Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="gradeId" name="gradeId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Grades : </label>
+                                                    <input class="form-control" type="text" id="grades" name="grades" placeholder="Grades">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Grade Grid End-->
+                                        <!--Grade Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Grade</button>
+                                            </div>
+                                        </div>
+                                        <!--Grade Information End-->
+                                    </div>
+                                    <!--Grade Tab End-->
+                                    <!--Classess Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Classes">
+                                        <!--Classes Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Class Name</th>
+                                                                    <th>Grade ID</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Classes Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="classId" name="classId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Class Name : </label>
+                                                    <input class="form-control" type="text" id="className" name="className" placeholder="Class Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Grade ID : </label>
+                                                    <input class="form-control" type="text" id="gradeId" name="gradeId" placeholder="Grade ID">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Classes Grid End-->
+                                        <!--Classes Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Class</button>
+                                            </div>
+                                        </div>
+                                        <!--Classes Information End-->
+
+                                    </div>
+                                    <!--Classes Tab End-->
+                                    <!--Section Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Section">
+                                        <!--Section Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Section Name</th>
+                                                                    <th>Class ID</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Section Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="sectionId" name="sectionId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Section Name : </label>
+                                                    <input class="form-control" type="text" id="sectionName" name="sectionName" placeholder="Section Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Class ID : </label>
+                                                    <input class="form-control" type="text" id="classId" name="classId" placeholder="Class ID">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--Classes Grid End-->
+                                        <!--Classes Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Section</button>
+                                            </div>
+                                        </div>
+                                        <!--Section Information End-->
+
+                                    </div>
+                                    <!--Section Tab End-->
+                                    <!--Session Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Session">
+                                        <!--Session Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Session Name</th>
+                                                                    <th>isCurrent</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Session Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="sectionId" name="sectionId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Session Name : </label>
+                                                    <input class="form-control" type="text" id="sectionName" name="sectionName" placeholder="Section Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">isCurrent : </label>
+                                                    <input class="form-control" type="text" id="classId" name="classId" placeholder="Class ID">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--Session Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Session</button>
+                                            </div>
+                                        </div>
+                                        <!--Session Information End-->
+
+                                    </div>
+                                    <!--Session Tab End-->
+                                    <!--Subject Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Subject">
+                                        <!--Session Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Subject Name</th>
+                                                                    <th>Abbreviation</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Subject Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="sectionId" name="sectionId" placeholder="ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Subject Name : </label>
+                                                    <input class="form-control" type="text" id="subjectName" name="subjectName" placeholder="Subject Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Abbreviation : </label>
+                                                    <input class="form-control" type="text" id="abbrreviation" name="abbreviation" placeholder="Abbreviation">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--Subject Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Subject</button>
+                                            </div>
+                                        </div>
+                                        <!--Subject Information End-->
+
+                                    </div>
+                                    <!--Subject Tab End-->
+                                    <!--Module Tab Start-->
+                                    <div role="tabpanel" class="tab-pane" id="Module">
+                                        <!--Session Grid Start-->
+                                        <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                                <!--Grid container starts here-->
+                                                <div class="col-sm-12 grid-contr no-padding">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID#</th>
+                                                                    <th>Module Name</th>
+                                                                    <th>Subject ID</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--Grid container ends here-->
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                                <div class="col-lg-7 col-sm-5 col-md-7"><h2>Module Information</h2></div>
+                                                <div class="form-group">
+                                                    <label class="control-label">ID : </label>
+                                                    <input type="text" class="form-control" id="ModuleId" name="ModuleId" placeholder="Module ID">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Module Name : </label>
+                                                    <input class="form-control" type="text" id="moduleName" name="moduleName" placeholder="Module Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Subject ID : </label>
+                                                    <input class="form-control" type="text" id="subjectId" name="subjectId" placeholder="Subject ID">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--Module Information Start-->
+                                        <div class="col-lg-12 no-padding">
+                                            <div class="col-sm-6 no-padding text-right pull-right">
+                                                <button data-target="#RefeCertiService" data-toggle="modal" type="button" class="btn btn-secondary btn-bottom02">Add Module</button>
+                                            </div>
+                                        </div>
+                                        <!--Module Information End-->
+
+                                    </div>
+                                    <!--Module Tab End-->
+                                </div>
+                            </div>
+                            <!--Tab container ends here-->
+                        </div>
+
+                        <!--Provider Name/ &/ Tax ID/ Lookup/ popup start--->
+                        <div id="ProviderNameTaxId" class="modal fade child-modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="inner-window">
+                                        <div class="inner-head">
+                                            Provider Name &amp; Tax ID Lookup
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 provider-name-tax-id-lookup">
+
+                                            <p><strong>Enter all or some specs. You may enter partial values:</strong></p>
+
+                                            <div class="providers-label">
+                                                <div class="form-group">
+                                                    <label class="control-label group-name">Provider NPI</label>
+                                                    <input placeholder="" class="form-control">
+                                                </div>
+
+                                            </div>
+                                            <div class="providers-label">
+                                                <div class="form-group">
+                                                    <label class="control-label group-name">Tax ID</label>
+                                                    <input placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="providers-label">
+                                                <div class="form-group">
+                                                    <label class="control-label group-name">Code ("vendor")</label>
+                                                    <input placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="providers-label">
+                                                <div class="form-group">
+                                                    <label class="control-label group-name">Name (Last, First)</label>
+                                                    <input placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="providers-label no-margin">
+                                                <div class="form-group">
+                                                    <label class="control-label group-name">Effective Date</label>
+                                                    <input placeholder="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 no-padding pull-right">
+                                                <button class="btn btn-secondary btn-bottom01 pull-right" type="button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                                <button class="btn btn-secondary btn-bottom02 pull-right" type="button">New Entry</button>
+                                                <button class="btn btn-secondary btn-bottom01 pull-right" type="button">Search</button>
+                                            </div>
+                                            <div class="col-sm-12 margin-top-12 text-center no-padding">Only Active Providers &amp; Affliations are searched. Entering a TIN optimizes the search speed.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Provider Name/ & / Tax ID/ Lookup/ popup ends--->
+                        <!--Referred/Certified Service/ popup Start--->
+
+                        <div id="RefeCertiService" class="modal fade child-modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="inner-window">
+                                        <div class="inner-head">
+                                            Referred/Certified Service
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 refe-certi-service">
+
+
+                                            <div class="form-group">
+                                                <label class="control-label group-name">Diagnosis</label>
+                                                <input placeholder="" class="form-control half-size-01">
+                                                <input placeholder="Approved" class="form-control half-size-01">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Service Set</label>
+                                                <select class="selectpicker">
+                                                    <option>(none)</option>
+                                                    <option>1</option>
+                                                </select>
+                                                <label class="checkbox-inline no-left-padding margin-top-5">(Manual) Disposition<input type="checkbox" class="margin-left-6" value=""></label>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label group-name">Service Code</label>
+                                                <input placeholder="" class="form-control half-size-01">
+                                                <label class="control-label modifiers">Modifiers</label>
+                                                <input placeholder="" class="form-control modifiers-input">
+                                                <label class="control-label comma">,</label>
+                                                <input placeholder="" class="form-control modifiers-input">
+                                                <label class="control-label comma">,</label>
+                                                <input placeholder="" class="form-control modifiers-input">
+                                            </div>
+
+
+
+
+                                            <div class="form-group">
+                                                <label class="control-label">Requested #</label>
+                                                <input placeholder="" class="form-control requsted-input">
+                                                <label class="control-label comma">, at</label>
+                                                <input placeholder="" class="form-control requsted-input">
+                                                <label class="control-label comma">=</label>
+                                                <label class="control-label value">$0.00</label>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label">Certified #</label>
+                                                <input placeholder="" class="form-control requsted-input">
+                                                <label class="control-label comma">, at</label>
+                                                <input placeholder="" class="form-control requsted-input">
+                                                <label class="control-label comma">=</label>
+                                                <label class="control-label value">$0.00</label>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label">Frequency</label>
+                                                <input placeholder="" class="form-control requsted-input">
+                                                <label class="control-label comma">/</label>
+                                                <select class="selectpicker frequency-select">
+                                                    <option></option>
+                                                    <option></option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="reference-info">
+                                                <h2>Reference info</h2>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Diagnostic Category</label>
+                                                        <input placeholder="" class="form-control">
+                                                        <button class="btn btn-secondary btn-bottom02" type="button" data-toggle="modal" data-target="#">Pmt Contract ID</button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Service Category</label>
+                                                        <input placeholder="" class="form-control">
+                                                        <button class="btn btn-secondary btn-bottom02" type="button" data-toggle="modal" data-target="#">Billing Contract ID</button>
+                                                    </div>
+
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div> <!--reference-info Ends-->
+
+
+
+                                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                                <ul class="pagination">
+                                                    <li><a href="#">|&lt;</a></li>
+                                                    <li><a href="#">&lt;</a></li>
+                                                    <li><a href="#">&gt;</a></li>
+                                                    <li><a href="#">&gt;|</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 col-md-5 col-lg-3 no-padding text-center record-info">#LAAAMNIT</div>
+                                            <div class="col-sm-5 pull-right">
+                                                <button class="btn btn-secondary btn-bottom01 pull-right" type="button" data-dismiss="modal" aria-hidden="true">Hide</button>
+                                                <button class="btn btn-secondary btn-bottom02 pull-right" type="button">Check</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Referred/Certified Service/ popup Ends--->
+
                     </div>
                 </div>
             </div>
-            <!--Member List Popup content ends here-->
-            <!--Member Accumulator Edit content starts here-->
-            <div id="MemberAccumulatorEdit" class="modal fade">
+            <!--Basic Form ends here-->
+            <!--Phone Directory starts here-->
+            <div id="PhoneDirectory" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <!--Content stretch from member-accumulator-edit.html-->
+                        <div class="inner-window">
+                            <div class="inner-head">
+                                Phone Directory
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!--Edit buttons starts here-->
+                            <div class="col-sm-12 bottom-header">
+                                <ul>
+                                    <li><a href="#"><img src="images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                                    <li><a class="btn disabled" href="#"><img src="images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                                    <li><a class="btn disabled" href="#"><img src="images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                                    <li><a href="#"><img src="images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12">
+                                <!--Phone Directory Information Start-->
+                                <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 no-right-padding no-left-padding">
+                                        Contact: <input placeholder="Contact Person Name"/>
+                                        Description : <input placeholder="Description" />
+                                        <input type="submit" value="Add" class="btn btn-secondary btn-bottom02" />
+                                               
+                                        <!--Grid container starts here-->
+                                        <div class="col-sm-12 grid-contr no-padding">
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID#</th>
+                                                            <th>Contact Person Name</th>
+                                                            <th>Description</th>
+
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!--Grid container ends here-->
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6 custom-code-cntr no-right-padding">
+                                        Phone Number : <input type="text" placeholder="Person Number"/>
+                                        <input type="submit" value="Add" class="btn btn-secondary btn-bottom02">
+                                        
+                                        <!--Grid container starts here-->
+                                            <div class="col-sm-12 grid-contr no-padding">
+                                                <div class="table-responsive">
+
+                                                    <table class="table table-bordered table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Phone Number</th>
+
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                               
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!--Grid container ends here-->
+                                </div>
+                                <!-- Phone Directory Information End-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--Member Accumulator Edit content ends here-->
+            <!--Phone Directory ends here-->
             <!--Referral / Certifications under this member content starts here-->
-            <div id="RefCertMember" class="modal fade">
+            <div id="Student" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <!--Content stretch from referral-certifications-member.html-->
@@ -498,14 +1376,8 @@
             <!--Practitioners Facilities Ends here-->
 
         </div>
-        
-            <div class="body-content">
-                @RenderBody()
-
-            </div>
-        
-        
     </div>
+    @RenderBody()
     @Scripts.Render("~/Bundles/MainLayout")
 </body>
 </html>

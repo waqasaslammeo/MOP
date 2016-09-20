@@ -111,7 +111,9 @@
     <Content Include="obj\Debug\BusinessEntity.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\BusinessEntity.dll" />
     <Content Include="obj\Debug\BusinessEntity.pdb" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="bin\BusinessEntity.dll.config" />
     <Content Include="obj\Debug\BusinessEntity.csprojResolveAssemblyReference.cache" />

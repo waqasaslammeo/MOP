@@ -30,7 +30,7 @@ body {
 	margin-top:0px;
 }
 .no-padding{
-	padding:0px;
+	padding:5px;
 }
 .no-margin{
 	margin:0px;
@@ -285,7 +285,7 @@ body {
 	box-shadow:none;
 }
 #MemberList .modal-dialog{
-	min-height:750px;
+	min-height:auto;
 }
 #PayerList .modal-dialog{
 	min-height:682px;
