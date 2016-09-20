@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using BusinessEntity.Context;
-using BusinessEntity.SMS;
+using MOP.Inventory;
+using MOP.SMS;
 
-namespace MOP.Models
+namespace MOP.Context
 {
-    public class SmsContext : DbContext,IContext
+    public class AlphaContext : DbContext
     {
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Section> Sections { get; set; }
         public DbSet<Class> Classes { get; set; }
         public DbSet<Grade> Grades { get; set; }
