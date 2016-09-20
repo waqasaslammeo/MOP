@@ -63,6 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\IContext.cs" />
     <Compile Include="Context\InventoryContext.cs" />
     <Compile Include="Context\SMSContext.cs" />
     <Compile Include="Inventory\Category.cs" />

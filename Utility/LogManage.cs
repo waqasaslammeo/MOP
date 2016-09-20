@@ -17,10 +17,10 @@ namespace Utility
             var path = "/Log/" + fileName;
             if (!System.IO.File.Exists(path))
             {
-                File.Create(path);
+                //File.Create(path);
             }
 
-            File.AppendAllText(path, log);
+            //File.AppendAllText(path, log);
 
         }
     }

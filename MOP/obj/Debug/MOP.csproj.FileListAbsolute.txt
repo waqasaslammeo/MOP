@@ -108,3 +108,7 @@ E:\Work\Project\MOP\MOP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Work\Project\MOP\MOP\obj\Debug\MOP.csprojResolveAssemblyReference.cache
 E:\Work\Project\MOP\MOP\obj\Debug\MOP.dll
 E:\Work\Project\MOP\MOP\obj\Debug\MOP.pdb
+E:\Work\Project\MOP\MOP\bin\BusinessEntity.dll
+E:\Work\Project\MOP\MOP\bin\BusinessEntity.pdb
+E:\Work\Project\MOP\MOP\bin\Test2.dll
+E:\Work\Project\MOP\MOP\bin\Test2.pdb

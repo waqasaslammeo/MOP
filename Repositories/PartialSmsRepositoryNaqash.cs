@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.SessionState;
 using BusinessEntity.SMS;
@@ -379,12 +380,12 @@ namespace Repositories
             } 
             return userList;
         }
-        public static List<Role> GetAllRoles()
+        public static List<Role> GetAllRoles( IContext db)
         {
             var roleList = new List<Role>();
             try
             {
-                using (var db = new SMSContext())
+               // using (var db = new SMSContext())
                 {
                     roleList = db.Roles.ToList();
                 }
