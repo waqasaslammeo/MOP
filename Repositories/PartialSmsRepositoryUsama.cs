@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using BusinessEntity.SMS;
 using BusinessEntity.Context;
+using Utility;
 
 namespace Repositories
 {
@@ -12,118 +13,180 @@ namespace Repositories
         #region Insert
         public static void InsertStudent(Student student)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.Students.Add(student);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.Students.Add(student);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void InsertPreviousSchool(PreviousSchool previousSchool)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.PreviousSchools.Add(previousSchool);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.PreviousSchools.Add(previousSchool);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void InsertStudentEnrollment(StudentEnrollment studentEnrollment)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.StudentEnrollments.Add(studentEnrollment);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.StudentEnrollments.Add(studentEnrollment);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
-      
         #endregion
 
         #region Update
         public static void UpdateStudent(Student student)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempStudent = db.Students.Single(x => x.Id == student.Id);
-                tempStudent.FirstName = student.FirstName;
-                tempStudent.LastName = student.LastName;
-                tempStudent.StudentRollNo = student.StudentRollNo;
-                tempStudent.FatherName = student.FatherName;
-                tempStudent.PreviousSchoolId = student.PreviousSchoolId;
-                tempStudent.StudentEnrollmentId = student.StudentEnrollmentId;
-                tempStudent.FatherCNIC = student.FatherCNIC;
-                tempStudent.PassportNo = student.PassportNo;
-                tempStudent.VisaStartDate = student.VisaStartDate;
-                tempStudent.VisaExpiryDate = student.VisaExpiryDate;
-                tempStudent.GuardianName = student.GuardianName;
-                tempStudent.GuardianCNIC = student.GuardianCNIC;
-                tempStudent.ContactNo1 = student.ContactNo1;
-                tempStudent.ContactNo2 = student.ContactNo2;
-                tempStudent.EmailAddress = student.EmailAddress;
-                tempStudent.Address1 = student.Address1;
-                tempStudent.Address2 = student.Address2;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempStudent = db.Students.Single(x => x.Id == student.Id);
+                    tempStudent.FirstName = student.FirstName;
+                    tempStudent.LastName = student.LastName;
+                    tempStudent.StudentRollNo = student.StudentRollNo;
+                    tempStudent.FatherName = student.FatherName;
+                    tempStudent.PreviousSchoolId = student.PreviousSchoolId;
+                    tempStudent.StudentEnrollmentId = student.StudentEnrollmentId;
+                    tempStudent.FatherCNIC = student.FatherCNIC;
+                    tempStudent.PassportNo = student.PassportNo;
+                    tempStudent.VisaStartDate = student.VisaStartDate;
+                    tempStudent.VisaExpiryDate = student.VisaExpiryDate;
+                    tempStudent.GuardianName = student.GuardianName;
+                    tempStudent.GuardianCNIC = student.GuardianCNIC;
+                    tempStudent.ContactNo1 = student.ContactNo1;
+                    tempStudent.ContactNo2 = student.ContactNo2;
+                    tempStudent.EmailAddress = student.EmailAddress;
+                    tempStudent.Address1 = student.Address1;
+                    tempStudent.Address2 = student.Address2;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void UpdateStudentEnrollment(StudentEnrollment studentEnrollment)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollment.Id);
-                tempStudentEnrollment.StudentId = studentEnrollment.StudentId;
-                tempStudentEnrollment.SectionId = studentEnrollment.SectionId;
-                tempStudentEnrollment.SessionId = studentEnrollment.SessionId;
-                tempStudentEnrollment.EnrollmentDate = studentEnrollment.EnrollmentDate;
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollment.Id);
+                    tempStudentEnrollment.StudentId = studentEnrollment.StudentId;
+                    tempStudentEnrollment.SectionId = studentEnrollment.SectionId;
+                    tempStudentEnrollment.SessionId = studentEnrollment.SessionId;
+                    tempStudentEnrollment.EnrollmentDate = studentEnrollment.EnrollmentDate;
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
 
         public static void UpdatePreviousSchool(PreviousSchool previousSchool)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPreviousSchool = db.PreviousSchools.Single(x => x.Id == previousSchool.Id);
-                tempPreviousSchool.StudentId = previousSchool.StudentId;
-                tempPreviousSchool.InstituteName = previousSchool.InstituteName;
-                tempPreviousSchool.JoinDate = previousSchool.JoinDate;
-                tempPreviousSchool.LeaveDate = previousSchool.LeaveDate;
+                using (var db = new SMSContext())
+                {
+                    var tempPreviousSchool = db.PreviousSchools.Single(x => x.Id == previousSchool.Id);
+                    tempPreviousSchool.StudentId = previousSchool.StudentId;
+                    tempPreviousSchool.InstituteName = previousSchool.InstituteName;
+                    tempPreviousSchool.JoinDate = previousSchool.JoinDate;
+                    tempPreviousSchool.LeaveDate = previousSchool.LeaveDate;
 
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }  
         }
         #endregion
         
         #region Delete
         public static void DeleteStudent(int studentId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempStudent = db.Students.Single(x => x.Id == studentId);
-                db.Students.Remove(tempStudent);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempStudent = db.Students.Single(x => x.Id == studentId);
+                    db.Students.Remove(tempStudent);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
 
         }
 
         public static void DeleteStudentEnrollment(int studentEnrollmentId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollmentId);
-                db.StudentEnrollments.Remove(tempStudentEnrollment);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempStudentEnrollment = db.StudentEnrollments.Single(x => x.Id == studentEnrollmentId);
+                    db.StudentEnrollments.Remove(tempStudentEnrollment);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
 
         }
 
         public static void DeletePreviousSchool(int previousSchoolId)
         {
-            using (var db = new SMSContext())
+            try
             {
-                var tempPreviousSchcool = db.PreviousSchools.Single(x => x.Id == previousSchoolId);
-                db.PreviousSchools.Remove(tempPreviousSchcool);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    var tempPreviousSchcool = db.PreviousSchools.Single(x => x.Id == previousSchoolId);
+                    db.PreviousSchools.Remove(tempPreviousSchcool);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
 
         }
         #endregion
@@ -132,119 +195,191 @@ namespace Repositories
         public static Student GetStudentById(int studentId)
         {
             var student = new Student();
-            using (var db = new SMSContext())
+            try
             {
-                student = db.Students.Single(x => x.Id == studentId);
+                using (var db = new SMSContext())
+                {
+                    student = db.Students.Single(x => x.Id == studentId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return student;
         }
 
         public static Student GetStudentByFatherName(string fatherName)
         {
             var student = new Student();
-            using (var db = new SMSContext())
+            try
             {
-                student = db.Students.Single(x => x.FatherName == fatherName);
+                using (var db = new SMSContext())
+                {
+                    student = db.Students.Single(x => x.FatherName == fatherName);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return student;
         }
 
         public static Student GetStudentByFatherCNIC(string cnic)
         {
             var student = new Student();
-            using (var db = new SMSContext())
+            try
             {
-                student = db.Students.Single(x => x.FatherCNIC == cnic);
+                using (var db = new SMSContext())
+                {
+                    student = db.Students.Single(x => x.FatherCNIC == cnic);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return student;
         }
 
         public static Student GetStudentByGuardianCNIC(string cnic)
         {
             var student = new Student();
-            using (var db = new SMSContext())
+            try
             {
-                student = db.Students.Single(x => x.GuardianCNIC == cnic);
+                using (var db = new SMSContext())
+                {
+                    student = db.Students.Single(x => x.GuardianCNIC == cnic);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return student;
         }
 
         public static Student GetStudentByEmailAddress(string emailAddress)
         {
             var student = new Student();
-            using (var db = new SMSContext())
+            try
             {
-                student = db.Students.Single(x => x.EmailAddress == emailAddress);
+                using (var db = new SMSContext())
+                {
+                    student = db.Students.Single(x => x.EmailAddress == emailAddress);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return student;
         }
 
         public static PreviousSchool GetPreviousSchoolByStudentId(int studentId)
         {
             var previousSchoolStudentId = new PreviousSchool();
-            using (var db = new SMSContext())
+            try
             {
-                previousSchoolStudentId = db.PreviousSchools.Single(x => x.Id == studentId);
+                using (var db = new SMSContext())
+                {
+                    previousSchoolStudentId = db.PreviousSchools.Single(x => x.Id == studentId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return previousSchoolStudentId;
         }
-      
-
         #endregion
 
         #region List
         public static List<Student> GetAllStudents()
         {
             var studentList = new List<Student>();
-            using (var db = new SMSContext())
+            try
             {
-                studentList = db.Students.ToList();
+                using (var db = new SMSContext())
+                {
+                    studentList = db.Students.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return studentList;
         }
 
         public static List<Student> GetAllStudentByFatherCNIC(string fatherCNIC)
         {
             var studentList = new List<Student>();
-            using (var db = new SMSContext())
+            try
             {
-                studentList = db.Students.Where(x=> x.FatherCNIC==fatherCNIC).ToList();
+                using (var db = new SMSContext())
+                {
+                    studentList = db.Students.Where(x => x.FatherCNIC == fatherCNIC).ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return studentList;
         }
 
         public static List<Student> GetAllStudentByFatherName(string fatherName)
         {
             var studentList = new List<Student>();
-            using (var db = new SMSContext())
+            try
             {
-                studentList = db.Students.Where(x=> x.FatherName==fatherName).ToList();
+                using (var db = new SMSContext())
+                {
+                    studentList = db.Students.Where(x => x.FatherName == fatherName).ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return studentList;
         }
 
         public static List<PreviousSchool> GetAllPreviousSchools()
         {
             var previousSchool = new List<PreviousSchool>();
-            using (var db = new SMSContext())
+            try
             {
-                previousSchool = db.PreviousSchools.ToList();
+                using (var db = new SMSContext())
+                {
+                    previousSchool = db.PreviousSchools.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return previousSchool;
         }
 
         public static List<PreviousSchool> GetAllStudentsByInstituteName(string instituteName)
         {
             var studentByInstituteList = new List<PreviousSchool>();
-            using (var db = new SMSContext())
+            try
             {
-                studentByInstituteList = db.PreviousSchools.Where(x => x.InstituteName == instituteName).ToList();
+                using (var db = new SMSContext())
+                {
+                    studentByInstituteList = db.PreviousSchools.Where(x => x.InstituteName == instituteName).ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return studentByInstituteList;
         }
-
-       
-
         #endregion
 
     }

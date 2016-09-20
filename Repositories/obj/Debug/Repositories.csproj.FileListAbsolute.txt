@@ -6,3 +6,13 @@ D:\ERP\MOP\Repositories\bin\BusinessEntity.dll
 D:\ERP\MOP\Repositories\bin\BusinessEntity.pdb
 D:\ERP\MOP\Repositories\obj\Debug\Repositories.dll
 D:\ERP\MOP\Repositories\obj\Debug\Repositories.pdb
+E:\Work\Project\MOP\Repositories\bin\Repositories.dll.config
+E:\Work\Project\MOP\Repositories\bin\Repositories.dll
+E:\Work\Project\MOP\Repositories\bin\Repositories.pdb
+E:\Work\Project\MOP\Repositories\bin\BusinessEntity.dll
+E:\Work\Project\MOP\Repositories\bin\BusinessEntity.pdb
+E:\Work\Project\MOP\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+E:\Work\Project\MOP\Repositories\obj\Debug\Repositories.dll
+E:\Work\Project\MOP\Repositories\obj\Debug\Repositories.pdb
+E:\Work\Project\MOP\Repositories\bin\Utility.dll
+E:\Work\Project\MOP\Repositories\bin\Utility.pdb

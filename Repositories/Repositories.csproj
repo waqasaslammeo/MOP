@@ -101,6 +101,10 @@
       <Project>{409abe16-9894-4aad-b8c1-7b3389447d31}</Project>
       <Name>BusinessEntity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{b8fa00ca-7266-4660-bd9c-647aedfd1d15}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

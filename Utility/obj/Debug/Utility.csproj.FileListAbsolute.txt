@@ -1,6 +1,0 @@
-D:\ERP\MOP\Utility\bin\Utility.dll.config
-D:\ERP\MOP\Utility\bin\Utility.dll
-D:\ERP\MOP\Utility\bin\Utility.pdb
-D:\ERP\MOP\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
-D:\ERP\MOP\Utility\obj\Debug\Utility.dll
-D:\ERP\MOP\Utility\obj\Debug\Utility.pdb

@@ -4,3 +4,9 @@ D:\ERP\MOP\BusinessEntity\bin\BusinessEntity.dll
 D:\ERP\MOP\BusinessEntity\bin\BusinessEntity.pdb
 D:\ERP\MOP\BusinessEntity\obj\Debug\BusinessEntity.dll
 D:\ERP\MOP\BusinessEntity\obj\Debug\BusinessEntity.pdb
+E:\Work\Project\MOP\BusinessEntity\bin\BusinessEntity.dll.config
+E:\Work\Project\MOP\BusinessEntity\bin\BusinessEntity.dll
+E:\Work\Project\MOP\BusinessEntity\bin\BusinessEntity.pdb
+E:\Work\Project\MOP\BusinessEntity\obj\Debug\BusinessEntity.dll
+E:\Work\Project\MOP\BusinessEntity\obj\Debug\BusinessEntity.pdb
+E:\Work\Project\MOP\BusinessEntity\obj\Debug\BusinessEntity.csprojResolveAssemblyReference.cache

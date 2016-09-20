@@ -1,10 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.SessionState;
 using BusinessEntity.SMS;
 using BusinessEntity.Context;
+using Utility;
 
 namespace Repositories
 {
@@ -15,28 +18,49 @@ namespace Repositories
         {
             var classobj = new Class();
 
-            using (var db = new SMSContext())
+            try
             {
-                classobj = db.Classes.Single(x => x.Id == classId);
+                using (var db = new SMSContext())
+                {
+                    classobj = db.Classes.Single(x => x.Id == classId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return classobj;
         }
         public static Section GetSectionById(int sectionId)
         {
             var section = new Section();
-            using (var db = new SMSContext())
+            try
             {
-                section = db.Sections.Single(x => x.Id == sectionId);
+                using (var db = new SMSContext())
+                {
+                    section = db.Sections.Single(x => x.Id == sectionId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return section;
         }
         public static Grade GetGradeById(int gradeId)
         {
             var grade = new Grade();
-            using (var db = new SMSContext())
+            try
             {
-                grade = db.Grades.Single(x => x.Id == gradeId);
+                using (var db = new SMSContext())
+                {
+                    grade = db.Grades.Single(x => x.Id == gradeId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return grade;
 
         }
@@ -44,220 +68,364 @@ namespace Repositories
         {
             var moduleobj = new Module();
 
-            using (var db = new SMSContext())
+            try
             {
-                moduleobj = db.Modules.Single(x => x.Id == moduleId);
+                using (var db = new SMSContext())
+                {
+                    moduleobj = db.Modules.Single(x => x.Id == moduleId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return moduleobj;
         }
         public static Session GetSessionById(int sessionId)
         {
             var sessionObj = new Session();
 
-            using (var db = new SMSContext())
+            try
             {
-                sessionObj = db.Sessions.Single(x => x.Id == sessionId);
+                using (var db = new SMSContext())
+                {
+                    sessionObj = db.Sessions.Single(x => x.Id == sessionId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return sessionObj;
         }
         public static Subject GetSubjectById(int subjectId)
         {
             var subjectObj = new Subject();
 
-            using (var db = new SMSContext())
+            try
             {
-                subjectObj = db.Subjects.Single(x => x.Id == subjectId);
+                using (var db = new SMSContext())
+                {
+                    subjectObj = db.Subjects.Single(x => x.Id == subjectId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return subjectObj;
         }
         public static SystemItem GetSystemItemById(int systemId)
         {
             var systemItemObj = new SystemItem();
 
-            using (var db = new SMSContext())
+            try
             {
-                systemItemObj = db.SystemItems.Single(x => x.Id == systemId);
+                using (var db = new SMSContext())
+                {
+                    systemItemObj = db.SystemItems.Single(x => x.Id == systemId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return systemItemObj;
         }
         public static User GetUserById(int userId)
         {
             var userObj = new User();
 
-            using (var db = new SMSContext())
+            try
             {
-                userObj = db.Users.Single(x => x.Id == userId);
+                using (var db = new SMSContext())
+                {
+                    userObj = db.Users.Single(x => x.Id == userId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return userObj;
         }
-
         public static User GetUserValidate(string username,string password)
         {
             var user = new User();
-            using (var db = new SMSContext())
+            try
             {
-                user = db.Users.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
+                using (var db = new SMSContext())
+                {
+                    user = db.Users.Where(x => x.Username == username && x.Password == password).SingleOrDefault();
 
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
 
             return user;
         }
         public static Role GetRoleById(int roleId)
         {
-            Role roleobj = new Role();
-            using (var db = new SMSContext())
+            var roleobj = new Role();
+            try
             {
-                roleobj = db.Roles.Single(x => x.Id == roleId);
+                using (var db = new SMSContext())
+                {
+                    roleobj = db.Roles.Single(x => x.Id == roleId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return roleobj;
         }
         public static SystemLog GetSystemLogById(int systemLogId)
         {
             var systemLog = new SystemLog();
-            using (var db = new SMSContext())
+            try
             {
-                systemLog = db.SystemLogs.Single(x => x.Id == systemLogId);
+                using (var db = new SMSContext())
+                {
+                    systemLog = db.SystemLogs.Single(x => x.Id == systemLogId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return systemLog;
         }
         public static UserRole GetIdByUserRole(int userRoleId)
         {
             var userRoleObj = new UserRole();
-            using (var db = new SMSContext())
+            try
             {
-                userRoleObj = db.UserRoles.Single(x => x.Id == userRoleId);
+                using (var db = new SMSContext())
+                {
+                    userRoleObj = db.UserRoles.Single(x => x.Id == userRoleId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return userRoleObj;
         }
         public static RoleItem GetIdByRoleItem(int roleItemId)
         {
             var roleItemObj = new RoleItem();
-            using (var db = new SMSContext())
+            try
             {
-                roleItemObj = db.RoleItems.Single(x => x.Id == roleItemId);
+                using (var db = new SMSContext())
+                {
+                    roleItemObj = db.RoleItems.Single(x => x.Id == roleItemId);
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return roleItemObj;
         }
         #endregion
+
         #region List
         public static List<Class> GetAllClasses()
         {
             var classList = new List<Class>();
 
-            using (var db = new SMSContext())
+            try
             {
-                classList = db.Classes.ToList();
+                using (var db = new SMSContext())
+                {
+                    classList = db.Classes.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
 
             return classList;
         }
-
         public static List<Section> GetAllSections()
         {
             var sectionList = new List<Section>();
-            using (var db = new SMSContext())
+            try
             {
-                sectionList = db.Sections.ToList();
+                using (var db = new SMSContext())
+                {
+                    sectionList = db.Sections.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return sectionList;
         }
-
         public static List<Grade> GetAllGrades()
         {
             var gradeList = new List<Grade>();
-            using (var db = new SMSContext())
+            try
             {
-                gradeList = db.Grades.ToList();
+                using (var db = new SMSContext())
+                {
+                    gradeList = db.Grades.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return gradeList;
         }
-
         public static List<SystemLog> GetAllSystemLog()
         {
             var systemLogList = new List<SystemLog>();
-            using (var db = new SMSContext())
+            try
             {
-                systemLogList = db.SystemLogs.ToList();
+                using (var db = new SMSContext())
+                {
+                    systemLogList = db.SystemLogs.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return systemLogList;
         }
-
         public static List<Module> GetAllModule()
         {
             var moduleList = new List<Module>();
-            using (var db = new SMSContext())
+            try
             {
-                moduleList = db.Modules.ToList();
+                using (var db = new SMSContext())
+                {
+                    moduleList = db.Modules.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return moduleList;
         }
-
         public static List<Session> GetAllSession()
         {
             var sessionList = new List<Session>();
-            using (var db = new SMSContext())
+            try
             {
-                sessionList = db.Sessions.ToList();
+                using (var db = new SMSContext())
+                {
+                    sessionList = db.Sessions.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return sessionList;
         }
-
-
         public static List<Subject> GetAllSubject()
         {
             var subjectList = new List<Subject>();
-            using (var db = new SMSContext())
+            try
             {
-                subjectList = db.Subjects.ToList();
+                using (var db = new SMSContext())
+                {
+                    subjectList = db.Subjects.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return subjectList;
         }
-
         public static List<SystemItem> GetAllSystemItem()
         {
             var systemItemList = new List<SystemItem>();
-            using (var db = new SMSContext())
+            try
             {
-                systemItemList = db.SystemItems.ToList();
+                using (var db = new SMSContext())
+                {
+                    systemItemList = db.SystemItems.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return systemItemList;
         }
-
         public static List<User> GetAllUser()
         {
             var userList = new List<User>();
-            using (var db = new SMSContext())
+            try
             {
-                userList = db.Users.ToList();
+                using (var db = new SMSContext())
+                {
+                    userList = db.Users.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return userList;
         }
-
-        public static List<Role> GetAllRoles()
+        public static List<Role> GetAllRoles( IContext db)
         {
             var roleList = new List<Role>();
-            using (var db = new SMSContext())
+            try
             {
-                roleList = db.Roles.ToList();
+               // using (var db = new SMSContext())
+                {
+                    roleList = db.Roles.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return roleList;
         }
         public static List<UserRole> GetAllUserRoles()
         {
             var userRoleList = new List<UserRole>();
-            using (var db = new SMSContext())
+            try
             {
-                userRoleList = db.UserRoles.ToList();
+                using (var db = new SMSContext())
+                {
+                    userRoleList = db.UserRoles.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return userRoleList;
         }
         public static List<RoleItem> GetAllRoleItems()
         {
             var roleItemList = new List<RoleItem>();
-            using (var db = new SMSContext())
+            try
             {
-                roleItemList = db.RoleItems.ToList();
+                using (var db = new SMSContext())
+                {
+                    roleItemList = db.RoleItems.ToList();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
             return roleItemList;
         }
 
@@ -265,354 +433,605 @@ namespace Repositories
         #region Insert
         public static void InsertSystemLog(SystemLog systemLog)
         {
-            using (var db = new SMSContext())
+            try
             {
-                db.SystemLogs.Add(systemLog);
-                db.SaveChanges();
+                using (var db = new SMSContext())
+                {
+                    db.SystemLogs.Add(systemLog);
+                    db.SaveChanges();
+                }
             }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            } 
         }
          public static void InsertClass(Class classObj)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Classes.Add(classObj);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Classes.Add(classObj);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertSection(Section section)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Sections.Add(section);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Sections.Add(section);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertGrade(Grade grade)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Grades.Add(grade);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Grades.Add(grade);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertModule(Module module)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Modules.Add(module);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Modules.Add(module);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertSessions(Session session)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Sessions.Add(session);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Sessions.Add(session);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertSubjects(Subject subject)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Subjects.Add(subject);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Subjects.Add(subject);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertSystemItem(SystemItem systemItem)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.SystemItems.Add(systemItem);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.SystemItems.Add(systemItem);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertUser(User user)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Users.Add(user);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Users.Add(user);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertRole(Role role)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.Roles.Add(role);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.Roles.Add(role);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertUserRole(UserRole userRole)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.UserRoles.Add(userRole);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.UserRoles.Add(userRole);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void InsertRoleItem(RoleItem roleItem)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 db.RoleItems.Add(roleItem);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     db.RoleItems.Add(roleItem);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
-
         #endregion
+
         #region Update
          public static void UpdateClass(Class classObj)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempClass = db.Classes.Single(x => x.Id == classObj.Id);
-                 tempClass.ClassName = classObj.ClassName;
-                 tempClass.GradeId = classObj.GradeId;
-                 tempClass.Grade = classObj.Grade;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempClass = db.Classes.Single(x => x.Id == classObj.Id);
+                     tempClass.ClassName = classObj.ClassName;
+                     tempClass.GradeId = classObj.GradeId;
+                     tempClass.Grade = classObj.Grade;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateSection(Section section)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSection = db.Sections.Single(x => x.Id == section.Id);
-                 tempSection.SectionName = section.SectionName;
-                 tempSection.ClassId = section.ClassId;
-                 tempSection.Class = section.Class;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSection = db.Sections.Single(x => x.Id == section.Id);
+                     tempSection.SectionName = section.SectionName;
+                     tempSection.ClassId = section.ClassId;
+                     tempSection.Class = section.Class;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
              {
-                 
-             }
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateGrade(Grade grade)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempGrade = db.Grades.Single(x => x.Id == grade.Id);
-                 tempGrade.Grades = grade.Grades;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempGrade = db.Grades.Single(x => x.Id == grade.Id);
+                     tempGrade.Grades = grade.Grades;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateModule(Module module)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempModule = db.Modules.Single(x => x.Id == module.Id);
-                 tempModule.ModuleName = module.ModuleName;
-                 tempModule.Subject = module.Subject;
-                 tempModule.SubjectId = module.SubjectId;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempModule = db.Modules.Single(x => x.Id == module.Id);
+                     tempModule.ModuleName = module.ModuleName;
+                     tempModule.Subject = module.Subject;
+                     tempModule.SubjectId = module.SubjectId;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateSession(Session session)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSession = db.Sessions.Single(x => x.Id == session.Id);
-                 tempSession.SessionName = session.SessionName;
-                 tempSession.IsCurrent = session.IsCurrent;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSession = db.Sessions.Single(x => x.Id == session.Id);
+                     tempSession.SessionName = session.SessionName;
+                     tempSession.IsCurrent = session.IsCurrent;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateSubject(Subject subject)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSubject = db.Subjects.Single(x => x.Id == subject.Id);
-                 tempSubject.SubjectName = subject.SubjectName;
-                 tempSubject.Abbreviation = subject.Abbreviation;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSubject = db.Subjects.Single(x => x.Id == subject.Id);
+                     tempSubject.SubjectName = subject.SubjectName;
+                     tempSubject.Abbreviation = subject.Abbreviation;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateSystemItem(SystemItem systemItem)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItem.Id);
-                 tempSystemItem.SystemItemName = systemItem.SystemItemName;
-                 tempSystemItem.IsActive = systemItem.IsActive;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItem.Id);
+                     tempSystemItem.SystemItemName = systemItem.SystemItemName;
+                     tempSystemItem.IsActive = systemItem.IsActive;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateRole(Role role)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var objrole = db.Roles.Single(x => x.Id == role.Id);
-                 objrole.RoleName = role.RoleName;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var objrole = db.Roles.Single(x => x.Id == role.Id);
+                     objrole.RoleName = role.RoleName;
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateUser(User user)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempUser = db.Users.Single(x => x.Id == user.Id);
-                 tempUser.FirstName = user.FirstName;
-                 tempUser.LastName = user.LastName;
-                 tempUser.Password = user.Password;
-                 tempUser.EmailAddress = user.EmailAddress;
-                 tempUser.Phone1 = user.Phone1;
-                 tempUser.Phone2 = user.Phone2;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempUser = db.Users.Single(x => x.Id == user.Id);
+                     tempUser.FirstName = user.FirstName;
+                     tempUser.LastName = user.LastName;
+                     tempUser.Password = user.Password;
+                     tempUser.EmailAddress = user.EmailAddress;
+                     tempUser.Phone1 = user.Phone1;
+                     tempUser.Phone2 = user.Phone2;
+                     db.SaveChanges();
+                 }
+
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateUserRole(UserRole userRole)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var objUserRole = db.UserRoles.Single(x => x.Id == userRole.Id);
-                 objUserRole.UserId = userRole.UserId;
-                 objUserRole.User = userRole.User;
-                 objUserRole.RoleId = userRole.RoleId;
-                 objUserRole.Role = userRole.Role;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var objUserRole = db.UserRoles.Single(x => x.Id == userRole.Id);
+                     objUserRole.UserId = userRole.UserId;
+                     objUserRole.User = userRole.User;
+                     objUserRole.RoleId = userRole.RoleId;
+                     objUserRole.Role = userRole.Role;
+                     db.SaveChanges();
+                 }
+
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateRoleItem(RoleItem roleItem)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var objRoleitem = db.RoleItems.Single(x => x.Id == roleItem.Id);
-                 objRoleitem.RoleId = roleItem.RoleId;
-                 objRoleitem.Role = roleItem.Role;
-                 objRoleitem.ItemId = roleItem.ItemId;
-                 objRoleitem.Item = roleItem.Item;
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var objRoleitem = db.RoleItems.Single(x => x.Id == roleItem.Id);
+                     objRoleitem.RoleId = roleItem.RoleId;
+                     objRoleitem.Role = roleItem.Role;
+                     objRoleitem.ItemId = roleItem.ItemId;
+                     objRoleitem.Item = roleItem.Item;
+                     db.SaveChanges();
+                 }
+
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void UpdateSystemLog(SystemLog systemLog)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var obj = db.SystemLogs.Where(x => x.Id == systemLog.Id).SingleOrDefault();
+                 using (var db = new SMSContext())
+                 {
+                     var obj = db.SystemLogs.Where(x => x.Id == systemLog.Id).SingleOrDefault();
 
-                 obj.Date = systemLog.Date;
-                 obj.Event = systemLog.Event;
-                 obj.Time = systemLog.Time;
-                 obj.LoggedInUser = systemLog.LoggedInUser;
-                 db.SaveChanges();
+                     obj.Date = systemLog.Date;
+                     obj.Event = systemLog.Event;
+                     obj.Time = systemLog.Time;
+                     obj.LoggedInUser = systemLog.LoggedInUser;
+                     db.SaveChanges();
+                 }
+
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
         #endregion
+
         #region Delete
          public static void DeleteClass(int classId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempClass = db.Classes.Single(x => x.Id == classId);
-                 db.Classes.Remove(tempClass);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempClass = db.Classes.Single(x => x.Id == classId);
+                     db.Classes.Remove(tempClass);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteSection(int sectionId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSection = db.Sections.Single(x => x.Id == sectionId);
-                 db.Sections.Remove(tempSection);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSection = db.Sections.Single(x => x.Id == sectionId);
+                     db.Sections.Remove(tempSection);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
             
          }
          public static void DeleteGrade(int gradeId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempGrade = db.Grades.Single(x => x.Id == gradeId);
-                 db.Grades.Remove(tempGrade);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempGrade = db.Grades.Single(x => x.Id == gradeId);
+                     db.Grades.Remove(tempGrade);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteModule(int moduleId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempModules = db.Modules.Single(x => x.Id == moduleId);
-                 db.Modules.Remove(tempModules);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempModules = db.Modules.Single(x => x.Id == moduleId);
+                     db.Modules.Remove(tempModules);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteSession(int sessionId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSession = db.Sessions.Single(x => x.Id == sessionId);
-                 db.Sessions.Remove(tempSession);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSession = db.Sessions.Single(x => x.Id == sessionId);
+                     db.Sessions.Remove(tempSession);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteSubject(int subjectId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSubject = db.Subjects.Single(x => x.Id == subjectId);
-                 db.Subjects.Remove(tempSubject);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSubject = db.Subjects.Single(x => x.Id == subjectId);
+                     db.Subjects.Remove(tempSubject);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteSystemItem(int systemItemId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItemId);
-                 db.SystemItems.Remove(tempSystemItem);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempSystemItem = db.SystemItems.Single(x => x.Id == systemItemId);
+                     db.SystemItems.Remove(tempSystemItem);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteUser(int userId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempUser = db.Users.Single(x => x.Id == userId);
-                 db.Users.Remove(tempUser);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempUser = db.Users.Single(x => x.Id == userId);
+                     db.Users.Remove(tempUser);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteRole(int roleId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempRole = db.Roles.Single(x => x.Id == roleId);
-                 db.Roles.Remove(tempRole);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempRole = db.Roles.Single(x => x.Id == roleId);
+                     db.Roles.Remove(tempRole);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteUserRole(int userRoleId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempUserRole = db.UserRoles.Single(x => x.Id == userRoleId);
-                 db.UserRoles.Remove(tempUserRole);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempUserRole = db.UserRoles.Single(x => x.Id == userRoleId);
+                     db.UserRoles.Remove(tempUserRole);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteRoleItem(int roleItemId)
          {
-             using (var db = new SMSContext())
+             try
              {
-                 var tempRoleItem = db.RoleItems.Single(x => x.Id == roleItemId);
-                 db.RoleItems.Remove(tempRoleItem);
-                 db.SaveChanges();
+                 using (var db = new SMSContext())
+                 {
+                     var tempRoleItem = db.RoleItems.Single(x => x.Id == roleItemId);
+                     db.RoleItems.Remove(tempRoleItem);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
          public static void DeleteSystemLog(int systemLogId)
          {
-             using (var db = new SMSContext())
+             try
              {
+                 using (var db = new SMSContext())
+                 {
 
-                 var obj = db.SystemLogs.Where(x => x.Id == systemLogId).FirstOrDefault();
+                     var obj = db.SystemLogs.Where(x => x.Id == systemLogId).FirstOrDefault();
 
-                 db.SystemLogs.Remove(obj);
-                 db.SaveChanges();
+                     db.SystemLogs.Remove(obj);
+                     db.SaveChanges();
+                 }
              }
+             catch (Exception exception)
+             {
+                 LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+             } 
          }
-
-        
-
         #endregion   
     }
 }
