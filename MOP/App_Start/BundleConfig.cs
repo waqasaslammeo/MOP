@@ -29,13 +29,17 @@ namespace MOP
 
             bundles.Add(new StyleBundle("~/Content/MainLayout").Include(
                 "~/Content/MainLayout/css/bootstrap.min.css",
-                "~/Content/MainLayout/css/custom.css"
+                "~/Content/MainLayout/css/custom.css",
+                "~/Content/MainLayout/css/datepicker.css"
+
                 ));
 
             bundles.Add(new ScriptBundle("~/Bundles/MainLayout").Include(
                 "~/Content/MainLayout/js/jquery-1.12.0.min.js",
                 "~/Content/MainLayout/js/bootstrap.min.js",
-                "~/Content/MainLayout/js/custom.js"
+                "~/Content/MainLayout/js/custom.js",
+                "~/Content/MainLayout/js/bootstrap-datepicker.js"
+
                 ));
         }
     }
