@@ -167,6 +167,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SmsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -288,7 +289,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -331,6 +334,17 @@
     <Content Include="Views\Home\Index1.cshtml" />
     <Content Include="Views\Sms\SignIn.cshtml" />
     <Content Include="Views\Sms\Index.cshtml" />
+    <Content Include="Views\Home\test1.cshtml" />
+    <Content Include="Views\Home\UserLogin.cshtml" />
+    <Content Include="Views\Home\SignUp1.cshtml" />
+    <Content Include="Views\Sms\SignUp.cshtml" />
+    <Content Include="Views\Shared\_MainLogin.cshtml" />
+    <Content Include="Views\Sms\City.cshtml" />
+    <Content Include="Views\Sms\Grade.cshtml" />
+    <Content Include="Views\Sms\Sessions.cshtml" />
+    <Content Include="Views\Sms\Subject.cshtml" />
+    <Content Include="Views\Sms\Branch.cshtml" />
+    <Content Include="Views\Sms\Module.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,4 +1,9 @@
 
+$(".login").click(function () {
+    $(".form-inline").submit();
+});
+
+
 // Modal popup scripts
 (function ($) {
     "use strict";
@@ -79,25 +84,25 @@ jQuery(function() {
    if('placeholder' in test) jQuery.support.placeholder = true;
 });
 
-//$(function() {
-//   if(!$.support.placeholder) { 
-//      var active = document.activeElement;
-//      $(':text, :password').focus(function () {
-//         if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
-//            $(this).val('').removeClass('hasPlaceholder');
-//         }
-//      }).blur(function () {
-//         if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
-//            $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
-//         }
-//      });
-//      $(':text, :password').blur();
-//      $(active).focus();
-//      //$('form:eq(0)').submit(function () {
-//      //   $(':text.hasPlaceholder, :password.hasPlaceholder').val('');
-//      //});
-//   }
-//});
+$(function() {
+   if(!$.support.placeholder) { 
+      var active = document.activeElement;
+      $(':text, :password').focus(function () {
+         if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+            $(this).val('').removeClass('hasPlaceholder');
+         }
+      }).blur(function () {
+         if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+            $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+         }
+      });
+      $(':text, :password').blur();
+      $(active).focus();
+      $('form:eq(0)').submit(function () {
+         $(':text.hasPlaceholder, :password.hasPlaceholder').val('');
+      });
+   }
+});
 
 $('a').mouseup(function(e){
     var button = 'left click';
@@ -120,3 +125,6 @@ $(document).click(function(e){
                 return false;
             }
 });
+
+
+

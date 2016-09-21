@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -13,8 +14,10 @@ namespace MOP.SMS
         public string StudentRollNo { get; set; }
         public string FatherName { get; set; }
         public int PreviousSchoolId { get; set; }
+        [Required]
         public virtual PreviousSchool PreviousSchool { get; set; }
         public int StudentEnrollmentId { get; set; }
+        [Required]
         public virtual StudentEnrollment StudentEnrollment { get; set; }
         public string FatherCNIC { get; set; }
         public string PassportNo { get; set; }
