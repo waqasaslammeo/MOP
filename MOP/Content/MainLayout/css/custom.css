@@ -3169,7 +3169,8 @@ body {
 }
 .third-party-carriers .right-section .address-info .small-size-02 {
 	 margin-left: 1%;
-    width: 18% !important;
+    /*width: 18% !important;*/
+    width:18%;
 }
 .third-party-carriers .right-section .small-size-03 {
 	width: 24% !important;

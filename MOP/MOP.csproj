@@ -166,7 +166,9 @@
     <Compile Include="Context\AlphaContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SMSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,9 +212,11 @@
     <Content Include="Content\MainLayout\claim-under-member.html" />
     <Content Include="Content\MainLayout\claims-examiner-form.html" />
     <Content Include="Content\MainLayout\copy-tiers-schedules.html" />
+    <Content Include="Content\MainLayout\css\bootstrap-datepicker.css" />
     <Content Include="Content\MainLayout\css\bootstrap.min.css" />
     <Content Include="Content\MainLayout\css\custom - Copy.css" />
     <Content Include="Content\MainLayout\css\custom.css" />
+    <Content Include="Content\MainLayout\css\datepicker.css" />
     <Content Include="Content\MainLayout\diagnosis-code-sets.html" />
     <Content Include="Content\MainLayout\disposition-codes.html" />
     <Content Include="Content\MainLayout\employer-groups-coverage.html" />
@@ -241,9 +245,11 @@
     <Content Include="Content\MainLayout\images\opticare-logo-small.png" />
     <Content Include="Content\MainLayout\index.html" />
     <Content Include="Content\MainLayout\insurers-hmos-tpas.html" />
+    <Content Include="Content\MainLayout\js\bootstrap-datepicker.js" />
     <Content Include="Content\MainLayout\js\bootstrap.min.js" />
     <Content Include="Content\MainLayout\js\custom.js" />
     <Content Include="Content\MainLayout\js\jquery-1.12.0.min.js" />
+    <Content Include="Content\MainLayout\js\jquery-3.1.0.min.js" />
     <Content Include="Content\MainLayout\legal-representives-attorneys.html" />
     <Content Include="Content\MainLayout\login.html" />
     <Content Include="Content\MainLayout\member-accumulator-edit.html" />
@@ -329,8 +335,20 @@
     <Content Include="Views\Shared\MainLogin.cshtml" />
     <Content Include="Views\Home\SignUp.cshtml" />
     <Content Include="Views\Home\Index1.cshtml" />
-    <Content Include="Views\Sms\SignIn.cshtml" />
-    <Content Include="Views\Sms\Index.cshtml" />
+    <Content Include="Views\SMS\Branch.cshtml" />
+    <Content Include="Views\SMS\Class.cshtml" />
+    <Content Include="Views\SMS\Module.cshtml" />
+    <Content Include="Views\SMS\PreviousSchool.cshtml" />
+    <Content Include="Views\SMS\Section.cshtml" />
+    <Content Include="Views\Inventory\Category.cshtml" />
+    <Content Include="Views\Inventory\Customer.cshtml" />
+    <Content Include="Views\Inventory\Employee.cshtml" />
+    <Content Include="Views\Inventory\Order.cshtml" />
+    <Content Include="Views\Inventory\Product.cshtml" />
+    <Content Include="Views\SMS\City.cshtml" />
+    <Content Include="Views\SMS\Grade.cshtml" />
+    <Content Include="Views\SMS\Session.cshtml" />
+    <Content Include="Views\SMS\Subject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
