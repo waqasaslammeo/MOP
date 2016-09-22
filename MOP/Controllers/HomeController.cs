@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 using MOP.Common;
 using MOP.Context;
 using MOP.Models;
+using MOP.SMS;
 
 
 namespace MOP.Controllers
@@ -18,12 +20,30 @@ namespace MOP.Controllers
             
             return View();
         }
-
-        public ActionResult SignUp()
+        [HttpGet]
+        public ActionResult SignUp1()
         {
             return View();
         }
 
+        [HttpPost]
+        public ActionResult SignUp1(User user)
+        {
+            using (var db = new AlphaContext())
+            {
+                var tempUser = db.Users.Single(x => x.Username == user.Username && x.Password == user.Password);
+                if (tempUser != null)
+                {
+                    Session["username"] = tempUser.Username.ToList();
+                    return RedirectToAction("demo1");
+                }
+                else
+                {
+                    ModelState.AddModelError("","username or password is Incorrect..!");
+                }
+            }
+            return View();
+        }
         public ActionResult Index1()
         {
             return View();
@@ -53,10 +73,9 @@ namespace MOP.Controllers
             return View();
         }
 
-        public ActionResult Alpha()
+        public PartialViewResult Test1()
         {
-            return View();
+            return PartialView("test1");
         }
-        
     }
 }

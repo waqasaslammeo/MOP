@@ -153,7 +153,6 @@ namespace Repositories
             } 
 
         }
-
         public static void DeleteStudentEnrollment(int studentEnrollmentId)
         {
             try
@@ -171,7 +170,6 @@ namespace Repositories
             } 
 
         }
-
         public static void DeletePreviousSchool(int previousSchoolId)
         {
             try
@@ -226,14 +224,14 @@ namespace Repositories
             return student;
         }
 
-        public static Student GetStudentByFatherCNIC(string cnic)
+        public static Student GetStudentByFatherCnic(string fatherCnic)
         {
             var student = new Student();
             try
             {
                 using (var db = new SMSContext())
                 {
-                    student = db.Students.Single(x => x.FatherCNIC == cnic);
+                    student = db.Students.Single(x => x.FatherCNIC == fatherCnic);
                 }
             }
             catch (Exception exception)
@@ -243,14 +241,14 @@ namespace Repositories
             return student;
         }
 
-        public static Student GetStudentByGuardianCNIC(string cnic)
+        public static Student GetStudentByGuardianCnic(string gardianCnic)
         {
             var student = new Student();
             try
             {
                 using (var db = new SMSContext())
                 {
-                    student = db.Students.Single(x => x.GuardianCNIC == cnic);
+                    student = db.Students.Single(x => x.GuardianCNIC == gardianCnic);
                 }
             }
             catch (Exception exception)
@@ -313,14 +311,14 @@ namespace Repositories
             return studentList;
         }
 
-        public static List<Student> GetAllStudentByFatherCNIC(string fatherCNIC)
+        public static List<Student> GetAllStudentByFatherCnic(string fatherCnic)
         {
             var studentList = new List<Student>();
             try
             {
                 using (var db = new SMSContext())
                 {
-                    studentList = db.Students.Where(x => x.FatherCNIC == fatherCNIC).ToList();
+                    studentList = db.Students.Where(x => x.FatherCNIC == fatherCnic).ToList();
                 }
             }
             catch (Exception exception)

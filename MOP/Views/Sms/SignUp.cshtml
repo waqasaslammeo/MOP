@@ -1,0 +1,41 @@
+﻿@using MOP.Models;
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_MainLogin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div id="LoginScreen" class="modal fade" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="login-contr">
+                        <div class="inner-head"><img src="images/opticare-logo-small.png" width="95" height="30"></div>
+                        <div class="bottom-header">Please Login</div>
+                        <div class="login-inner col-xs-9 col-sm-8 no-padding">
+                            @using (Html.BeginForm("SignUp", "Sms", FormMethod.Post, new { @class = "form-inline" }))
+                            {
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="Username" value="" placeholder="Enter User ID">
+                                
+                                </div>
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="login-password" type="password" class="form-control" name="Password" value="" placeholder="Enter Password">
+                                  
+                                </div>
+                                <button type="submit" class="btn btn-default login">Login</button>
+                            }
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

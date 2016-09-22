@@ -380,12 +380,12 @@ namespace Repositories
             } 
             return userList;
         }
-        public static List<Role> GetAllRoles( IContext db)
+        public static List<Role> GetAllRoles()
         {
             var roleList = new List<Role>();
             try
             {
-               // using (var db = new SMSContext())
+               using (var db = new SMSContext())
                 {
                     roleList = db.Roles.ToList();
                 }

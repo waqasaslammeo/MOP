@@ -222,6 +222,8 @@
     <Content Include="Content\MainLayout\employer-groups-coverage.html" />
     <Content Include="Content\MainLayout\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\MainLayout\icd-dsm-diagnosis-codes.html" />
+    <Content Include="Content\MainLayout\images\alphabackground9.jpg" />
+    <Content Include="Content\MainLayout\images\back.jpg" />
     <Content Include="Content\MainLayout\images\icon-add-white.png" />
     <Content Include="Content\MainLayout\images\icon-add.png" />
     <Content Include="Content\MainLayout\images\icon-commun-white.png" />
@@ -349,6 +351,8 @@
     <Content Include="Views\SMS\Grade.cshtml" />
     <Content Include="Views\SMS\Session.cshtml" />
     <Content Include="Views\SMS\Subject.cshtml" />
+    <Content Include="Views\Inventory\Supplier.cshtml" />
+    <Content Include="Views\SMS\Company.cshtml" />
     <Content Include="Views\Home\Alpha.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@ namespace MOP.SMS
     public class Session
     {
         public int Id { get; set; }
-        public String SessionName { get; set; }
+        public string SessionName { get; set; }
         public bool IsCurrent { get; set; }
 
     }

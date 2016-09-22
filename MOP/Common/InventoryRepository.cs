@@ -23,7 +23,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertCategory " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void InsertCustomer(Customer customer)
@@ -38,7 +38,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertCustomer " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void InsertEmployee(Employee employee)
@@ -53,7 +53,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertEmployee " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void InsertOrder(Order order)
@@ -68,10 +68,10 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertOrder " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
-        public static void InsertProduct(OrderDetail orderDetail)
+        public static void InsertOrderDetail(OrderDetail orderDetail)
         {
             try
             {
@@ -83,10 +83,10 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertOrderDetail " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
-        public static void InsertOrderDetail(Product product)
+        public static void InsertProduct(Product product)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertProduct " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void InsertSupplier(Supplier supplier)
@@ -113,7 +113,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:InsertSupplier " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         #endregion
@@ -134,7 +134,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateCategory " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateCustomer(Customer customer)
@@ -156,7 +156,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateCustomer " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateEmployee(Employee employee)
@@ -182,7 +182,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateEmployee " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateOrder(Order order)
@@ -204,7 +204,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateOrder " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateOrderDetail(OrderDetail orderDetail)
@@ -225,7 +225,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateOrderDetail " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateProduct(Product product)
@@ -249,7 +249,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateProduct " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void UpdateSupplier(Supplier supplier)
@@ -272,7 +272,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:UpdateSupplier " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         #endregion
@@ -293,7 +293,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteCategory " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteCustomer(int customerId)
@@ -312,7 +312,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteCustomer " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteEmployee(int employeeId)
@@ -331,7 +331,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteEmployee " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteOrder(int orderId)
@@ -348,7 +348,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteOrder " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteOrderDetail(int orderDetailId)
@@ -365,7 +365,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteOrderDetail " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteProduct(int productId)
@@ -384,7 +384,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteProduct " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         public static void DeleteSupplier(int supplierId)
@@ -403,7 +403,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:DeleteSupplier " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
         }
         #endregion
@@ -423,7 +423,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetCategoryById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempCategory;
         }
@@ -441,7 +441,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetCustomerById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempCustomer;
         }
@@ -458,7 +458,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetEmployeeById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempEmployee;
         }
@@ -475,7 +475,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetOrderDetailsById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempOrderDetail;
         }
@@ -492,7 +492,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetProductById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempProduct;
         }
@@ -509,7 +509,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetSupplierById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempSupplier;
         }
@@ -528,7 +528,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllCategories " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return categoryList;
         }
@@ -544,7 +544,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllCustomers " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return customerList;
         }
@@ -560,7 +560,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllEmployees " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return employeeList;
         }
@@ -576,7 +576,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllOrders " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return orderList;
         }
@@ -592,7 +592,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllOrderDetails " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return orderDetailList;
         }
@@ -608,7 +608,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllProducts " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return productList;
         }
@@ -624,7 +624,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllSuppliers " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return supplierList;
         }
@@ -640,7 +640,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetAllOrdersByDate " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return orderList;
         }
@@ -656,7 +656,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetOrderDetailsByOrderId " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return list;
         }
@@ -672,7 +672,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetProductByCategoryId " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return list;
         }
@@ -688,7 +688,7 @@ namespace MOP.Common
             }
             catch (Exception exception)
             {
-                LogManage.Log("MethodName:GetClassById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+                LogManage.Log("MethodName:GetProductBySupplierId " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return list;
         }
