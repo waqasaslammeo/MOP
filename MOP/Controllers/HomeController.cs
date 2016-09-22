@@ -52,5 +52,11 @@ namespace MOP.Controllers
         {
             return View();
         }
+
+        public ActionResult Alpha()
+        {
+            return View();
+        }
+        
     }
 }
