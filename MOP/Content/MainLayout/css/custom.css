@@ -3152,9 +3152,9 @@ body {
 .third-party-carriers .search-container .first-col .control-label {
     width: 35%;
 }
-.third-party-carriers .search-container .first-col .form-control {
+/*.third-party-carriers .search-container .first-col .form-control {
     width: 64%;
-}
+}*/
 .third-party-carriers .right-section {
 	background: #f6f4f4 none repeat scroll 0 0;
     border: 1px solid #d1d1d1;
@@ -3165,7 +3165,7 @@ body {
     width: 24% !important;
 }
 .third-party-carriers .right-section .address-info .gender {
-	width: 62% !important;
+	width: 18% !important;
 }
 .third-party-carriers .right-section .address-info .small-size-02 {
 	 margin-left: 1%;
@@ -5267,3 +5267,65 @@ body {
 .glyphicon-lock:before {
   content: "🔒";
 }
+
+/*--------------------------------------------------------------Alpha CSS---------------------------------------------------------------*/
+/*Modal Min Height Starts*/
+#Branch .modal-dialog {
+	min-height:325px;
+}
+
+#City .modal-dialog {
+	min-height:325px;
+}
+
+#Class .modal-dialog {
+	min-height:600px;
+}
+
+#Grade .modal-dialog {
+	min-height:325px;
+}
+
+#Module .modal-dialog {
+	min-height:600px;
+}
+
+#PreviousSchool .modal-dialog {
+	min-height:600px;
+}
+
+#Section .modal-dialog {
+	min-height:600px;
+}
+
+#Session .modal-dialog {
+	min-height:325px;
+}
+
+#Subject .modal-dialog {
+	min-height:325px;
+}
+
+#Category .modal-dialog {
+	min-height:600px;
+}
+
+#Customer .modal-dialog {
+	min-height:600px;
+}
+
+#Employee .modal-dialog {
+	min-height:600px;
+}
+
+#Order .modal-dialog {
+	min-height:600px;
+}
+
+#Product .modal-dialog {
+	min-height:600px;
+}
+.search-container .first-col .form-control {
+    width: 100%;
+}
+/*Modal Min Height Ends*/
