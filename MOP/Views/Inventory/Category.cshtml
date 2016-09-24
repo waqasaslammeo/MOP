@@ -6,7 +6,7 @@
 
 <div class="inner-window">
     <div class="inner-head">
-        Category
+        Category Form
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     </div>
     <!--Edit buttons starts here-->
@@ -44,6 +44,8 @@
                         <tr>
                             <th>Category Name</th>
                             <th>Description</th>
+                            <th></th>
+                            <th></th>
 
                         </tr>
                     </thead>
@@ -53,7 +55,8 @@
                             <tr>
                                 <td>@Html.Raw(category.CategoryName)</td>
                                 <td>@Html.Raw(category.Description)</td>
-                                <td><a href="home/deletecategory/@Html.Raw(category.Id)"><img src="/Content/MainLayout/images/remove.png" width="30" height="30"></a></td>
+                                <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                <td><a href="home/deletecategory/@Html.Raw(category.Id)"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
                             </tr>
                         }
                         

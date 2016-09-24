@@ -3,20 +3,16 @@
 
     <div class="inner-window">
         <div class="inner-head">
-            Insurance carrier (COB) Listing
+            Company Form
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <!--Edit buttons starts here-->
         <div class="col-sm-12 bottom-header">
             <ul>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-                <li id="Add_Company"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-copy-white.png" width="30" height="30"><span>Copy</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-validate-white.png" width="30" height="30"><span>Validate</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-commun-white.png" width="30" height="30"><span>Commun.</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
             </ul>
         </div>
@@ -86,50 +82,63 @@
                         <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Company Name</label>
+                                    <h2>Company Information</h2>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Company Name :</label>
                                     <input class="form-control" name="CompanyName" placeholder="Company Name...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Tag Line</label>
+                                    <label class="control-label">Tag Line :</label>
                                     <input class="form-control" name="TagLine" placeholder="Tag Line...">
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Short Description</label>
+                                    <label class="control-label">Short Description :</label>
                                     <input class="form-control" name="ShortDescription" style="height: 100px;" placeholder="Short Description...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Detail Description</label>
+                                    <label class="control-label">Detail Description :</label>
                                     <input class="form-control" name="DetailDescription" style="height: 200px;" placeholder="Detail Description...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Founder Name</label>
+                                    <label class="control-label">Founder Name :</label>
                                     <input class="form-control" name="FounderName" placeholder="Founder Name...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Founded On</label>
-                                    <input class="form-control" name="FoundedOn" placeholder="dd/MM/yyyy">
+                                    <label class="control-label">Founded On :</label>
+                                    <input id="foundedOn" class="form-control" name="FoundedOn" placeholder="dd/MM/yyyy">
                                 </div>
+                                <script type="text/javascript">
+
+                                    $(document).ready(function () {
+                                        $('#foundedOn').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                    });
+                                </script>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Phone Number</label>
+                                    <label class="control-label">Phone Number :</label>
                                     <input class="form-control" name="PhoneNumber" placeholder="Phone Number...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Logo</label>
+                                    <label class="control-label">Logo :</label>
                                     <input id="fileupload" type="file" name="Logo" value="Upload Logo">
                                 </div>
                             </div>

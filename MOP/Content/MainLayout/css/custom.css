@@ -5282,6 +5282,10 @@ body {
 	min-height:600px;
 }
 
+#Company .modal-dialog {
+	min-height:600px;
+}
+
 #Grade .modal-dialog {
 	min-height:325px;
 }
@@ -5307,7 +5311,7 @@ body {
 }
 
 #Category .modal-dialog {
-	min-height:600px;
+	min-height:325px;
 }
 
 #Customer .modal-dialog {
