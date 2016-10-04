@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using MOP.Inventory;
-using MOP.SMS;
+using MOP.Models.Inventory;
+using MOP.Models.SMS;
 
 namespace MOP.Context
 {

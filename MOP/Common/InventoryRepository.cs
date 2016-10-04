@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MOP.Context;
-using MOP.Inventory;
+using MOP.Models.Inventory;
 
 namespace MOP.Common
 {
@@ -461,6 +461,23 @@ namespace MOP.Common
                 LogManage.Log("MethodName:GetEmployeeById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return tempEmployee;
+        }
+
+        public static Order GetOrderById(int orderId)
+        {
+            var tempOrder = new Order();
+            try
+            {
+                using (var db = new AlphaContext())
+                {
+                    tempOrder = db.Orders.Single(x => x.Id == orderId);
+                }
+            }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetOrderId" + Environment.NewLine + "Time" + DateTime.Now + Environment.NewLine + "ErrorMsg:" + exception.Message);               
+            }
+            return tempOrder;
         }
         public static OrderDetail GetOrderDetailsById(int orderDetailsId)
         {

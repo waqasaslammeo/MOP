@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 
-namespace MOP.Inventory
+namespace MOP.Models.Inventory
 {
     public class Order
     {
@@ -15,7 +15,7 @@ namespace MOP.Inventory
         public virtual Employee Employee { get; set; }
         public int OrderDate { get; set; }
         public int NetTotal { get; set; }
-
+        public string ContactTitle { get; set; }
         public int Discount { get; set; }
         
     }

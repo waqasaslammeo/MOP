@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace MOP
+namespace MOP.Common
 {
     public static class LogManage
     {

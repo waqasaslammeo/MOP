@@ -1,116 +1,114 @@
-﻿@using MOP.Inventory
+﻿@using MOP.Common
+@using MOP.Models.Inventory
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_MainLayoutWithOutHeader.cshtml";
+}
 @{
     var categoryList = ViewBag.CategoryList == null ? new List<Category>() : ViewBag.CategoryList as List<Category>;
     var cat = ViewBag.Category == null ? new Category() : ViewBag.Category as Category;
 }
-
-<div class="inner-window">
-    <div class="inner-head">
-        Category
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    </div>
-    <!--Edit buttons starts here-->
-    <div class="col-sm-12 bottom-header">
-        <ul>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-        </ul>
-    </div>
-    <!--Edit buttons ends here-->
-    <div class="third-party-carriers">
-        <!--Search starts here-->
-        <div class="col-sm-12 search-container">
-            <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search By City Name">
+@using (Html.BeginForm("Category", "Inventory", FormMethod.Post, new { @class = "form-horizontal"}))
+{
+    <div class="inner-window">
+        <div class="inner-head">
+            CATEGORY
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <!--Edit buttons starts here-->
+        <div class="col-sm-12 bottom-header">
+            <ul>
+                <li id="Category_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+            </ul>
+        </div>
+        <!--Edit buttons ends here-->
+        <div class="third-party-carriers">
+            <!--Search starts here-->
+            <div class="col-sm-12 search-container">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
+                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Search By City Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                        <button type="button" class="btn btn-primary" style="margin: 9px 0px;">Search</button>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
-                </div>
             </div>
-
-        </div>
-        <!--Search ends here-->
-        <!--Grid starts here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Category Name</th>
-                            <th>Description</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var category in categoryList)
-                        {
+            <!--Search ends here-->
+            <!--Grid starts here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
                             <tr>
-                                <td>@Html.Raw(category.CategoryName)</td>
-                                <td>@Html.Raw(category.Description)</td>
-                                <td><a href="home/deletecategory/@Html.Raw(category.Id)"><img src="/Content/MainLayout/images/remove.png" width="30" height="30"></a></td>
+                                <th>Category Name</th>
+                                <th>Description</th>
                             </tr>
-                        }
-                        
-                       
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-12 button-wrap">
-                <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
-            </div>
-        </div>
-        <!--Grid ends here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
-            <div class="right-section">
-                <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
-                    <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <h2>Category Information</h2>
-                            </div>
-                        </div>
-                        <input type="hidden" name="Id" value="@Html.Raw(cat.Id)" />
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Category Name :</label>
-                                <input class="form-control" placeholder="" value="@Html.Raw(cat.CategoryName)">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                        <div class="form-group">
-                            <label class="control-label">Description</label>
-                            <input class="form-control" placeholder="" value="@Html.Raw(cat.Description)">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                        <div class="form-group">
-                            <label class="control-label">Picture :</label>
-                            <input type="file">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
-                            <div class="form-group">
-                                <div class="col-sm-2 col-md-2 col-lg-2 button-contr no-right-padding">
-                                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Add</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                        </thead>
+                        <tbody>
+                            @foreach (var category in categoryList)
+                            {
+                                <tr>
+                                    <td>@Html.Raw(category.CategoryName)</td>
+                                    <td>@Html.Raw(category.Description)</td>
+                                    <td><a href="@Url.Action("CategoryDelete", "Inventory", new { id = category.Id })"><img src="/Content/MainLayout/images/remove.png" width="30" height="30"></a></td>
+                                </tr>
+                            } 
+                        </tbody>
+                    </table>
                 </div>
-                <div class="clearfix"></div>
-
-            </div><!--right-section Ends-->
-
-        </div>
-    </div><!--Category Ends-->
-</div>
-
+                <div class="col-lg-12 button-wrap">
+                    <div class="col-sm-2 col-md-3 no-padding record-info">@Html.Raw(categoryList.Count) Records</div>
+                </div>
+            </div>
+            <!--Grid ends here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                <div class="right-section">
+                    <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                        <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <h2>Category Information</h2>
+                                </div>
+                            </div>
+                            <input type="hidden" name="Id" value="@Html.Raw(cat.Id)">
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Category Name </label>
+                                    <input class="form-control" placeholder="" name="CategoryName" value="@Html.Raw(cat.CategoryName)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                            <div class="form-group">
+                                <label class="control-label">Description</label>
+                                <input class="form-control" placeholder="" name="Description" value="@Html.Raw(cat.Description)">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                            <div class="form-group">
+                                <label class="control-label">Picture </label>
+                                <input type="file">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button id="" type="submit" value="Save"/>
+                    <div class="clearfix"></div>
+                </div><!--right-section Ends-->
+            </div>
+        </div><!--Category Ends-->
+    </div>
+}
+<script>
+    $("#Category_Add").click(function () {
+       // alert("test check point");
+        $("form").submit();
+    });
+</script>

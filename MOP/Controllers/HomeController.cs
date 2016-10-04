@@ -7,7 +7,7 @@ using System.Web.Services.Description;
 using MOP.Common;
 using MOP.Context;
 using MOP.Models;
-using MOP.SMS;
+using MOP.Models.SMS;
 
 
 namespace MOP.Controllers
@@ -17,8 +17,7 @@ namespace MOP.Controllers
         public ActionResult Index()
         {
             var c = new AlphaContext();
-            
-            return View();
+            return View(c.Branches.ToList());
         }
         [HttpGet]
         public ActionResult SignUp1()

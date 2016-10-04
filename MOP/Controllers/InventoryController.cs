@@ -1,28 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using MOP.Common;
-using MOP.Inventory;
+using MOP.Models.Inventory;
 
 namespace MOP.Controllers
 {
     public class InventoryController : Controller
-    {
-        //
-        // GET: /Inventory/
+    {        
         public ActionResult Index()
         {
             return View();
         }
-        [HttpGet]
-        public PartialViewResult Category()
+        #region Category
+        public void CommonCategory()
         {
-            return PartialView("Category");
+            var categoryList = InventoryRepository.GetAllCategories();
+            ViewBag.CategoryList = categoryList;
+        }
+        [HttpGet]
+        public ActionResult Category(int id=0)
+        {
+            if (id > 0)
+            {
+                var category = InventoryRepository.GetCategoryById(id);
+                ViewBag.Category = category;
+            }
+            
+            CommonCategory();
+            return View();
         }
         [HttpPost]
-        public PartialViewResult Category(Category category)
+        public ActionResult Category(Category category)
         {
             if (category.Id > 0)
             {
@@ -32,21 +45,36 @@ namespace MOP.Controllers
             {
                 InventoryRepository.InsertCategory(category);
             }
-            return PartialView("Category");
+            CommonCategory();
+
+            return RedirectToAction("index", "Inventory", new { p = "Category" });
         }
-        [HttpPost]
-        public PartialViewResult DeleteCategory(int categoryId)
+        public ActionResult DeleteCategory(int categoryId)
         {
             InventoryRepository.DeleteCategory(categoryId);
-            return PartialView("Category");
+            CommonCategory();
+            return RedirectToAction("index", "Inventory", new {p = "Category"});
+        }
+        #endregion
+        #region Customer
+
+        public void CommonCustomer()
+        {
+            var customerList = InventoryRepository.GetAllCustomers();
+            ViewBag.CustomerList = customerList;
+
         }
         [HttpGet]
-        public PartialViewResult Customer()
+        public ActionResult Customer(int id=0)
         {
-            return PartialView("Customer");
+
+            var customer=InventoryRepository.GetCustomerById(id);
+            ViewBag.Customer = customer;
+            CommonCustomer();
+            return View();
         }
         [HttpPost]
-        public PartialViewResult Customer(Customer customer)
+        public ActionResult Customer(Customer customer)
         {
             if (customer.Id > 0)
             {
@@ -56,21 +84,35 @@ namespace MOP.Controllers
             {
                 InventoryRepository.InsertCustomer(customer);
             }
-            return PartialView("Customer");
-        }
-        [HttpPost]
-        public PartialViewResult Customer(int customerId)
+            CommonCustomer();
+            return RedirectToAction("index", "Inventory", new { p = "Customer" });
+        }       
+        public ActionResult CustomerDelete(int customerId)
         {
             InventoryRepository.DeleteCustomer(customerId);
-            return PartialView("Customer");
+            CommonCustomer();
+            return RedirectToAction("index", "Inventory", new { p = "Customer" });
+        }
+        #endregion
+        #region Employee
+        public void CommonEmployee()
+        {
+            var employeeList = InventoryRepository.GetAllSuppliers();
+            ViewBag.EmployeeList = employeeList;
         }
         [HttpGet]
-        public PartialViewResult Employee()
+        public ActionResult Employee(int id)
         {
-            return PartialView("Employee");
+            if (id > 0)
+            {
+                var employee = InventoryRepository.GetEmployeeById(id);
+                ViewBag.Employee = employee;
+            }
+            CommonEmployee();
+            return View();
         }
         [HttpPost]
-        public PartialViewResult Employee(Employee employee)
+        public ActionResult Employee(Employee employee)
         {
             if (employee.Id > 0)
             {
@@ -80,45 +122,104 @@ namespace MOP.Controllers
             {
                 InventoryRepository.InsertEmployee(employee);
             }
-            return PartialView("Employee");
+            CommonEmployee();
+            return RedirectToAction("index", "Inventory", new { p = "Employee" });
         }
-        [HttpPost]
-        public PartialViewResult Employee(int employeeId)
+        public ActionResult EmployeeDelete(int employeeId)
         {
             InventoryRepository.DeleteEmployee(employeeId);
-            return PartialView("Employee");
+            CommonEmployee();
+            return RedirectToAction("index", "Inventory", new { p = "Employee" });
+        }
+        #endregion
+        #region Order
+
+        public void CommonOrder()
+        {
+            var orderList = InventoryRepository.GetAllOrders();
+            ViewBag.OrderList = orderList;
         }
         [HttpGet]
-        public PartialViewResult Order()
+        public ActionResult Order(int id =0)
         {
-            return PartialView("Order");
+             var order=InventoryRepository.GetOrderById(id);
+            ViewBag.Order = order;
+            CommonOrder();
+            return View();
         }
         [HttpPost]
-        public PartialViewResult Order(Order order)
+        public ActionResult Order(Order order)
         {
             if (order.Id > 0)
             {
-             InventoryRepository.UpdateOrder(order);   
+                InventoryRepository.UpdateOrder(order);
             }
             else
             {
                 InventoryRepository.InsertOrder(order);
             }
-            return PartialView("Order");
+            CommonOrder();
+            return RedirectToAction("index", "Inventory", new { p = "Order" });
         }
-        [HttpPost]
-        public PartialViewResult Order(int orderId)
+        public ActionResult OrderDelete(int orderId)
         {
             InventoryRepository.DeleteOrder(orderId);
-            return PartialView("Order");
+            CommonOrder();
+            return RedirectToAction("index", "Inventory", new { p = "Order" });
+        }
+        #endregion
+        #region OrderDetails
+
+        public void CommonOrderDetail()
+        {
+            var orderDetailList = InventoryRepository.GetAllOrderDetails();
+            ViewBag.OrderDetailList = orderDetailList;
+        }
+       [HttpGet]
+        public ActionResult OrderDetail(int id = 0)
+        {
+            var orderDetail = InventoryRepository.GetOrderDetailsById(id);
+            ViewBag.OrderDetail = orderDetail;
+            return View();
+        }
+         [HttpPost]
+        public ActionResult OrderDetail(OrderDetail orderDetail)
+        {
+            if (orderDetail.Id > 0)
+            {
+                InventoryRepository.UpdateOrderDetail(orderDetail);
+            }
+            else
+            {
+                InventoryRepository.InsertOrderDetail(orderDetail);
+            }
+            CommonOrderDetail();
+            return RedirectToAction("index", "Inventory", new { p = "OrderDetail" });
+        }
+        public ActionResult DeleteOrderDetail(int id = 0)
+        {
+            InventoryRepository.DeleteOrderDetail(id);
+            CommonOrderDetail();
+            return RedirectToAction("index", "Inventory", new { p = "OrderDetail" });
+        }
+        #endregion
+        #region Product
+
+        public void CommonProduct()
+        {
+            var productList = InventoryRepository.GetAllProducts();
+            ViewBag.ProductList = productList;
         }
         [HttpGet]
-        public PartialViewResult Product()
+        public ActionResult Product(int id =0)
         {
-            return PartialView("Product");
+            var product = InventoryRepository.GetProductById(id);
+            ViewBag.Product = product;
+            CommonProduct();
+            return View();
         }
         [HttpPost]
-        public PartialViewResult Product(Product product)
+        public ActionResult Product(Product product)
         {
             if (product.Id > 0)
             {
@@ -128,13 +229,53 @@ namespace MOP.Controllers
             {
                 InventoryRepository.InsertProduct(product);
             }
-            return PartialView("Product");
+            CommonProduct();
+            return RedirectToAction("index", "Inventory", new { p = "Product" });
         }
-        [HttpPost]
-        public PartialViewResult Product(int productId)
+        public ActionResult ProductDelete(int productId)
         {
             InventoryRepository.DeleteProduct(productId);
-            return PartialView("Product");
+            CommonProduct();
+            return RedirectToAction("index", "Inventory", new { p = "Product" });
         }
-	}
+        #endregion
+        #region Supplier
+
+        public void CommonSupplier()
+        {
+            var supplierList = InventoryRepository.GetAllSuppliers();
+            ViewBag.SupplierList = supplierList;
+        }
+        [HttpGet]
+        public ActionResult Supplier(int id = 0)
+        {
+           
+            var supplier = InventoryRepository.GetSupplierById(id);
+            ViewBag.Supplier = supplier;
+            CommonSupplier();
+            return View();
+        }
+         [HttpPost]
+        public ActionResult Supplier(Supplier supplier)
+        {
+            if (supplier.Id > 0)
+            {
+                InventoryRepository.UpdateSupplier(supplier);
+            }
+            else
+            {
+                InventoryRepository.InsertSupplier(supplier);
+            }
+            CommonSupplier();
+            return RedirectToAction("index", "Inventory", new { p = "Supplier" });
+        }
+        public ActionResult SupplierDelete(int supplierId)
+        {
+            InventoryRepository.DeleteSupplier(supplierId);
+            CommonSupplier();
+            return RedirectToAction("index", "Inventory", new { p = "Supplier" });
+        }
+        #endregion
+
+    }
 }

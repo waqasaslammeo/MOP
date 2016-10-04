@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MOP.Inventory
+namespace MOP.Models.Inventory
 {
     public class Employee
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MOP.Context;
-using MOP.SMS;
+using MOP.Models.SMS;
 
 namespace MOP.Common
 {
@@ -122,7 +122,7 @@ namespace MOP.Common
             }
             return previousSchoolStudentId;
         }
-        public static Company GetCompany(int companyId)
+        public static Company GetCompanyById(int companyId)
         {
             var companyObj = new Company();
             try
@@ -173,7 +173,7 @@ namespace MOP.Common
         //    }
         //    return phoneDirectoryDetailObj;
         //}
-        public static City GetCity(int cityId)
+        public static City GetCityById(int cityId)
         {
             var cityObj = new City();
             try
@@ -190,15 +190,15 @@ namespace MOP.Common
             }
             return cityObj;
         }
-        //public static Branch GetBranch(int branchId)
-        //{
-        //    var branchObj = new Branch();
-        //    using (var db = new AlphaContext())
-        //    {
-        //        branchObj = db.Branches.Single(x => x.Id == branchId);
-        //    }
-        //    return branchObj;
-        //}
+        public static Branch GetBranchById(int branchId)
+        {
+            var branchObj = new Branch();
+            using (var db = new AlphaContext())
+            {
+                branchObj = db.Branches.Single(x => x.Id == branchId);
+            }
+            return branchObj;
+        }
         public static Branch GetBranchByCityId(int cityId)
         {
             var branchByCityIdObj = new Branch();
