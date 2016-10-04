@@ -1,81 +1,77 @@
-﻿@{
-    ViewBag.Title = "Company";
-    Layout = "~/Views/Shared/_MainLayoutWithOutHeader.cshtml";
-}
-@using MOP.Common
-@using MOP.Models.SMS
-@{
-    var companyList = ViewBag.CompanyList == null ? new List<Company>() : ViewBag.CompanyList as List<Company>;
-    var com = ViewBag.Company == null ? new Company() : ViewBag.Company as Company;
-}
-@using (Html.BeginForm("Company", "SMS", FormMethod.Post))
+﻿@using (Html.BeginForm("Company", "SMS", FormMethod.Post))
 {
+
     <div class="inner-window">
         <div class="inner-head">
-            COMPANY
+            Company Form
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <!--Edit buttons starts here-->
         <div class="col-sm-12 bottom-header">
             <ul>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-                <li id="Add_Company"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-copy-white.png" width="30" height="30"><span>Copy</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-validate-white.png" width="30" height="30"><span>Validate</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-commun-white.png" width="30" height="30"><span>Commun.</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
                 <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
             </ul>
         </div>
         <!--Edit buttons ends here-->
         <div class="third-party-carriers">
+
             <!--Grid starts here-->
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <h2>Company Information</h2>
                 <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
                     <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
+
                         <div class="col-sm-12 col-md-12 col-lg-10">
                             <div class="form-group ">
-                                <img src="@Html.Raw(com.Logo)" class="img-rounded img-responsive " alt="Image Not Found" style="width: 150px;height: 150px;" align="right">
+                                <img src="http://ichef.bbci.co.uk/news/660/cpsprodpb/A2E4/production/_89400714_gettyimages-522829204.jpg" class="img-rounded img-responsive " alt="Image Not Found" style="width: 150px;height: 150px;" align="right">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                            <div class="form-group">
+                                <label class="control-label"><b>Company Name : </b></label>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Company Name : @Html.Raw(com.CompanyName)</b></label>
+                                <label class="control-label"><b>Tag Line : </b></label>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Tag Line : @Html.Raw(com.TagLine)</b></label>
+                                <label class="control-label"><b>Founder Name : </b></label>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Founder Name : @Html.Raw(com.FounderName)</b></label>
+                                <label class="control-label"><b>Founded On : </b></label>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Founded On : @Html.Raw(com.FoundedOn)</b></label>
+                                <label class="control-label"><b>Short Description : </b></label>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Short Description : @Html.Raw(com.ShortDescription)</b></label>
+                                <label class="control-label"><b>Detail Description : </b></label>
+
                             </div>
                         </div>
+
                         <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                             <div class="form-group">
-                                <label class="control-label"><b>Detail Description : @Html.Raw(com.DetailDescription)</b></label>
+                                <label class="control-label"><b>Phone Number : </b></label>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label"><b>Phone Number : @Html.Raw(com.PhoneNumber)</b></label>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -85,66 +81,84 @@
                     <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
                         <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                                <input type="hidden" name="Id" value="@Html.Raw(com.Id)" />
                                 <div class="form-group">
-                                    <label class="control-label">Company Name</label>
-                                    <input class="form-control" name="CompanyName" placeholder="Company Name..." value="@Html.Raw(com.CompanyName)">
+                                    <h2>Company Information</h2>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Tag Line</label>
-                                    <input class="form-control" name="TagLine" placeholder="Tag Line..." value="@Html.Raw(com.TagLine)">
+                                    <label class="control-label">Company Name :</label>
+                                    <input class="form-control" name="CompanyName" placeholder="Company Name...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Short Description</label>
-                                    <input class="form-control" name="ShortDescription" value="@Html.Raw(com.ShortDescription)" style="height: 100px;" placeholder="Short Description...">
+                                    <label class="control-label">Tag Line :</label>
+                                    <input class="form-control" name="TagLine" placeholder="Tag Line...">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Short Description :</label>
+                                    <input class="form-control" name="ShortDescription" style="height: 100px;" placeholder="Short Description...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Detail Description</label>
-                                    <input class="form-control" name="DetailDescription" value="@Html.Raw(com.DetailDescription)" style="height: 200px;" placeholder="Detail Description...">
+                                    <label class="control-label">Detail Description :</label>
+                                    <input class="form-control" name="DetailDescription" style="height: 200px;" placeholder="Detail Description...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Founder Name</label>
-                                    <input class="form-control" name="FounderName" placeholder="Founder Name..." value="@Html.Raw(com.FounderName)">
+                                    <label class="control-label">Founder Name :</label>
+                                    <input class="form-control" name="FounderName" placeholder="Founder Name...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Founded On</label>
-                                    <input class="form-control" name="FoundedOn" placeholder="dd/MM/yyyy" value="@Html.Raw(com.FoundedOn)">
+                                    <label class="control-label">Founded On :</label>
+                                    <input id="foundedOn" class="form-control" name="FoundedOn" placeholder="dd/MM/yyyy">
+                                </div>
+                                <script type="text/javascript">
+
+                                    $(document).ready(function () {
+                                        $('#foundedOn').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Phone Number :</label>
+                                    <input class="form-control" name="PhoneNumber" placeholder="Phone Number...">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                                 <div class="form-group">
-                                    <label class="control-label">Phone Number</label>
-                                    <input class="form-control" name="PhoneNumber" placeholder="Phone Number..." value="@Html.Raw(com.FoundedOn)">
+                                    <label class="control-label">Logo :</label>
+                                    <input id="fileupload" type="file" name="Logo" value="Upload Logo">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                                <div class="form-group">
-                                    <label class="control-label">Logo</label>
-                                    <input id="fileupload" type="file" name="Logo" value="@Html.Raw(com.Logo)">
-                                </div>
-                            </div>
+
                         </div>
                     </div>
+
+
                     <div class="clearfix"></div>
-                </div>
-                <!--right-section Ends-->
+
+                </div><!--right-section Ends-->
+
             </div>
-        </div>
-        <!--third-party-carriers Ends-->
+        </div><!--third-party-carriers Ends-->
     </div>
+
 }
+
 <script>
     $("#Add_Company").click(function () {
-    $("form").submit();
+        $("form").submit();
     });
 </script>

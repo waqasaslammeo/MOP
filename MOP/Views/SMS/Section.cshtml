@@ -1,120 +1,118 @@
 ﻿@using MOP.Common
-@using MOP.Models.SMS
+@using MOP.SMS
 
 @{
 
     var sectionList = ViewBag.SectionList == null ? new List<Section>() : ViewBag.SectionList as List<Section>;
     var classList = ViewBag.ClassList == null ? new List<Class>() : ViewBag.ClassList as List<Class>;
-    var sectionObj = ViewBag.Section == null ? new Section() : ViewBag.Section as Section;
+    var sectionObj = ViewBag.SectionObj == null ? new Section() : ViewBag.SectionObj as Section;
 }
 
-@using (Html.BeginForm("Section", "SMS", FormMethod.Post, new { @class = "form-horizontal" }))
+@using (Html.BeginForm("Section", "SMS", FormMethod.Post))
 {
-    <div class="inner-window">
-        <div class="inner-head">
-            Section Form
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <!--Edit buttons starts here-->
-        <div class="col-sm-12 bottom-header">
-            <ul>
-                <li id="Section_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-            </ul>
-        </div>
-        <!--Edit buttons ends here-->
-        <div class="third-party-carriers">
-            <!--Search starts here-->
-            <div class="col-sm-12 search-container">
-                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Search By Section or Class">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                        <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
+<div class="inner-window">
+    <div class="inner-head">
+        Section Form
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <div class="third-party-carriers">
+        <!--Search starts here-->
+        <div class="col-sm-12 search-container">
+            <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                    <div class="form-group">
+                        <input class="searchTextBox" placeholder="Search by Section or Class">
                     </div>
                 </div>
-
+                <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                    <button type="button" class="btn-primary searchButton">Search</button>
+                </div>
             </div>
-            <!--Search ends here-->
-            <!--Grid starts here-->
-            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>Section Name</th>
-                                <th>Class</th>
-                                <th> </th>
-                                <th> </th>
-                            </tr>
-                        </thead>
-                        <tbody>
+
+        </div>
+        <!--Search ends here-->
+        <!--Grid starts here-->
+        <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Section Name</th>
+                            <th>Class</th>
+                            <th> </th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
                             @foreach (var secList in sectionList)
                             {
-                                <tr>
-                                    <td>@Html.Raw(secList.SectionName)</td>
-                                    <td>@Html.Raw(secList.ClassId)</td>
-                                    <td><a href='@Url.Action("Section", "SMS", new {id = secList.Id})'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                                    <td><a href='@Url.Action("DeleteSection", "SMS", new {id = secList.Id})'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                                </tr>
+                            <tr>
+                                <td>@Html.Raw(secList.SectionName)</td>
+                                <td>@Html.Raw(secList.ClassId)</td>
+                                <td><a href='@Url.Action("Section", "SMS", new {id = secList.Id})'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                <td><a href='@Url.Action("DeleteSection", "SMS", new {id = secList.Id})'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+                            </tr>
                             }
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-lg-12 button-wrap">
-                    <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
-                </div>
+                    </tbody>
+                </table>
             </div>
-            <!--Grid ends here-->
-            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
-                <div class="right-section">
-                    <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
-                        <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
-                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                                <h2>Section Information</h2>
-                                <input type="hidden" name="Id" value="@Html.Raw(sectionObj.Id)" />
-                                <div class="form-group">
-                                    <label class="control-label">Section Name :</label>
-                                    <input name="SectionName" value="@Html.Raw(sectionObj.SectionName)" class="form-control" placeholder="Section Name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                        <h2>Class Information</h2>
-                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
+            <div class="col-lg-12 button-wrap">
+                <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+            </div>
+        </div>
+        <!--Grid ends here-->
+        <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+            <div class="right-section">
+                <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                    <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                            <h2>Section Information</h2>
+                            <input type="hidden" name="Id" value="@Html.Raw(sectionObj.Id)" />
                             <div class="form-group">
-                                <label class="control-label">Class :</label>
-                                <select class="selectpicker">
-                                    <option>-- Select Class --</option>
-                                    @foreach (var clsList in classList)
-                                    {
-                                        if (sectionObj.ClassId == clsList.Id)
-                                        {
-                                            <option value="@Html.Raw(clsList.Id)" selected="selected">@Html.Raw(clsList.ClassName)</option>
-                                        }
-                                        else
-                                        {
-                                            <option value="@Html.Raw(clsList.Id)">@Html.Raw(clsList.ClassName)</option>
-                                        }
-                                    }
-                                </select>
+                                <label class="control-label">Section Name :</label>
+                                <input name="SectionName" value="@Html.Raw(sectionObj.SectionName)" class="form-control" placeholder="Section Name">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                    <h2>Class Information</h2>
+                    <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
+                        <div class="form-group">
+                            <label class="control-label">Class :</label>
+                            <select class="selectpicker">
+                                <option>-- Select Class --</option>
+                                @foreach (var clsList in classList)
+{
+    if (sectionObj.ClassId == clsList.Id)
+    {
+        <option value="@Html.Raw(clsList.Id)" selected="selected">@Html.Raw(clsList.ClassName)</option>
+    }
+    else
+    {
+        <option value="@Html.Raw(clsList.Id)">@Html.Raw(clsList.ClassName)</option>
+    }
+}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                    <div class="col-sm-12 bottom-header Section-header">
+                        <ul>
+                            <li id="Add_Section"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                        </ul>
+                    </div>
+                </div>
                     <div class="clearfix"></div>
 
                 </div><!--right-section Ends-->
 
-            </div>
-        </div><!--Section Ends-->
-    </div>
+        </div>
+    </div><!--Section Ends-->
+</div>
 }
 <!--End Section Form-->
 

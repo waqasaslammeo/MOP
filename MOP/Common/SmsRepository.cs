@@ -130,7 +130,24 @@ namespace MOP.Common
             }
             return previousSchoolStudentId;
         }
-        public static Company GetCompanyById(int companyId)
+
+        public static PreviousSchool GetPreviousSchoolById(int previousSchoolId)
+        {
+            var previousSchoolById = new PreviousSchool();
+            try
+            {
+                using (var db = new AlphaContext())
+                {
+                    previousSchoolById = db.PreviousSchools.Single(x => x.Id == previousSchoolId);
+                }
+            }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetPreviousSchoolById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }
+            return previousSchoolById;
+        }
+        public static Company GetCompany(int companyId)
         {
             var companyObj = new Company();
             try
