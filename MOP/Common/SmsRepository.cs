@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MOP.Context;
-using MOP.SMS;
+using MOP.Models.SMS;
 
 namespace MOP.Common
 {
@@ -25,6 +25,14 @@ namespace MOP.Common
                 LogManage.Log("MethodName:GetStudentById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
             }
             return student;
+        }
+
+        public static Branch GetBranchById(int branchId)
+        {
+            using (var db = new AlphaContext())
+            {
+                return db.Branches.FirstOrDefault(x => x.Id == branchId);
+            }
         }
         //public static StudentEnrollment GetStudentEnrollmentById(int studentEntrollmentId)
         //{
@@ -122,7 +130,7 @@ namespace MOP.Common
             }
             return previousSchoolStudentId;
         }
-        public static Company GetCompany(int companyId)
+        public static Company GetCompanyById(int companyId)
         {
             var companyObj = new Company();
             try
@@ -173,7 +181,7 @@ namespace MOP.Common
         //    }
         //    return phoneDirectoryDetailObj;
         //}
-        public static City GetCity(int cityId)
+        public static City GetCityById(int cityId)
         {
             var cityObj = new City();
             try

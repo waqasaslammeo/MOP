@@ -1,257 +1,203 @@
-﻿<div class="inner-window">
-    <div class="inner-head">
-        Employee Form
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    </div>
-    <!--Edit buttons starts here-->
-    <div class="col-sm-12 bottom-header">
-        <ul>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-        </ul>
-    </div>
-    <!--Edit buttons ends here-->
-    <div class="third-party-carriers">
-        <!--Search starts here-->
-        <div class="col-sm-12 search-container">
-            <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search By First Name">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
-                </div>
-            </div>
+﻿@using MOP.Models.Inventory
+
+@{
+    var employeeList = ViewBag.EmployeeList == null ? new List<Employee>() : ViewBag.EmployeeList as List<Employee>;
+    var employee = ViewBag.Employee == null ? new Employee() : ViewBag.Employee as Employee;   
+}
+@using (Html.BeginForm("Employee", "Inventory", FormMethod.Post))
+{
+    <div class="inner-window">
+        <div class="inner-head">
+            Employee Form
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
-        <!--Search ends here-->
-        <!--Grid starts here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Hire Date</th>
-                            <th>Report To</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-12 button-wrap">
-                <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
-            </div>
+        <!--Edit buttons starts here-->
+        <div class="col-sm-12 bottom-header">
+            <ul>
+                <li id="Employee_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+            </ul>
         </div>
-        <!--Grid ends here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
-            <div class="right-section">
-                <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
-                    <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <h2>Personal Information</h2>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">First Name :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Last Name :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Date Of Birth (DOB) :</label>
-                                <input id="DOB" class="form-control" placeholder="Select Date">
-                            </div>
-                            <script type="text/javascript">
-
-                                $(document).ready(function () {
-                                    $('#DOB').datepicker({
-                                        format: "dd/mm/yyyy"
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Hire Date :</label>
-                                <input id="hireDate" class="form-control" placeholder="Select Date">
-                            </div>
-                            <script type="text/javascript">
-
-                                $(document).ready(function () {
-                                    $('#hireDate').datepicker({
-                                        format: "dd/mm/yyyy"
-                                    });
-                         
-                                });
-                            </script>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <h2>Address Information</h2>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Address</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">City</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <h2>Other Information</h2>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Title :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-        
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Home Page :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Extension :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <div class="form-group">
-                                <label class="control-label">Note :</label>
-                                <input class="form-control" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+        <!--Edit buttons ends here-->
+        <div class="third-party-carriers">
+            <!--Search starts here-->
+            <div class="col-sm-12 search-container">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
+                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
                         <div class="form-group">
-                            <label class="control-label">Report To :</label>
-                            <input class="form-control" placeholder="">
+                            <label class="control-label">Employee Name:</label>
+                            <input class="form-control" placeholder="Search By First Name">
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                        <button type="button" class="btn btn-primary" style="margin: 9px 0px;">Search</button>
+                    </div>
+                </div>
+            </div>
+            <!--Search ends here-->
+            <!--Grid starts here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Hire Date</th>
+                                <th>Report To</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var tempEmployeeList in employeeList)
+                            {
+                                <tr>
+                                    <td>@Html.Raw(tempEmployeeList.FirstName)</td>
+                                    <td>@Html.Raw(tempEmployeeList.HireDate)</td>
+                                    <td>@Html.Raw(tempEmployeeList.ReportTo)</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#"><img src="/Content/MainLayout/images/remove.png" width="30" height="30"></a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 button-wrap">
+                    <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+                </div>
+            </div>
+            <!--Grid ends here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                <div class="right-section">
+                    <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                        <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <h2>Personal Information</h2>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">First Name :</label>
+                                    <input class="form-control" placeholder="" value="@Html.Raw(employee.FirstName)">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Last Name :</label>
+                                    <input class="form-control" placeholder="" value="@Html.Raw(employee.LastName)">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Date Of Birth (DOB) :</label>
+                                    <input id="DOB" class="form-control" placeholder="Select Date" value="@Html.Raw(employee.BirthDate)">
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#DOB').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Hire Date :</label>
+                                    <input id="hireDate" class="form-control" placeholder="Select Date" >
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#hireDate').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <h2>Address Information</h2>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">Address</label>
+                                    <input class="form-control" placeholder="" value="@Html.Raw(employee.Address)">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <label class="control-label">City</label>
+                                    <input class="form-control" placeholder="" value="@Html.Raw(employee.City)>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <div class="form-group">
+                                    <h2>Other Information</h2>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+    <div class="form-group">
+        <label class="control-label">Title :</label>
+        <input class="form-control" placeholder="" value="@Html.Raw(employee.Title)>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+        <div class="form-group">
+            <label class="control-label">Home Page :</label>
+            <input class="form-control" placeholder="" value="@Html.Raw(employee.HomePage)>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+            <div class="form-group">
+                <label class="control-label">Extension :</label>
+                <input class="form-control" placeholder="" value="@Html.Raw(employee.Extension)>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                <div class="form-group">
+                    <label class="control-label">Note :</label>
+                    <input class="form-control" placeholder="" value="@Html.Raw(employee.Note)>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                    <div class="form-group">
+                        <label class="control-label">Report To :</label>
+                        <input class="form-control" placeholder="" value="@Html.Raw(employee.ReportTo)>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
                         <div class="form-group">
                             <label class="control-label">Photo Path :</label>
-                            <input class="form-control" placeholder="">
+                            <input class="form-control" placeholder="" value="@Html.Raw(employee.PhotoPath)>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
-                            <div class="form-group">
-                                <div class="col-sm-2 col-md-2 col-lg-2 button-contr no-right-padding">
-                                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Add</button>
+                        <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                            <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
+                                <div class="form-group">
+                                    <div class="col-sm-2 col-md-2 col-lg-2 button-contr no-right-padding">
+                                        <button type="button" class="btn btn-primary" style="margin: 9px 0px;">Add</button>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="clearfix"></div>
-
-            </div><!--right-section Ends-->
-
+                    <div class="clearfix"></div>
+                </div><!--right-section Ends-->
+            </div>
+        </div><!--Employee Ends-->
         </div>
-    </div><!--Employee Ends-->
-</div>
-
+}
+<script>
+    $("#Employee_Add").click(function () {
+        // alert("test check point");
+        $("form").submit();
+    });
+</script>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 
-namespace MOP.Inventory
+namespace MOP.Models.Inventory
 {
     public class Order
     {

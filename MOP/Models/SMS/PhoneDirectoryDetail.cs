@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MOP.SMS
+namespace MOP.Models.SMS
 {
     public class PhoneDirectoryDetail
     {

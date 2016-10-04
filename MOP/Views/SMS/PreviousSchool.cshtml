@@ -1,237 +1,148 @@
-﻿
-<div class="inner-window">
-    <div class="inner-head">
-        Previous School Form
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    </div>
-    <!--Edit buttons starts here-->
-    <div class="col-sm-12 bottom-header">
-        <ul>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-        </ul>
-    </div>
-    <!--Edit buttons ends here-->
-    <div class="third-party-carriers">
-        <!--Search starts here-->
-        <div class="col-sm-12 search-container">
-            <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search By Student Id or Institue Name">
+﻿@using MOP.Common
+@using MOP.Models.SMS
+
+@{
+
+    var previousSchoolList = ViewBag.PreviousSchoolList == null ? new List<PreviousSchool>() : ViewBag.PreviousSchoolList as List<PreviousSchool>;
+    var studentList = ViewBag.StudentList == null ? new List<Student>() : ViewBag.StudentList as List<Student>;
+    var previousSchoolObj = ViewBag.PreviousSchool == null ? new PreviousSchool() : ViewBag.PreviousSchool as PreviousSchool;
+}
+
+@using (Html.BeginForm("PreviousSchool", "SMS", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <div class="inner-window">
+        <div class="inner-head">
+            Previous School Form
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <!--Edit buttons starts here-->
+        <div class="col-sm-12 bottom-header">
+            <ul>
+                <li id="PreviousSchool_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+            </ul>
+        </div>
+        <!--Edit buttons ends here-->
+        <div class="third-party-carriers">
+            <!--Search starts here-->
+            <div class="col-sm-12 search-container">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
+                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Search By Student Id or Institue Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                        <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
+
+            </div>
+            <!--Search ends here-->
+            <!--Grid starts here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Institue Name</th>
+                                <th>Join Date</th>
+                                <th>Leave Date</th>
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ps in previousSchoolList)
+                            {
+                                <tr>
+                                    <td>@Html.Raw(ps.StudentId)</td>
+                                    <td>@Html.Raw(ps.InstituteName)</td>
+                                    <td>@Html.Raw(ps.JoinDate)</td>
+                                    <td>@Html.Raw(ps.LeaveDate)</td>
+                                    <td><a href='@Url.Action("PreviousSchool", "SMS", new {id = ps.Id})'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                    <td><a href='@Url.Action("DeletePreviousSchool", "SMS", new { id = ps.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 button-wrap">
+                    <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
                 </div>
             </div>
-
-        </div>
-        <!--Search ends here-->
-        <!--Grid starts here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Student ID</th>
-                            <th>Institue Name</th>
-                            <th>Join Date</th>
-                            <th>Leave Date</th>
-                            <th> </th>
-                            <th> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-12 button-wrap">
-                <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
-            </div>
-        </div>
-        <!--Grid ends here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
-            <div class="right-section">
-                <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
-                    <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
-                        <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
-                            <h2>Student Information</h2>
+            <!--Grid ends here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                <div class="right-section">
+                    <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                        <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding first-col">
+                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                <h2>Student Information</h2>
+                                <div class="form-group">
+                                    <label class="control-label">Student :</label>
+                                    <select class="selectpicker">
+                                        <option>-- Select Student --</option>
+                                        @foreach (var sl in studentList as List<Student>)
+                                        {
+                                            if (previousSchoolObj.StudentId == sl.Id)
+                                            {
+                                                <option value="@Html.Raw(sl.Id)" selected="selected">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@Html.Raw(sl.Id)">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                        <input type="hidden" name="Id" value="@Html.Raw(previousSchoolObj.Id)" />
+                        <h2>Institue Information</h2>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
                             <div class="form-group">
-                                <label class="control-label">Student :</label>
-                                <select class="selectpicker">
-                                    <option>-- Select Student --</option>
-                                    <option>Waqas Bhai</option>
-                                    <option>Usama</option>
-                                    <option>Kamran</option>
-                                </select>
+                                <label class="control-label">Institue Name :</label>
+                                <input name="InstituteName" class="form-control" placeholder="" value="@Html.Raw(previousSchoolObj.InstituteName)">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                    <h2>Institue Information</h2>
-                    <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
-                        <div class="form-group">
-                            <label class="control-label">Institue Name :</label>
-                            <input class="form-control" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Date :</label>
-                            <input id="example1" class="form-control small-size-02 datepicker" placeholder="Join Date" style="width:29%;">
-                            <input id="example2" class="form-control small-size-02 datepicker" placeholder="Leave Date" style="width:30%;">
-                        </div>
-                        <script type="text/javascript">
-
-                            $(document).ready(function () {
-                                $('#example1').datepicker({
-                                    format: "dd/mm/yyyy"
-                                });
-                                $('#example2').datepicker({
-                                    format: "dd/mm/yyyy"
-                                });
-                            });
-                        </script>
-
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                    <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
-                        <div class="form-group">
-                            <div class="col-sm-2 col-md-2 col-lg-2 button-contr no-right-padding">
-                                <button type="button" class="btn btn-primary" style="margin:9px 0px;">Add</button>
+                            <div class="form-group">
+                                <label class="control-label">Date :</label>
+                                <input name="JoinDate" value="@Html.Raw(previousSchoolObj.JoinDate)" id="example1" class="form-control small-size-02 datepicker" placeholder="Join Date" style="width:29%;">
+                                <input name="LeaveDate" value="@Html.Raw(previousSchoolObj.LeaveDate)" id="example2" class="form-control small-size-02 datepicker" placeholder="Leave Date" style="width:30%;">
                             </div>
+                            <script type="text/javascript">
+
+                                $(document).ready(function () {
+                                    $('#example1').datepicker({
+                                        format: "dd/mm/yyyy"
+                                    });
+                                    $('#example2').datepicker({
+                                        format: "dd/mm/yyyy"
+                                    });
+                                });
+                            </script>
 
                         </div>
                     </div>
-                </div>
-                <div class="clearfix"></div>
+                    <div class="clearfix"></div>
 
-            </div><!--right-section Ends-->
+                </div><!--right-section Ends-->
 
-        </div>
-    </div><!--Previous School Ends-->
-</div>
+            </div>
+        </div><!--Previous School Ends-->
+    </div>
+}
+<!--End Previous School Form-->
+
+<script>
+    $("#PreviousSchool_Add").click(function () {
+        // alert("test check point");
+        $("form").submit();
+    });
+</script>

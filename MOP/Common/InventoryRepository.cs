@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MOP.Context;
-using MOP.Inventory;
-
+using MOP.Models.Inventory;
 namespace MOP.Common
 {
     public static class InventoryRepository
@@ -117,7 +116,6 @@ namespace MOP.Common
             }
         }
         #endregion
-
         #region Update
         public static void UpdateCategory(Category category)
         {
@@ -276,7 +274,6 @@ namespace MOP.Common
             }
         }
         #endregion
-
         #region Delete
         public static void DeleteCategory(int categoryId)
         {
@@ -407,7 +404,6 @@ namespace MOP.Common
             }
         }
         #endregion
-
         #region Get
         public static Category GetCategoryById(int categoryId)
         {
@@ -462,6 +458,23 @@ namespace MOP.Common
             }
             return tempEmployee;
         }
+
+        public static Order GetOrderById(int orderId)
+        {
+            var tempOrder = new Order();
+            try
+            {
+                using (var db = new AlphaContext())
+                {
+                    tempOrder = db.Orders.Single(x => x.Id == orderId);
+                }
+            }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetOrderId" + Environment.NewLine + "Time" + DateTime.Now + Environment.NewLine + "ErrorMsg:" + exception.Message);               
+            }
+            return tempOrder;
+        }
         public static OrderDetail GetOrderDetailsById(int orderDetailsId)
         {
             var tempOrderDetail = new OrderDetail();
@@ -514,7 +527,6 @@ namespace MOP.Common
             return tempSupplier;
         }
         #endregion
-
         #region List
         public static List<Category> GetAllCategories()
         {
