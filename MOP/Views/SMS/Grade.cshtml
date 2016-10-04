@@ -1,90 +1,92 @@
-﻿<div class="inner-window">
-    <div class="inner-head">
-        Grade Form
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    </div>
-    <!--Edit buttons starts here-->
-    <div class="col-sm-12 bottom-header">
-        <ul>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-        </ul>
-    </div>
-    <!--Edit buttons ends here-->
-    <div class="third-party-carriers">
-        <!--Search starts here-->
-        <div class="col-sm-12 search-container">
-            <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search By Grade">
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
-                </div>
-            </div>
-
+﻿@using MOP.Models.SMS
+@{
+    var gradeList = ViewBag.GradeList == null ? new List<Grade>() : ViewBag.GradeList as List<Grade>;
+    var gra = ViewBag.Grade == null ? new Grade() : ViewBag.Grade as Grade;
+}
+@using (Html.BeginForm("Grade", "SMS", FormMethod.Post))
+{
+    <div class="inner-window">
+        <div class="inner-head">
+            Grade Form
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
-        <!--Search ends here-->
-        <!--Grid starts here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Grade</th>
-                            <th> </th>
-                            <th> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
-                            <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-lg-12 button-wrap">
-                <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
-            </div>
+        <!--Edit buttons starts here-->
+        <div class="col-sm-12 bottom-header">
+            <ul>
+                <li id="Add_Grade"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                <li id="Update_Grade"><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                <li id="Delete_Grade"><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+            </ul>
         </div>
-        <!--Grid ends here-->
-        <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
-            <div class="right-section">
-                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                    <h2>Grade Information</h2>
-                    <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
-                    </div>
-                    <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+        <!--Edit buttons ends here-->
+        <div class="third-party-carriers">
+            <!--Search starts here-->
+            <div class="col-sm-12 search-container">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
+                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
                         <div class="form-group">
-                            <label class="control-label">Grade Name :</label>
-                            <input class="form-control" placeholder="">
+                            <input class="form-control" placeholder="Search By Grade">
                         </div>
                     </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                        <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
+                    </div>
                 </div>
-                <div class="clearfix"></div>
-            </div><!--right-section Ends-->
-        </div>
-    </div><!--third-party-carriers Ends-->
-</div>
+            </div>
+            <!--Search ends here-->
+            <!--Grid starts here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Grade</th>
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var grade in ViewBag.gradeList)
+                            {
+                                <tr>
+                                    <td>@Html.Raw(grade.Grades)</td>
+                                    <td><a href="/SMS/Grade/@Html.Raw(grade.Id)"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                    <td><a href="/SMS/DeleteGrade/@Html.Raw(grade.Id)"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
 
-
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 button-wrap">
+                    <div class="col-sm-2 col-md-3 no-padding record-info">@Html.Raw(gradeList.Count) Records</div>
+                </div>
+            </div>
+            <!--Grid ends here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                <div class="right-section">
+                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                        <h2>Grade Information</h2>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                        </div>
+                        <input type="hidden" name="Id" value="@Html.Raw(gra.Id)" />
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Grade Name :</label>
+                                <input class="form-control" placeholder="" name="Grades" value="@Html.Raw(gra.Grades)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!--right-section Ends-->
+            </div>
+        </div><!--third-party-carriers Ends-->
+    </div>
+}
+<script>
+    $("#Add_Grade").click(function () {
+        $("form").submit();
+    });
+</script>
