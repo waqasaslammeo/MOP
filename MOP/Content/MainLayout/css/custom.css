@@ -179,8 +179,11 @@ body {
 	padding:0px;
 }
 .bottom-header{
-	height:57px;
+	/*height:57px;*/
 	background: #8fbbf1;
+
+    /*Usama Changing*/
+    height:40px;
 }
 .bottom-header ul{
 	list-style:none;
@@ -346,7 +349,7 @@ body {
 	max-width:1280px;
 }
 .search-container .first-col{
-	margin-right:-18px;
+	margin-right:-0px;
 }
 .search-container .first-col .control-label{
 	width:28%;
@@ -494,10 +497,16 @@ body {
 	width:36%;
 }
 .tab-container .form-control{
-	width:64%;
+	/*width:64%;*/
+
+    /*Usama Change 9_27_2016*/
+    width:62%;
 }
 .tab-container .address-info .form-control{
-	width:78%;
+	/*width:78%;*/
+
+    /*Usama Change 9_27_2016*/
+    width:62% !Important;
 }
 #PayerList .tab-container .address-info .control-label, .employer-group-coverage .tab-container .address-info .control-label{
 	width:20%;
@@ -3152,9 +3161,9 @@ body {
 .third-party-carriers .search-container .first-col .control-label {
     width: 35%;
 }
-/*.third-party-carriers .search-container .first-col .form-control {
-    width: 64%;
-}*/
+.third-party-carriers .search-container .first-col .form-control {
+    width: 100%;
+}
 .third-party-carriers .right-section {
 	background: #f6f4f4 none repeat scroll 0 0;
     border: 1px solid #d1d1d1;
@@ -5271,7 +5280,7 @@ body {
 /*--------------------------------------------------------------Alpha CSS---------------------------------------------------------------*/
 /*Modal Min Height Starts*/
 #Branch .modal-dialog {
-	min-height:325px;
+	min-height:620px;
 }
 
 #City .modal-dialog {
@@ -5279,12 +5288,51 @@ body {
 }
 
 #Class .modal-dialog {
-	min-height:600px;
+	min-height:620px;
 }
 
 #Company .modal-dialog {
 	min-height:600px;
 }
+#Exams .modal-dialog {
+min-height:435px;
+}
+#ExamType .modal-dialog {
+min-height:435px;
+}
+
+#Registration .modal-dialog {
+min-height:435px;
+}
+
+#Student .modal-dialog {
+min-height:435px;
+}
+#Setup .modal-dialog {
+min-height:435px;
+}
+
+#SessionList .modal-dialog {
+min-height:435px;
+}
+
+#EnrolledStudent .modal-dialog {
+min-height:435px;
+}
+
+#ClassExam .modal-dialog {
+min-height:420px;
+}
+
+#EnrolledStudent .esDropDown{
+width:100%;
+}
+
+#EnrolledStudent .esButton{
+width:50%;
+margin:auto;
+}
+
 
 #Grade .modal-dialog {
 	min-height:325px;
@@ -5329,7 +5377,230 @@ body {
 #Product .modal-dialog {
 	min-height:600px;
 }
-.search-container .first-col .form-control {
-    width: 100%;
+
+#Purchase .modal-dialog {
+	min-height:420px;
+}
+
+#Sale .modal-dialog {
+	min-height:420px;
+}
+
+#PhoneDirectory .modal-dialog {
+	min-height:420px;
+}
+
+#Items .modal-dialog {
+	min-height:420px;
+}
+
+#Role .modal-dialog {
+	min-height:420px;
+}
+
+#Purchase .psTextBox , .psDropDown {
+width:100%;
+}
+#Purchase .productCode {
+width:75%;
+}
+#Purchase .productButton {
+width:25%;
+height:25px;
+padding:0px;
+margin:auto;
+}
+
+#Sale .psTextBox , .psDropDown {
+width:100%;
+}
+#Sale .productCode {
+width:75%;
+}
+#Sale .productButton {
+    width: 25%;
+    height: 25px;
+    padding: 0px;
+    margin: auto;
+}
+
+.searchContainer{
+    padding:10px 0px 5px 10px;
+}
+
+.searchInnerContainer {
+margin-left:-25px;
+}
+
+.searchTextBox {
+width:90%;
+height:30px;
+padding:10px;
+}
+
+.searchButton {
+width:46% !important;
+height:30px;
+margin:9px -72px;
+}
+
+.no-margin {
+margin-left:-6px;
+}
+
+.class-header {
+width:287px;
+margin-left:186px;
+margin-top:10px;
+}
+
+.class-header-tab {
+width:274px;
+margin-left:168px;
+margin-top:10px;
+}
+
+.class-header #Add_Class {
+    margin-left:50px;
+}
+
+.city-header {
+width:293px;
+margin-left:180px;
+margin-top:10px;
+}
+
+.city-header #Add_City {
+    margin-left:55px;
+}
+
+.branch-header {
+width:293px;
+margin-left:180px;
+margin-top:10px;
+padding:0px;
+}
+
+.branch-header #Add_Branch {
+    margin-left:55px;
+}
+
+.ExamTypeTab-header {
+width:278px;
+margin-left:161px;
+margin-top:10px;
+}
+
+.ExamTypeTab-header #Add_ExamTypeTab {
+    margin-left:52px;
+}
+
+.ClassExamTab-header {
+width:270px;
+margin-left:170px;
+margin-top:10px;
+}
+
+.ClassExamTab-header #Add_ClassExamTab {
+    margin-left:47px;
+}
+
+.Grade-header {
+width:292px;
+margin-left:179px;
+margin-top:10px;
+}
+
+.Grade-header #Add_Grade {
+    margin-left:50px;
+}
+
+
+.Grade-header-tab {
+width:278px;
+margin-left:161px;
+margin-top:10px;
+}
+
+.Grade-header-tab #Add_Grade {
+    margin-left:45px;
+}
+
+.Module-header {
+width:288px;
+margin-left:180px;
+margin-top:10px;
+}
+
+.Module-header #Add_Module {
+    margin-left:50px;
+}
+
+.PreviousSchool-header {
+width:288px;
+margin-left:180px;
+margin-top:10px;
+}
+
+.PreviousSchool-header #Add_PreviousSchool {
+    margin-left:50px;
+}
+
+.Section-header {
+width:288px;
+margin-left:180px;
+margin-top:10px;
+}
+
+.Section-header #Add_Section {
+    margin-left:50px;
+}
+
+.Session-header {
+width:293px;
+margin-left:181px;
+margin-top:10px;
+}
+
+.Session-header-tab {
+width:279px;
+margin-left:163px;
+margin-top:10px;
+}
+
+.Session-header-tab #Add_Session {
+    margin-left:50px;
+}
+
+
+.Session-header #Add_Session {
+    margin-left:50px;
+}
+
+.Subject-header {
+width:293px;
+margin-left:181px;
+margin-top:10px;
+}
+
+.Subject-header #Add_Subject {
+    margin-left:50px;
+}
+
+.Student-header {
+width:293px;
+margin-left:181px;
+margin-top:10px;
+}
+
+.Student-header #Add_Student {
+    margin-left:55px;
+}
+
+
+.Branch-Menu-Items {
+width:95px;
+height:33px;
+font-size:15px;
 }
 /*Modal Min Height Ends*/

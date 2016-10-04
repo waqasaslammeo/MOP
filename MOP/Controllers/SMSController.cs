@@ -27,7 +27,7 @@ namespace MOP.Controllers
             ViewBag.BranchList = branchList;
         }
         [HttpGet]
-        public PartialViewResult Branch(int id = 0)
+        public ActionResult Branch(int id = 0)
         {
             if (id > 0)
             {
@@ -36,7 +36,7 @@ namespace MOP.Controllers
             }
             BranchCommon();
 
-            return PartialView("Branch");
+            return View("Branch");
         }
         [HttpPost]
         public PartialViewResult Branch(Branch branch)
@@ -367,155 +367,51 @@ namespace MOP.Controllers
         }
         #endregion
 
+        public PartialViewResult ExamType()
+        {
+            return PartialView("ExamType");
+        }
 
-        //public PartialViewResult Class()
-        //{
-        //    return PartialView("Class");
-        //}
-        //[HttpPost]
-        //public PartialViewResult Class(Class cClass)
-        //{
-        //    if (cClass.Id > 0)
-        //    {
-        //        SmsRepository.UpdateClass(cClass);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertClass(cClass);
-        //    }
+        public PartialViewResult Class()
+        {
+            return PartialView("Class");
+        }
 
-        //    return PartialView("Class");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeleteClass(int id = 0)
-        //{
-        //    SmsRepository.DeleteClass(id);
-        //    return PartialView("Class");
-        //}
+        public PartialViewResult SessionList()
+        {
+            return PartialView("SessionList");
+        }
 
-        //public PartialViewResult Module()
-        //{
-        //    return PartialView("Module");
-        //}
-        //[HttpPost]
-        //public PartialViewResult Module(Module module)
-        //{
-        //    if (module.Id > 0)
-        //    {
-        //        SmsRepository.UpdateModule(module);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertModule(module);
-        //    }
 
-        //    return PartialView("Module");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeleteModule(int id = 0)
-        //{
-        //    SmsRepository.DeleteModule(id);
-        //    return PartialView("Module");
-        //}
+        public PartialViewResult EnrolledStudent()
+        {
+            return PartialView("EnrolledStudent");
+        }
 
-        //public PartialViewResult PreviousSchool()
-        //{
-        //    return PartialView("PreviousSchool");
-        //}
-        //[HttpPost]
-        //public PartialViewResult PreviousSchool(PreviousSchool previousSchool)
-        //{
-        //    if (previousSchool.Id > 0)
-        //    {
-        //        SmsRepository.UpdatePreviousSchool(previousSchool);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertPreviousSchool(previousSchool);
-        //    }
+        public PartialViewResult ClassExam() 
+        {
+            return PartialView("ClassExam");
+        }
 
-        //    return PartialView("PreviousSchool");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeletePreviousSchool(int id = 0)
-        //{
-        //    SmsRepository.DeletePreviousSchool(id);
-        //    return PartialView("PreviousSchool");
-        //}
+        public PartialViewResult Exams()
+        {
+            return PartialView("Exams");
+        }
 
-        //public PartialViewResult Section()
-        //{
-        //    return PartialView("Section");
-        //}
-        //[HttpPost]
-        //public PartialViewResult Section(Section section)
-        //{
-        //    if (section.Id > 0)
-        //    {
-        //        SmsRepository.UpdateSection(section);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertSection(section);
-        //    }
+        public PartialViewResult Student()
+        {
+            return PartialView("Student");
+        }
 
-        //    return PartialView("Section");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeleteSection(int id = 0)
-        //{
-        //    SmsRepository.DeleteSection(id);
-        //    return PartialView("Section");
-        //}
+        public PartialViewResult Setup()
+        {
+            return PartialView("Setup");
+        }
 
-        //public PartialViewResult Session()
-        //{
-        //    return PartialView("Session");
-        //}
-        //[HttpPost]
-        //public PartialViewResult Session(Session session)
-        //{
-        //    if (session.Id > 0)
-        //    {
-        //        SmsRepository.UpdateSession(session);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertSessions(session);
-        //    }
+        public PartialViewResult Registration()
+        {
+            return PartialView("Registration");
+        }
 
-        //    return PartialView("Session");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeleteSession(int id = 0)
-        //{
-        //    SmsRepository.DeleteSession(id);
-        //    return PartialView("Session");
-        //}
-
-        //public PartialViewResult Subject()
-        //{
-        //    return PartialView("Subject");
-        //}
-        //[HttpPost]
-        //public PartialViewResult Subject(Subject subject)
-        //{
-        //    if (subject.Id > 0)
-        //    {
-        //        SmsRepository.UpdateSubject(subject);
-        //    }
-        //    else
-        //    {
-        //        SmsRepository.InsertSubjects(subject);
-        //    }
-
-        //    return PartialView("Subject");
-        //}
-        //[HttpPost]
-        //public PartialViewResult DeleteSubject(int id = 0)
-        //{
-        //    SmsRepository.DeleteSubject(id);
-        //    return PartialView("Subject");
-        //}
 	}
 }

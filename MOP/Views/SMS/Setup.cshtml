@@ -1,0 +1,176 @@
+﻿@using MOP.Common
+@using MOP.SMS
+
+<div class="inner-window">
+    <div class="inner-head">
+        Setup Form
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <!--Tab container starts here-->
+    <div class="col-sm-12 tab-container">
+        <!-- Nav tabs -->
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#sessionTab" aria-controls="sessionTab" role="tab" data-toggle="tab">1 - Session</a></li>
+            <li role="presentation"><a href="#gradeTab" aria-controls="gradeTab" role="tab" data-toggle="tab">2 - Grade</a></li>
+            <li role="presentation"><a href="#classTab" aria-controls="classTab" role="tab" data-toggle="tab">3 - Class</a></li>
+            <li role="presentation"><a href="#cityTab" aria-controls="cityTab" role="tab" data-toggle="tab">4 - City</a></li>
+            <li role="presentation"><a href="#branchTab" aria-controls="branchTab" role="tab" data-toggle="tab">5 - Branch</a></li>
+            <li role="presentation"><a href="#subjectTab" aria-controls="subjectTab" role="tab" data-toggle="tab">6 - Subject</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="sessionTab">
+                @Html.Action("Session", "SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="gradeTab">
+                @Html.Action("Grade","SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="classTab">
+                @Html.Action("Class","SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="cityTab">
+                @Html.Action("City","SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="branchTab">
+                @Html.Action("Branch","SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="subjectTab">
+                <!--Edit buttons starts here-->
+                <div class="col-sm-12 bottom-header">
+                    <ul>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                        <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images//icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                        <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-copy-white.png" width="30" height="30"><span>Copy</span></a></li>
+                        <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-validate-white.png" width="30" height="30"><span>Validate</span></a></li>
+                        <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
+                        <li><a href="#" data-target="#OutPutFormat-print" data-toggle="modal"><img src="/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                        <li><a href="#" data-target="#MemberPatient" data-toggle="modal"><img src="/Content/MainLayout/images/icon-commun-white.png" width="30" height="30"><span>Commun.</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                    </ul>
+                </div>
+                <!--Edit buttons ends here-->
+                <!--Tab container starts here-->
+                <div class="col-sm-12 tab-container">
+                    <!-- Nav tabs -->
+                    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#subjectFormTab" aria-controls="subjectFormTab" role="tab" data-toggle="tab">1 - Subject</a></li>
+                        <li role="presentation"><a href="#moduleFormTab" aria-controls="moduleFormTab" role="tab" data-toggle="tab">2 - Module</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="subjectFormTab">
+
+
+                            @{
+
+                                var subjectList = ViewBag.SubjectList == null ? new List<Subject>() : ViewBag.SubjectList as List<Subject>;
+                                var subjectObj = ViewBag.SubjectObj == null ? new Subject() : ViewBag.SubjectObj as Subject;
+                            }
+
+                            @using (Html.BeginForm("Subject", "SMS", FormMethod.Post))
+                            {
+                                        <!--Edit buttons starts here-->
+                                <div class="col-sm-12 bottom-header">
+                                    <ul>
+                                        <li id="Subject_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                                        <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                                        <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                                        <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                                        <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                                    </ul>
+                                </div>
+                                        <!--Edit buttons ends here-->
+                                <div class="third-party-carriers">
+                                    <!--Search starts here-->
+                                    <div class="col-sm-12 search-container">
+                                        <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                                            <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                                                <div class="form-group">
+                                                    <input class="searchTextBox" placeholder="Search by Subject Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                                                <button type="button" class="btn-primary searchButton">Search</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--Search ends here-->
+                                    <!--Grid starts here-->
+                                    <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Subject</th>
+                                                        <th>Abbreviation </th>
+                                                        <th> </th>
+                                                        <th> </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var subList in subjectList)
+                                                    {
+                                                        <tr>
+                                                            <td>@Html.Raw(subList.SubjectName)</td>
+                                                            <td>@Html.Raw(subList.Abbreviation)</td>
+                                                            <td><a href='@Url.Action("Subject", "SMS", new { id = subList.Id })'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                                            <td><a href='@Url.Action("DeleteSubject", "SMS", new { id = subList.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-lg-12 button-wrap">
+                                            <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+                                        </div>
+                                    </div>
+                                    <!--Grid ends here-->
+                                    <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                                        <div class="right-section">
+                                            <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                                                <h2>Subject Information</h2>
+                                                <input type="hidden" name="Id" value="@Html.Raw(subjectObj.Id)" />
+                                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Subject Name :</label>
+                                                        <input name="SubjectName" value="@Html.Raw(subjectObj.SubjectName)" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Abbreviation :</label>
+                                                        <input name="Abbreviation" value="@Html.Raw(subjectObj.Abbreviation)" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div><!--right-section Ends-->
+                                    </div>
+                                </div><!--third-party-carriers Ends-->
+                            }
+                            <!--End Subject Form-->
+
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="moduleFormTab">
+                            <h2>Welcome</h2>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--Tab container ends here-->
+            </div>
+            </div>
+        </div>
+    </div>
+            <script>
+                $("#Subject_Add").click(function () {
+                    // alert("test check point");
+                    $("form").submit();
+                });
+            </script>

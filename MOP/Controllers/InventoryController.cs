@@ -136,5 +136,39 @@ namespace MOP.Controllers
             InventoryRepository.DeleteProduct(productId);
             return PartialView("Product");
         }
+
+        public PartialViewResult Purchase()
+        {
+            return PartialView("Purchase");
+        }
+
+        public PartialViewResult Sale()
+        {
+            return PartialView("Sale");
+        }
+
+        public PartialViewResult SaleProductModal()
+        {
+            return PartialView("SaleProductModal");
+        }
+
+        public PartialViewResult PurchaseProductModal()
+        {
+            return PartialView("PurchaseProductModal");
+        }
+        public PartialViewResult PhoneDirectory()
+        {
+            return PartialView("PhoneDirectory");
+        }
+
+        public PartialViewResult Items()
+        {
+            return PartialView("Items");
+        }
+
+        public PartialViewResult Role()
+        {
+            return PartialView("Role");
+        }
 	}
 }

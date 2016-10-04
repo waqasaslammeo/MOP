@@ -8,35 +8,24 @@
     var sectionObj = ViewBag.SectionObj == null ? new Section() : ViewBag.SectionObj as Section;
 }
 
-@using (Html.BeginForm("Section", "SMS", FormMethod.Post, new { @class = "form-horizontal" }))
+@using (Html.BeginForm("Section", "SMS", FormMethod.Post))
 {
 <div class="inner-window">
     <div class="inner-head">
         Section Form
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     </div>
-    <!--Edit buttons starts here-->
-    <div class="col-sm-12 bottom-header">
-        <ul>
-            <li id="Section_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-        </ul>
-    </div>
-    <!--Edit buttons ends here-->
     <div class="third-party-carriers">
         <!--Search starts here-->
         <div class="col-sm-12 search-container">
-            <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
+            <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Search By Section or Class">
+                        <input class="searchTextBox" placeholder="Search by Section or Class">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
+                    <button type="button" class="btn-primary searchButton">Search</button>
                 </div>
             </div>
 
@@ -108,9 +97,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
+                <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                    <div class="col-sm-12 bottom-header Section-header">
+                        <ul>
+                            <li id="Add_Section"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                            <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="clearfix"></div>
 
-            </div><!--right-section Ends-->
+                </div><!--right-section Ends-->
 
         </div>
     </div><!--Section Ends-->

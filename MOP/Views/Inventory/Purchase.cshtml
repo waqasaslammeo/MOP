@@ -1,0 +1,150 @@
+﻿<div class="inner-window">
+    <div class="inner-head">
+        PURCHASE DATA FORM
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <!--Edit buttons starts here-->
+    <div class="col-sm-12 bottom-header">
+        <ul>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images//icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-copy-white.png" width="30" height="30"><span>Copy</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-validate-white.png" width="30" height="30"><span>Validate</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
+            <li><a href="#" data-target="#OutPutFormat-print" data-toggle="modal"><img src="/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+            <li><a href="#" data-target="#MemberPatient" data-toggle="modal"><img src="/Content/MainLayout/images/icon-commun-white.png" width="30" height="30"><span>Commun.</span></a></li>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+        </ul>
+    </div>
+    <!--Edit buttons ends here-->
+    <!--Search container starts here-->
+    <div class="col-sm-12 search-container">
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding first-col">
+            <div class="form-group">
+                <input id="Date" class="form-control psTextBox" placeholder="Select Date">
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#Date').datepicker({
+                        format: "dd/mm/yyyy"
+                    });
+                });
+            </script>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <select class="selectpicker purchaseDropDown">
+                    <option>--Supplier--</option>
+                    <option>Usama</option>
+                    <option>Kamran</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 search-container">
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control productCode" placeholder="Product Code">
+                <button class="btn productButton" data-toggle="modal" data-target="#PurchaseProductModal">. . .</button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Product Name">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="QTY">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <button type="button" class="btn btn-secondary productButton">Add</button>
+            </div>
+        </div>
+    </div>
+    <!--Search container ends here-->
+    <!--Grid container starts here-->
+    <div class="col-sm-12 grid-contr">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Product Code </th>
+                        <th>Product Name </th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A, A, A</td>
+                        <td>M</td>
+                        <td>01 / 01 / 2000</td>
+                        <td> 002456021 MMDF</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>James Albert</td>
+                        <td>M</td>
+                        <td>03 / 02 / 1981</td>
+                        <td> 002456021 MMDF </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Gina thomson</td>
+                        <td>F</td>
+                        <td> 01 / 08 / 1986</td>
+                        <td> 002456021 MMDF</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 record-info">8 Records found</div>
+    </div>
+    <!--Grid container ends here-->
+    <!--Text boxes start from here-->
+    <div class="col-sm-12 search-container">
+        <div class="col-sm-12 col-md-2 col-lg-3 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Total">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Discont">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Net Amount">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-2 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Paid Amount">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-3 no-padding">
+            <div class="form-group">
+                <input class="form-control psTextBox" placeholder="Return Amount">
+            </div>
+        </div>
+    </div>
+    <!--Text boxes ends here-->
+</div>
+
+<!--Purchase Product Modal Popup contant starts here-->
+<div id="PurchaseProductModal" class="modal fade child-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+<!--Purchase Product Modal Popup content ends here-->

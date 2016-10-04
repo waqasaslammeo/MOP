@@ -1,0 +1,199 @@
+﻿<div class="inner-window">
+    <div class="inner-head">
+        Exam Form
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <!--Tab container starts here-->
+    <div class="col-sm-12 tab-container">
+        <!-- Nav tabs -->
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#examTypeTab" aria-controls="examTypeTab" role="tab" data-toggle="tab">1 - Exam Type</a></li>
+            <li role="presentation"><a href="#classExamTab" aria-controls="classExamTab" role="tab" data-toggle="tab">2 - Class Exam</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="examTypeTab">
+                @Html.Action("ExamType","SMS")
+            </div>
+            <div role="tabpanel" class="tab-pane" id="classExamTab">
+                @Html.Action("ClassExam","SMS")
+            </div>
+
+        </div>
+    </div>
+    <!--Tab container ends here-->
+</div>
+
+<!--Provider Name/ &/ Tax ID/ Lookup/ popup start--->
+<div id="ProviderNameTaxId" class="modal fade child-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="inner-window">
+                <div class="inner-head">
+                    Provider Name &amp; Tax ID Lookup
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 provider-name-tax-id-lookup">
+
+                    <p><strong>Enter all or some specs. You may enter partial values:</strong></p>
+
+                    <div class="providers-label">
+                        <div class="form-group">
+                            <label class="control-label group-name">Provider NPI</label>
+                            <input placeholder="" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="providers-label">
+                        <div class="form-group">
+                            <label class="control-label group-name">Tax ID</label>
+                            <input placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="providers-label">
+                        <div class="form-group">
+                            <label class="control-label group-name">Code ("vendor")</label>
+                            <input placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="providers-label">
+                        <div class="form-group">
+                            <label class="control-label group-name">Name (Last, First)</label>
+                            <input placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="providers-label no-margin">
+                        <div class="form-group">
+                            <label class="control-label group-name">Effective Date</label>
+                            <input placeholder="" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 no-padding pull-right">
+                        <button class="btn btn-secondary btn-bottom01 pull-right" type="button" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button class="btn btn-secondary btn-bottom02 pull-right" type="button">New Entry</button>
+                        <button class="btn btn-secondary btn-bottom01 pull-right" type="button">Search</button>
+                    </div>
+                    <div class="col-sm-12 margin-top-12 text-center no-padding">Only Active Providers &amp; Affliations are searched. Entering a TIN optimizes the search speed.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Provider Name/ & / Tax ID/ Lookup/ popup ends--->
+<!--Referred/Certified Service/ popup Start--->
+
+<div id="RefeCertiService" class="modal fade child-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="inner-window">
+                <div class="inner-head">
+                    Referred/Certified Service
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 refe-certi-service">
+
+
+                    <div class="form-group">
+                        <label class="control-label group-name">Diagnosis</label>
+                        <input placeholder="" class="form-control half-size-01">
+                        <input placeholder="Approved" class="form-control half-size-01">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Service Set</label>
+                        <select class="selectpicker">
+                            <option>(none)</option>
+                            <option>1</option>
+                        </select>
+                        <label class="checkbox-inline no-left-padding margin-top-5">(Manual) Disposition<input type="checkbox" class="margin-left-6" value=""></label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label group-name">Service Code</label>
+                        <input placeholder="" class="form-control half-size-01">
+                        <label class="control-label modifiers">Modifiers</label>
+                        <input placeholder="" class="form-control modifiers-input">
+                        <label class="control-label comma">,</label>
+                        <input placeholder="" class="form-control modifiers-input">
+                        <label class="control-label comma">,</label>
+                        <input placeholder="" class="form-control modifiers-input">
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label class="control-label">Requested #</label>
+                        <input placeholder="" class="form-control requsted-input">
+                        <label class="control-label comma">, at</label>
+                        <input placeholder="" class="form-control requsted-input">
+                        <label class="control-label comma">=</label>
+                        <label class="control-label value">$0.00</label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label">Certified #</label>
+                        <input placeholder="" class="form-control requsted-input">
+                        <label class="control-label comma">, at</label>
+                        <input placeholder="" class="form-control requsted-input">
+                        <label class="control-label comma">=</label>
+                        <label class="control-label value">$0.00</label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label">Frequency</label>
+                        <input placeholder="" class="form-control requsted-input">
+                        <label class="control-label comma">/</label>
+                        <select class="selectpicker frequency-select">
+                            <option></option>
+                            <option></option>
+                        </select>
+
+                    </div>
+
+                    <div class="reference-info">
+                        <h2>Reference info</h2>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Diagnostic Category</label>
+                                <input placeholder="" class="form-control">
+                                <button class="btn btn-secondary btn-bottom02" type="button" data-toggle="modal" data-target="#">Pmt Contract ID</button>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Service Category</label>
+                                <input placeholder="" class="form-control">
+                                <button class="btn btn-secondary btn-bottom02" type="button" data-toggle="modal" data-target="#">Billing Contract ID</button>
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div> <!--reference-info Ends-->
+
+
+
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <ul class="pagination">
+                            <li><a href="#">|&lt;</a></li>
+                            <li><a href="#">&lt;</a></li>
+                            <li><a href="#">&gt;</a></li>
+                            <li><a href="#">&gt;|</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-md-5 col-lg-3 no-padding text-center record-info">#LAAAMNIT</div>
+                    <div class="col-sm-5 pull-right">
+                        <button class="btn btn-secondary btn-bottom01 pull-right" type="button" data-dismiss="modal" aria-hidden="true">Hide</button>
+                        <button class="btn btn-secondary btn-bottom02 pull-right" type="button">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Referred/Certified Service/ popup Ends--->

@@ -1,0 +1,555 @@
+﻿<div class="inner-window">
+    <div class="inner-head">
+        Registration Form
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <!--Edit buttons starts here-->
+    <div class="col-sm-12 bottom-header">
+        <ul>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images//icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-copy-white.png" width="30" height="30"><span>Copy</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-validate-white.png" width="30" height="30"><span>Validate</span></a></li>
+            <li><a class="btn disabled" href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-filter-white.png" width="30" height="30"><span>Filter</span></a></li>
+            <li><a href="#" data-target="#OutPutFormat-print" data-toggle="modal"><img src="/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+            <li><a href="#" data-target="#MemberPatient" data-toggle="modal"><img src="/Content/MainLayout/images/icon-commun-white.png" width="30" height="30"><span>Commun.</span></a></li>
+            <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+        </ul>
+    </div>
+    <!--Edit buttons ends here-->
+    <!--Tab container starts here-->
+    <div class="col-sm-12 tab-container">
+        <!-- Nav tabs -->
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="/Sms/Student" aria-controls="studentTab" role="tab" data-toggle="tab">1 - Student</a></li>
+            <li role="presentation"><a href="#previousSchoolTab" aria-controls="previousSchoolTab" role="tab" data-toggle="tab">2 - Previous School</a></li>
+            <li role="presentation"><a href="#enrollmentTab" aria-controls="enrollmentTab" role="tab" data-toggle="tab">3 - Enrollment</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="studentTab">
+                <!--Edit buttons starts here-->
+                <div class="col-sm-12 bottom-header">
+                    <ul>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                        <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                    </ul>
+                </div>
+                <!--Edit buttons ends here-->
+                <div class="third-party-carriers">
+                    <!--Search starts here-->
+                    <div class="col-sm-12 search-container">
+                        <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                            <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                                <div class="form-group">
+                                    <input class="searchTextBox" placeholder="Search by Student Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                                <button type="button" class="btn-primary searchButton">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Search ends here-->
+                    <!--Grid starts here-->
+                    <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Student Name</th>
+                                        <th> </th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                        <td><a href="#"><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-12 button-wrap">
+                            <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+                        </div>
+                    </div>
+                    <!--Grid ends here-->
+                    <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                        <div class="right-section">
+                            <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                                <h2>Student Information</h2>
+
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">First Name :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Last Name :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Father Name :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Father CNIC :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Gaurdian Name :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Gaurdian CNIC :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Passport Number :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Visa Start Date :</label>
+                                        <input id="vsd" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Visa End Date :</label>
+                                        <input id="ved" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+
+                                    $(document).ready(function () {
+                                        $('#vsd').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                        $('#ved').datepicker({
+                                            format: "dd/mm/yyyy"
+                                        });
+                                    });
+                                </script>
+
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Contact #1 :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Contact #2 :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Address #1 :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                                    <div class="form-group">
+                                        <label class="control-label">Address #2 :</label>
+                                        <input class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div><!--right-section Ends-->
+                    </div>
+                </div><!--third-party-carriers Ends-->
+            </div>
+            <div role="tabpanel" class="tab-pane" id="previousSchoolTab">
+                @using MOP.Common
+                @using MOP.SMS
+
+                @{
+
+                    var previousSchoolList = ViewBag.PreviousSchoolList == null ? new List<PreviousSchool>() : ViewBag.PreviousSchoolList as List<PreviousSchool>;
+                    var studentList = ViewBag.StudentList == null ? new List<Student>() : ViewBag.StudentList as List<Student>;
+                    var previousSchoolObj = ViewBag.PreviousSchoolObj == null ? new PreviousSchool() : ViewBag.PreviousSchoolObj as PreviousSchool;
+                }
+
+                @using (Html.BeginForm("PreviousSchool", "SMS", FormMethod.Post))
+                {
+                        <!--Edit buttons starts here-->
+                        <div class="col-sm-12 bottom-header">
+                            <ul>
+                                <li id="PreviousSchool_Add"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                                <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                            </ul>
+                        </div>
+                        <!--Edit buttons ends here-->
+                        <div class="third-party-carriers">
+                            <!--Search starts here-->
+                            <div class="col-sm-12 search-container">
+                                <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                                    <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                                        <div class="form-group">
+                                            <input class="searchTextBox" placeholder="Search by Student id or Intitute Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                                        <button type="button" class="btn-primary searchButton">Search</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--Search ends here-->
+                            <!--Grid starts here-->
+                            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Student ID</th>
+                                                <th>Institue Name</th>
+                                                <th>Join Date</th>
+                                                <th>Leave Date</th>
+                                                <th> </th>
+                                                <th> </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var ps in previousSchoolList)
+                                            {
+                                                <tr>
+                                                    <td>@Html.Raw(ps.StudentId)</td>
+                                                    <td>@Html.Raw(ps.InstituteName)</td>
+                                                    <td>@Html.Raw(ps.JoinDate)</td>
+                                                    <td>@Html.Raw(ps.LeaveDate)</td>
+                                                    <td><a href='@Url.Action("PreviousSchool", "SMS", new {id = ps.Id})'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                                    <td><a href='@Url.Action("DeletePreviousSchool", "SMS", new { id = ps.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+                                                </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-lg-12 button-wrap">
+                                    <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+                                </div>
+                            </div>
+                            <!--Grid ends here-->
+                            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                                <div class="right-section">
+                                    <div class="col-sm-10 col-md-12 col-lg-12 general-info no-padding">
+                                        <div class="col-sm-12 col-md-12 col-lg-12 no-right-padding no-left-padding">
+                                            <div class="col-sm-12 col-md-12 col-lg-10 no-padding">
+                                                <h2>Student Information</h2>
+                                                <div class="form-group">
+                                                    <label class="control-label">Student :</label>
+                                                    <select class="selectpicker">
+                                                        <option>-- Select Student --</option>
+                                                        @foreach (var sl in studentList as List<Student>)
+                                                        {
+                                                            if (previousSchoolObj.StudentId == sl.Id)
+                                                            {
+                                                                <option value="@Html.Raw(sl.Id)" selected="selected">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                                            }
+                                                            else
+                                                            {
+                                                                <option value="@Html.Raw(sl.Id)">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                                        <input type="hidden" name="Id" value="@Html.Raw(previousSchoolObj.Id)" />
+                                        <h2>Institue Information</h2>
+                                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
+                                            <div class="form-group">
+                                                <label class="control-label">Institue Name :</label>
+                                                <input name="InstituteName" class="form-control" placeholder="" value="@Html.Raw(previousSchoolObj.InstituteName)">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Date :</label>
+                                                <input name="JoinDate" value="@Html.Raw(previousSchoolObj.JoinDate)" id="example1" class="form-control small-size-02 datepicker" placeholder="Join Date" style="width:29%;">
+                                                <input name="LeaveDate" value="@Html.Raw(previousSchoolObj.LeaveDate)" id="example2" class="form-control small-size-02 datepicker" placeholder="Leave Date" style="width:30%;">
+                                            </div>
+                                            <script type="text/javascript">
+
+                                                $(document).ready(function () {
+                                                    $('#example1').datepicker({
+                                                        format: "dd/mm/yyyy"
+                                                    });
+                                                    $('#example2').datepicker({
+                                                        format: "dd/mm/yyyy"
+                                                    });
+                                                });
+                                            </script>
+
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                </div><!--right-section Ends-->
+
+                            </div>
+                        </div><!--Previous School Ends-->
+                }
+                <!--End Previous School Form-->
+
+                <script>
+                    $("#PreviousSchool_Add").click(function () {
+                        // alert("test check point");
+                        $("form").submit();
+                    });
+                </script>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="enrollmentTab">
+                <!--Edit buttons starts here-->
+                <div class="col-sm-12 bottom-header">
+                    <ul>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
+                        <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
+                        <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
+                    </ul>
+                </div>
+                <!--Edit buttons ends here-->
+                <div class="third-party-carriers">
+                    <!--Search starts here-->
+                    <div class="col-sm-12 search-container">
+                        <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                            <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                                <div class="form-group">
+                                    <input class="searchTextBox" placeholder="Search by Student Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                                <button type="button" class="btn-primary searchButton">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Search ends here-->
+                    <!--Grid starts here-->
+                    <div class="col-sm-12 search-container">
+                        <div class="col-sm-12 col-md-3 col-lg-3 no-padding">
+                            <div class="form-group">
+                                <select class="selectpicker esDropDown">
+                                    <option> - - Select Session - - </option>
+                                    <option>Session 1</option>
+                                    <option>Session 2</option>
+                                    <option>Session 3</option>
+                                    <option>Session 4</option>
+                                    <option>Session 5</option>
+                                    <option>Session 6</option>
+                                    <option>Session 7</option>
+                                    <option>Session 8</option>
+                                    <option>Session 9</option>
+                                    <option>Session 10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 no-padding">
+                            <div class="form-group">
+                                <select class="selectpicker esDropDown">
+                                    <option> - - Select Class - - </option>
+                                    <option>Class 1</option>
+                                    <option>Class 2</option>
+                                    <option>Class 3</option>
+                                    <option>Class 4</option>
+                                    <option>Class 5</option>
+                                    <option>Class 6</option>
+                                    <option>Class 7</option>
+                                    <option>Class 8</option>
+                                    <option>Class 9</option>
+                                    <option>Class 10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 no-padding">
+                            <div class="form-group">
+                                <select class="selectpicker esDropDown">
+                                    <option> - - Select Section - - </option>
+                                    <option>Section 1</option>
+                                    <option>Section 2</option>
+                                    <option>Section 3</option>
+                                    <option>Section 4</option>
+                                    <option>Section 5</option>
+                                    <option>Section 6</option>
+                                    <option>Section 7</option>
+                                    <option>Section 8</option>
+                                    <option>Section 9</option>
+                                    <option>Section 10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 no-padding">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-secondary esButton">Enroll</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Unenrolled Student</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-12 button-wrap">
+                            <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
+                        </div>
+                    </div>
+                    <!--Grid ends here-->
+                    <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                        <div class="right-section">
+                            <div class="col-sm-12 col-md-12 col-lg-12 grid-contr">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Enrolled Student</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" /></td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div><!--right-section Ends-->
+                    </div>
+                </div><!--Enrolled Student Ends-->
+            </div>
+        </div>
+    </div>
+    <!--Tab container ends here-->
+</div>
