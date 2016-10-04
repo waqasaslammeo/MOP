@@ -370,6 +370,10 @@
     <Content Include="Views\SMS\Setup.cshtml" />
     <Content Include="Views\SMS\Registration.cshtml" />
     <Content Include="Views\Shared\_MainLayoutWithOutHeader.cshtml" />
+    <Content Include="Views\SMS\Index.cshtml" />
+    <Content Include="Views\SMS\Sessions.cshtml" />
+    <Content Include="Views\SMS\SignUp.cshtml" />
+    <Content Include="Views\SMS\TestGrade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
