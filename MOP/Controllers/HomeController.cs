@@ -76,5 +76,10 @@ namespace MOP.Controllers
         {
             return PartialView("test1");
         }
+
+        public ActionResult Alpha()
+        {
+            return View();
+        }
     }
 }

@@ -1,3 +1,38 @@
+$(document).ready(function() {
+    
+
+
+    var Insert = function() {
+        $("form").submit();
+    };
+
+    var Update = function(u,id) {
+        $.ajax({
+            type: "POST",
+            url: u,
+            data: { id: id },
+            dataType: "json",
+            success: function (data) {
+                return data;
+            }
+        });
+    };
+
+
+    var Delete = function(u, id,modalId) {
+        $.ajax({
+            type: "POST",
+            url: u,
+            data: { id: id },
+            dataType: "html",
+            success: function (data) {
+                document.getElementById(modalId).innerHTML = data;
+            }
+        });
+    };
+
+});
+
 
 // Modal popup scripts
 (function ($) {
@@ -99,24 +134,24 @@ jQuery(function() {
 //   }
 //});
 
-$('a').mouseup(function(e){
-    var button = 'left click';
-    if(e.which === 2){
-        button = 'middle click';
-    }
-    else if(e.which == 3){
-        button = 'right click';
-    }
-    $('#log').append('<span>' +button +'('+e.which +')</span><br/>');
+//$('a').mouseup(function(e){
+//    var button = 'left click';
+//    if(e.which === 2){
+//        button = 'middle click';
+//    }
+//    else if(e.which == 3){
+//        button = 'right click';
+//    }
+//    $('#log').append('<span>' +button +'('+e.which +')</span><br/>');
     
-    e.preventDefault();
-    e.stopPropagation();
-});
+//    e.preventDefault();
+//    e.stopPropagation();
+//});
 
 
 $(document).click(function(e){
             if (e.which != 3) {
-                e.preventDefault();
-                return false;
+                //e.preventDefault();
+                //return false;
             }
 });

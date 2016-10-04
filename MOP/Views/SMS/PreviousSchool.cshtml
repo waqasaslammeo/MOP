@@ -5,7 +5,6 @@
 
     var previousSchoolList = ViewBag.PreviousSchoolList == null ? new List<PreviousSchool>() : ViewBag.PreviousSchoolList as List<PreviousSchool>;
     var studentList = ViewBag.StudentList == null ? new List<Student>() : ViewBag.StudentList as List<Student>;
-    var cityList = ViewBag.CityList == null ? new List<City>() : ViewBag.CityList as List<City>;
     var previousSchoolObj = ViewBag.PreviousSchool == null ? new PreviousSchool() : ViewBag.PreviousSchool as PreviousSchool;
 }
 
@@ -65,7 +64,6 @@
                                     <td>@Html.Raw(ps.InstituteName)</td>
                                     <td>@Html.Raw(ps.JoinDate)</td>
                                     <td>@Html.Raw(ps.LeaveDate)</td>
-                                    <td>@Html.Raw(SmsRepository.GetStudentById(ps.StudentId).FirstName)</td>
                                     <td><a href='@Url.Action("PreviousSchool", "SMS", new {id = ps.Id})'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
                                     <td><a href='@Url.Action("DeletePreviousSchool", "SMS", new { id = ps.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
                                 </tr>
@@ -75,7 +73,7 @@
                     </table>
                 </div>
                 <div class="col-lg-12 button-wrap">
-                    <div class="col-sm-2 col-md-3 no-padding record-info">@Html.Raw(previousSchoolList.Count) Records</div>
+                    <div class="col-sm-2 col-md-3 no-padding record-info">0 Records</div>
                 </div>
             </div>
             <!--Grid ends here-->
@@ -87,14 +85,19 @@
                                 <h2>Student Information</h2>
                                 <div class="form-group">
                                     <label class="control-label">Student :</label>
-                                    <select name="StudentId" class="selectpicker col-lg-6">
-                                        <option value='-1'>Select Student</option>
-                                        @foreach (var s in studentList)
+                                    <select class="selectpicker">
+                                        <option>-- Select Student --</option>
+                                        @foreach (var sl in studentList as List<Student>)
                                         {
-                                            <option value='@Html.Raw(s.Id)'>@Html.Raw(s.FirstName)</option>
+                                            if (previousSchoolObj.StudentId == sl.Id)
+                                            {
+                                                <option value="@Html.Raw(sl.Id)" selected="selected">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@Html.Raw(sl.Id)">@Html.Raw(sl.FirstName + sl.LastName)</option>
+                                            }
                                         }
-
-
                                     </select>
                                 </div>
                             </div>
@@ -117,10 +120,10 @@
 
                                 $(document).ready(function () {
                                     $('#example1').datepicker({
-                                        format: "yyyy/mm/dd"
+                                        format: "dd/mm/yyyy"
                                     });
                                     $('#example2').datepicker({
-                                        format: "yyyy/mm/dd"
+                                        format: "dd/mm/yyyy"
                                     });
                                 });
                             </script>

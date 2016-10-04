@@ -26,6 +26,14 @@ namespace MOP.Common
             }
             return student;
         }
+
+        public static Branch GetBranchById(int branchId)
+        {
+            using (var db = new AlphaContext())
+            {
+                return db.Branches.FirstOrDefault(x => x.Id == branchId);
+            }
+        }
         //public static StudentEnrollment GetStudentEnrollmentById(int studentEntrollmentId)
         //{
         //    var studentEnrollment = new StudentEnrollment();
@@ -122,7 +130,24 @@ namespace MOP.Common
             }
             return previousSchoolStudentId;
         }
-        public static Company GetCompanyById(int companyId)
+
+        public static PreviousSchool GetPreviousSchoolById(int previousSchoolId)
+        {
+            var previousSchoolById = new PreviousSchool();
+            try
+            {
+                using (var db = new AlphaContext())
+                {
+                    previousSchoolById = db.PreviousSchools.Single(x => x.Id == previousSchoolId);
+                }
+            }
+            catch (Exception exception)
+            {
+                LogManage.Log("MethodName:GetPreviousSchoolById " + Environment.NewLine + " Time: " + DateTime.Now + Environment.NewLine + " ErrorMsg: " + exception.Message);
+            }
+            return previousSchoolById;
+        }
+        public static Company GetCompany(int companyId)
         {
             var companyObj = new Company();
             try
@@ -190,15 +215,15 @@ namespace MOP.Common
             }
             return cityObj;
         }
-        public static Branch GetBranchById(int branchId)
-        {
-            var branchObj = new Branch();
-            using (var db = new AlphaContext())
-            {
-                branchObj = db.Branches.Single(x => x.Id == branchId);
-            }
-            return branchObj;
-        }
+        //public static Branch GetBranch(int branchId)
+        //{
+        //    var branchObj = new Branch();
+        //    using (var db = new AlphaContext())
+        //    {
+        //        branchObj = db.Branches.Single(x => x.Id == branchId);
+        //    }
+        //    return branchObj;
+        //}
         public static Branch GetBranchByCityId(int cityId)
         {
             var branchByCityIdObj = new Branch();

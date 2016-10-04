@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "Branch";
+    Layout = "~/Views/Shared/_MainLayoutWithOutHeader.cshtml";
+}
+@using MOP.Common
+@using MOP.Models.SMS
+@{
+    var branchList = ViewBag.BranchList == null ? new List<Branch>() : ViewBag.BranchList as List<Branch>;
+    var cityList = ViewBag.CityList == null ? new List<City>() : ViewBag.CityList as List<City>;
+    var branchObj = ViewBag.Branch == null ? new Branch() : ViewBag.Branch as Branch;
+}
+@using (Html.BeginForm("Branch", "SMS", FormMethod.Post))
+{
+    <div class="inner-window">
+        <div class="inner-head">
+            Branch 
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="third-party-carriers">
+            <!--Search starts here-->
+            <div class="col-sm-12 search-container">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                    <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
+                        <div class="form-group">
+                            <input class="searchTextBox" placeholder="Search . . . ">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
+                        <button type="button" class="btn-primary searchButton">Search</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--Search ends here-->
+            <!--Grid starts here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 grid-contr">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>City </th>
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                       <tbody>
+                            @foreach (var branch in branchList)
+                            {
+                                <tr>
+                                   
+                                    <td>@Html.Raw(branch.BranchName)</td>
+                                    <td>@Html.Raw(SmsRepository.GetCityById(branch.CityId).CityName)</td>
+                                    <td><a href='@Url.Action("index", "Sms", new { v = branch.Id, p = "Branch" })'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                    <td><a href='@Url.Action("DeleteBranch", "SMS", new { id = branch.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-12 button-wrap">
+                    <div class="col-sm-2 col-md-3 no-padding record-info">@Html.Raw(branchList.Count) Records</div>
+                </div>
+            </div>
+            <!--Grid ends here-->
+            <div class="col-sm-12 col-md-6 col-lg-6 no-left-padding">
+                <div class="right-section">
+                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
+                        <h2>Branch Information</h2>
+                        <input type="hidden" id="BranchId" name="Id" value="@Html.Raw(branchObj.Id)" />
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+
+                                <label class="control-label">Branch Name :</label>
+                                <input class="form-control" placeholder="" name="BranchName" value="@Html.Raw(branchObj.BranchName)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">City Name :</label>
+                                <select name="CityId" class="selectpicker col-lg-6">
+                                    <option value='-1'>Select City</option>
+                                    @foreach (var city in cityList)
+                                    {
+                                        if (branchObj.CityId == city.Id)
+                                        {
+                                            <option selected ="selected" name="CityId" value='@Html.Raw(city.Id)'>@Html.Raw(city.CityName)</option>
+                                        }
+                                        else
+                                        {
+                                            <option name="CityId" value='@Html.Raw(city.Id)'>@Html.Raw(city.CityName)</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <!--Usama Ikram Form Change 9-22-2016-->
+                        <div class="col-sm-12 col-md-12 col-lg-12 no-padding no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Branch Adress :</label>
+                                <input class="form-control" style="height: 100px;" placeholder="" name="Address" value="@Html.Raw(branchObj.Address)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Branch Logo :</label>
+                                <input name="Logo" type="file" placeholder="" value="@Html.Raw(branchObj.Logo)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Contact Person :</label>
+                                <input class="form-control" placeholder="" name="ContactPerson" value="@Html.Raw(branchObj.ContactPerson)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Contact Number :</label>
+                                <input class="form-control" name="Phone" placeholder="" value="@Html.Raw(branchObj.Phone)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Email :</label>
+                                <input class="form-control" name="Email" placeholder="" value="@Html.Raw(branchObj.Email)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="form-group">
+                                <label class="control-label">Website :</label>
+                                <input class="form-control" name="Website" placeholder="" value="@Html.Raw(branchObj.Website)"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                            <div class="col-sm-12 bottom-header branch-header">
+                                <button type="submit" class="btn-primary Branch-Menu-Items"><span class="glyphicon glyphicon-file"></span> Save</button>
+                                <button class="btn-primary Branch-Menu-Items"><span class="glyphicon glyphicon-print"></span> View</button>
+                                <button class="btn-primary Branch-Menu-Items"><span class="glyphicon glyphicon-log-out"></span> Exit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!--right-section Ends-->
+            </div>
+        </div><!--Branch Ends-->
+    </div>
+}

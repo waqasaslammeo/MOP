@@ -1,4 +1,8 @@
-﻿@using MOP.Common
+﻿@{
+    ViewBag.Title = "Class";
+    Layout = "~/Views/Shared/_MainLayoutWithOutHeader.cshtml";
+}
+@using MOP.Common
 @using MOP.Models.SMS
 @{
     var classList = ViewBag.ClassList == null ? new List<Class>() : ViewBag.ClassList as List<Class>;
@@ -9,33 +13,23 @@
 {
     <div class="inner-window">
         <div class="inner-head">
-            Class Form
+            Class 
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
-        <!--Edit buttons starts here-->
-        <div class="col-sm-12 bottom-header">
-            <ul>
-                <li id="Add_Class"><a href="#"><img src="/Content/MainLayout/images/icon-add-white.png" width="30" height="30"><span>Add</span></a></li>
-                <li><a href=""><img src="/Content/MainLayout/images/icon-edit-white.png" width="30" height="30"><span>Edit</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-delete-white.png" width="30" height="30"><span>Delete</span></a></li>
-                <li><a href="#"><img src="~/Content/MainLayout/images/icon-print-white.png" width="30" height="30"><span>Print</span></a></li>
-                <li><a href="#"><img src="/Content/MainLayout/images/icon-exit-white.png" width="30" height="30"><span>Exit</span></a></li>
-            </ul>
-        </div>
-        <!--Edit buttons ends here-->
         <div class="third-party-carriers">
             <!--Search starts here-->
             <div class="col-sm-12 search-container">
-                <div class="col-sm-8 col-md-8 col-lg-8 no-padding">
-                    <div class="col-sm-12 col-md-4 col-lg-4 no-padding first-col">
+                <div class="col-sm-8 col-md-8 col-lg-8 no-padding no-margin">
+                    <div class="col-sm-12 col-md-8 col-lg-8 no-padding first-col">
                         <div class="form-group">
-                            <input class="form-control" placeholder="Search By Class Name or Grade">
+                            <input class="searchTextBox" placeholder="Search . . .">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 button-contr no-right-padding">
-                        <button type="button" class="btn btn-primary" style="margin:9px 0px;">Search</button>
+                        <button type="button" class="btn-primary searchButton">Search</button>
                     </div>
                 </div>
+
             </div>
             <!--Search ends here-->
             <!--Grid starts here-->
@@ -56,8 +50,8 @@
                                 <tr>                                   
                                     <td>@Html.Raw(cClass.ClassName)</td>
                                     <td>@Html.Raw(SmsRepository.GetGradeById(cClass.GradeId).Grades)</td>
-                                    <td></td>
-                                    <td><a href="#"><img src="/Content/MainLayout/images/remove.png" width="16" height="16"></a></td>
+                                    <td><a href='@Url.Action("index", "SMS", new { v = cClass.Id,p="Class" })'><img src="/Content/MainLayout/images/edit.png" width="16" height="16"></a></td>
+                                    <td><a href='@Url.Action("DeleteClass", "SMS", new { id = cClass.Id })'><img src="/Content/MainLayout/images/delete1.png" width="16" height="16"></a></td>
                                 </tr>
                             }
                         </tbody>
@@ -90,20 +84,26 @@
                                 <select class="selectpicker" name="GradeId">
                                     <option value="-1">Select Grade </option>
                                     @foreach (var grade in gradeList)
-                                    {   
-                                     <option value='@Html.Raw(grade.Id)'>@Html.Raw(grade.Grades)</option>                                      
+                                    {
+                                        if (classObj.GradeId == grade.Id)
+                                        {
+                                            <option selected="selected" name="GradeId" value='@Html.Raw(grade.Id)'>@Html.Raw(grade.Grades)</option>
+                                        }
+                                        else
+                                        {
+                                        
+                                             <option  name="GradeId" value='@Html.Raw(grade.Id)'>@Html.Raw(grade.Grades)</option>
+                                        }
                                     }
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-10 address-info no-padding">
-                        <div class="col-sm-10 col-md-12 col-lg-12 no-padding">
-                            <div class="form-group">
-                                <div class="col-sm-2 col-md-2 col-lg-2 button-contr no-right-padding">
-                                    <button type="button" class="btn btn-primary" style="margin:9px 0px;">Add</button>
-                                </div>
-                            </div>
+                    <div class="col-sm-10 col-md-12 col-lg-12 no-right-padding address-cntr no-left-padding">
+                        <div class="col-sm-12 bottom-header class-header">
+                            <button type="submit" class="btn-primary Class-Menu-Items"><span class="glyphicon glyphicon-file"></span> Save</button>
+                            <button class="btn-primary Class-Menu-Items"><span class="glyphicon glyphicon-print"></span> View</button>
+                            <button class="btn-primary Class-Menu-Items"><span class="glyphicon glyphicon-log-out"></span> Exit</button>
                         </div>
                     </div>
                     <div class="clearfix"></div>
